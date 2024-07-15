@@ -1,0 +1,393 @@
+From 457bed09b3cc98b213d0eb9452c98d588defb8aa Mon Sep 17 00:00:00 2001
+From: Chenghao Lyu <chenghao@cs.umass.edu>
+Date: Sun, 15 Oct 2023 13:55:07 +0200
+Subject: [PATCH 1/3] add prefix rules
+
+---
+ .../spark/sql/SparkSessionExtensions.scala    | 31 +++++++++++++++++++
+ .../sql/execution/adaptive/AQEOptimizer.scala |  8 +++--
+ .../adaptive/AdaptiveRulesHolder.scala        |  3 ++
+ .../adaptive/AdaptiveSparkPlanExec.scala      |  5 ++-
+ .../internal/BaseSessionStateBuilder.scala    |  3 ++
+ 5 files changed, 47 insertions(+), 3 deletions(-)
+
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/SparkSessionExtensions.scala b/sql/core/src/main/scala/org/apache/spark/sql/SparkSessionExtensions.scala
+index b7c86ab7de..e3a8cff688 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/SparkSessionExtensions.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/SparkSessionExtensions.scala
+@@ -47,8 +47,11 @@ import org.apache.spark.sql.execution.{ColumnarRule, SparkPlan}
+  * <li>Customized Parser.</li>
+  * <li>(External) Catalog listeners.</li>
+  * <li>Columnar Rules.</li>
++ * <li>Adaptive Query Stage Preparation Prefix Rules.</li>
+  * <li>Adaptive Query Stage Preparation Rules.</li>
++ * <li>Adaptive Query Execution Runtime Optimizer Prefix Rules.</li>
+  * <li>Adaptive Query Execution Runtime Optimizer Rules.</li>
++ * <li>Adaptive Query Stage Optimizer Prefix Rules.</li>
+  * <li>Adaptive Query Stage Optimizer Rules.</li>
+  * </ul>
+  *
+@@ -112,12 +115,19 @@ class SparkSessionExtensions {
+   type FunctionDescription = (FunctionIdentifier, ExpressionInfo, FunctionBuilder)
+   type TableFunctionDescription = (FunctionIdentifier, ExpressionInfo, TableFunctionBuilder)
+   type ColumnarRuleBuilder = SparkSession => ColumnarRule
++  type QueryStagePrepPrefixRuleBuilder = SparkSession => Rule[SparkPlan]
+   type QueryStagePrepRuleBuilder = SparkSession => Rule[SparkPlan]
++  type QueryStageOptimizerPrefixRuleBuilder = SparkSession => Rule[SparkPlan]
+   type QueryStageOptimizerRuleBuilder = SparkSession => Rule[SparkPlan]
+
+   private[this] val columnarRuleBuilders = mutable.Buffer.empty[ColumnarRuleBuilder]
++  private[this] val queryStagePrepPrefixRuleBuilders =
++    mutable.Buffer.empty[QueryStagePrepPrefixRuleBuilder]
+   private[this] val queryStagePrepRuleBuilders = mutable.Buffer.empty[QueryStagePrepRuleBuilder]
++  private[this] val runtimeOptimizerPrefixRules = mutable.Buffer.empty[RuleBuilder]
+   private[this] val runtimeOptimizerRules = mutable.Buffer.empty[RuleBuilder]
++  private[this] val queryStageOptimizerPrefixRuleBuilders =
++    mutable.Buffer.empty[QueryStageOptimizerPrefixRuleBuilder]
+   private[this] val queryStageOptimizerRuleBuilders =
+     mutable.Buffer.empty[QueryStageOptimizerRuleBuilder]
+
+@@ -131,6 +141,9 @@ class SparkSessionExtensions {
+   /**
+    * Build the override rules for the query stage preparation phase of adaptive query execution.
+    */
++  private[sql] def buildQueryStagePrepPrefixRules(session: SparkSession): Seq[Rule[SparkPlan]] = {
++    queryStagePrepPrefixRuleBuilders.map(_.apply(session)).toSeq
++  }
+   private[sql] def buildQueryStagePrepRules(session: SparkSession): Seq[Rule[SparkPlan]] = {
+     queryStagePrepRuleBuilders.map(_.apply(session)).toSeq
+   }
+@@ -138,6 +151,10 @@ class SparkSessionExtensions {
+   /**
+    * Build the override rules for the optimizer of adaptive query execution.
+    */
++  private[sql] def buildRuntimeOptimizerPrefixRules(session: SparkSession)
++  : Seq[Rule[LogicalPlan]] = {
++    runtimeOptimizerPrefixRules.map(_.apply(session)).toSeq
++  }
+   private[sql] def buildRuntimeOptimizerRules(session: SparkSession): Seq[Rule[LogicalPlan]] = {
+     runtimeOptimizerRules.map(_.apply(session)).toSeq
+   }
+@@ -145,6 +162,10 @@ class SparkSessionExtensions {
+   /**
+    * Build the override rules for the query stage optimizer phase of adaptive query execution.
+    */
++  private[sql] def buildQueryStageOptimizerPrefixRules(session: SparkSession)
++  : Seq[Rule[SparkPlan]] = {
++    queryStageOptimizerPrefixRuleBuilders.map(_.apply(session)).toSeq
++  }
+   private[sql] def buildQueryStageOptimizerRules(session: SparkSession): Seq[Rule[SparkPlan]] = {
+     queryStageOptimizerRuleBuilders.map(_.apply(session)).toSeq
+   }
+@@ -160,6 +181,9 @@ class SparkSessionExtensions {
+    * Inject a rule that can override the query stage preparation phase of adaptive query
+    * execution.
+    */
++  def injectQueryStagePrepPrefixRule(builder: QueryStagePrepPrefixRuleBuilder): Unit = {
++    queryStagePrepPrefixRuleBuilders += builder
++  }
+   def injectQueryStagePrepRule(builder: QueryStagePrepRuleBuilder): Unit = {
+     queryStagePrepRuleBuilders += builder
+   }
+@@ -173,6 +197,9 @@ class SparkSessionExtensions {
+    *
+    * Note that, it does not work if adaptive query execution is disabled.
+    */
++  def injectRuntimeOptimizerPrefixRule(builder: RuleBuilder): Unit = {
++    runtimeOptimizerPrefixRules += builder
++  }
+   def injectRuntimeOptimizerRule(builder: RuleBuilder): Unit = {
+     runtimeOptimizerRules += builder
+   }
+@@ -181,10 +208,14 @@ class SparkSessionExtensions {
+    * Inject a rule that can override the query stage optimizer phase of adaptive query
+    * execution.
+    */
++  def injectQueryStageOptimizerPrefixRule(builder: QueryStageOptimizerPrefixRuleBuilder): Unit = {
++    queryStageOptimizerPrefixRuleBuilders += builder
++  }
+   def injectQueryStageOptimizerRule(builder: QueryStageOptimizerRuleBuilder): Unit = {
+     queryStageOptimizerRuleBuilders += builder
+   }
+
++
+   private[this] val resolutionRuleBuilders = mutable.Buffer.empty[RuleBuilder]
+
+   /**
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AQEOptimizer.scala b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AQEOptimizer.scala
+index 7bee641a00..be994f9083 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AQEOptimizer.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AQEOptimizer.scala
+@@ -27,7 +27,10 @@ import org.apache.spark.util.Utils
+ /**
+  * The optimizer for re-optimizing the logical plan used by AdaptiveSparkPlanExec.
+  */
+-class AQEOptimizer(conf: SQLConf, extendedRuntimeOptimizerRules: Seq[Rule[LogicalPlan]])
++class AQEOptimizer(conf: SQLConf,
++                   extendedRuntimeOptimizerPrefixRules: Seq[Rule[LogicalPlan]],
++                   extendedRuntimeOptimizerRules: Seq[Rule[LogicalPlan]]
++                  )
+   extends RuleExecutor[LogicalPlan] {
+
+   private def fixedPoint =
+@@ -35,7 +38,8 @@ class AQEOptimizer(conf: SQLConf, extendedRuntimeOptimizerRules: Seq[Rule[Logica
+       conf.optimizerMaxIterations,
+       maxIterationsSetting = SQLConf.OPTIMIZER_MAX_ITERATIONS.key)
+
+-  private val defaultBatches = Seq(
++  private val defaultBatches = Batch("User Provided Runtime Optimizers (Prefix)", fixedPoint,
++    extendedRuntimeOptimizerPrefixRules: _*) +: Seq(
+     Batch("Propagate Empty Relations", fixedPoint,
+       AQEPropagateEmptyRelation,
+       ConvertToLocalRelation,
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveRulesHolder.scala b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveRulesHolder.scala
+index 8391fe44f5..013b587339 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveRulesHolder.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveRulesHolder.scala
+@@ -31,7 +31,10 @@ import org.apache.spark.sql.execution.SparkPlan
+  *                                 all children query stages are materialized
+  */
+ class AdaptiveRulesHolder(
++    val queryStagePrepPrefixRules: Seq[Rule[SparkPlan]],
+     val queryStagePrepRules: Seq[Rule[SparkPlan]],
++    val runtimeOptimizerPrefixRules: Seq[Rule[LogicalPlan]],
+     val runtimeOptimizerRules: Seq[Rule[LogicalPlan]],
++    val queryStageOptimizerPrefixRules: Seq[Rule[SparkPlan]],
+     val queryStageOptimizerRules: Seq[Rule[SparkPlan]]) {
+ }
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
+index a760991ab5..49e30e8cb7 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
+@@ -87,6 +87,7 @@ case class AdaptiveSparkPlanExec(
+
+   // The logical plan optimizer for re-optimizing the current logical plan.
+   @transient private val optimizer = new AQEOptimizer(conf,
++    session.sessionState.adaptiveRulesHolder.runtimeOptimizerPrefixRules,
+     session.sessionState.adaptiveRulesHolder.runtimeOptimizerRules)
+
+   // `EnsureRequirements` may remove user-specified repartition and assume the query plan won't
+@@ -117,6 +118,7 @@ case class AdaptiveSparkPlanExec(
+     // around this case.
+     val ensureRequirements =
+       EnsureRequirements(requiredDistribution.isDefined, requiredDistribution)
++    context.session.sessionState.adaptiveRulesHolder.queryStagePrepPrefixRules ++
+     Seq(
+       RemoveRedundantProjects,
+       ensureRequirements,
+@@ -132,7 +134,8 @@ case class AdaptiveSparkPlanExec(
+
+   // A list of physical optimizer rules to be applied to a new stage before its execution. These
+   // optimizations should be stage-independent.
+-  @transient private val queryStageOptimizerRules: Seq[Rule[SparkPlan]] = Seq(
++  @transient private val queryStageOptimizerRules: Seq[Rule[SparkPlan]] =
++  context.session.sessionState.adaptiveRulesHolder.queryStageOptimizerPrefixRules ++ Seq(
+     PlanAdaptiveDynamicPruningFilters(this),
+     ReuseAdaptiveSubquery(context.subqueryCache),
+     OptimizeSkewInRebalancePartitions,
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/internal/BaseSessionStateBuilder.scala b/sql/core/src/main/scala/org/apache/spark/sql/internal/BaseSessionStateBuilder.scala
+index 460e5b68ff..7425139bb3 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/internal/BaseSessionStateBuilder.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/internal/BaseSessionStateBuilder.scala
+@@ -313,8 +313,11 @@ abstract class BaseSessionStateBuilder(
+
+   protected def adaptiveRulesHolder: AdaptiveRulesHolder = {
+     new AdaptiveRulesHolder(
++      extensions.buildQueryStagePrepPrefixRules(session),
+       extensions.buildQueryStagePrepRules(session),
++      extensions.buildRuntimeOptimizerPrefixRules(session),
+       extensions.buildRuntimeOptimizerRules(session),
++      extensions.buildQueryStageOptimizerPrefixRules(session),
+       extensions.buildQueryStageOptimizerRules(session))
+   }
+
+--
+2.45.2
+
+
+From dd64f2dcbfdcce2d742e28bf32655ff990b9a545 Mon Sep 17 00:00:00 2001
+From: Chenghao Lyu <chenghao@cs.umass.edu>
+Date: Wed, 29 Nov 2023 15:20:05 +0100
+Subject: [PATCH 2/3] inject QS rules after processing subquery and dpp
+
+---
+ .../spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
+index 49e30e8cb7..df3f5fe3c0 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
+@@ -135,9 +135,10 @@ case class AdaptiveSparkPlanExec(
+   // A list of physical optimizer rules to be applied to a new stage before its execution. These
+   // optimizations should be stage-independent.
+   @transient private val queryStageOptimizerRules: Seq[Rule[SparkPlan]] =
+-  context.session.sessionState.adaptiveRulesHolder.queryStageOptimizerPrefixRules ++ Seq(
++  Seq(
+     PlanAdaptiveDynamicPruningFilters(this),
+-    ReuseAdaptiveSubquery(context.subqueryCache),
++    ReuseAdaptiveSubquery(context.subqueryCache)
++  ) ++ context.session.sessionState.adaptiveRulesHolder.queryStageOptimizerPrefixRules ++ Seq(
+     OptimizeSkewInRebalancePartitions,
+     CoalesceShufflePartitions(context.session),
+     // `OptimizeShuffleWithLocalRead` needs to make use of 'AQEShuffleReadExec.partitionSpecs'
+--
+2.45.2
+
+
+From 8324aceffa890667e8243c7c36908cbb578c823a Mon Sep 17 00:00:00 2001
+From: Chenghao Lyu <chenghao@cs.umass.edu>
+Date: Sat, 13 Jul 2024 18:12:32 -0400
+Subject: [PATCH 3/3] update
+
+---
+ .../spark/sql/execution/SparkPlan.scala       |  2 +-
+ .../adaptive/AdaptiveSparkPlanExec.scala      | 52 ++++++++++++++++++-
+ .../spark/sql/execution/ui/SQLListener.scala  | 12 +++++
+ 3 files changed, 63 insertions(+), 3 deletions(-)
+
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/execution/SparkPlan.scala b/sql/core/src/main/scala/org/apache/spark/sql/execution/SparkPlan.scala
+index bbd74a1fe7..b61a1a0486 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/execution/SparkPlan.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/execution/SparkPlan.scala
+@@ -532,7 +532,7 @@ abstract class SparkPlan extends QueryPlan[SparkPlan] with Logging with Serializ
+
+       var i = 0
+
+-      if (takeFromEnd) {
++      if (takeFromEnd) {spark.executor.instances
+         while (buf.length < n && i < res.length) {
+           val rows = decodeUnsafeRows(res(i)._2)
+           if (n - buf.length >= res(i)._1) {
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
+index df3f5fe3c0..44a0d0670b 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.scala
+@@ -19,6 +19,7 @@ package org.apache.spark.sql.execution.adaptive
+
+ import java.util
+ import java.util.concurrent.LinkedBlockingQueue
++import java.util.concurrent.atomic.AtomicInteger
+
+ import scala.collection.JavaConverters._
+ import scala.collection.concurrent.TrieMap
+@@ -43,7 +44,7 @@ import org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec._
+ import org.apache.spark.sql.execution.bucketing.DisableUnnecessaryBucketedScan
+ import org.apache.spark.sql.execution.columnar.InMemoryTableScanExec
+ import org.apache.spark.sql.execution.exchange._
+-import org.apache.spark.sql.execution.ui.{SparkListenerSQLAdaptiveExecutionUpdate, SparkListenerSQLAdaptiveSQLMetricUpdates, SQLPlanMetric}
++import org.apache.spark.sql.execution.ui.{SparkListenerSQLAdaptiveExecutionUpdate, SparkListenerSQLAdaptiveSQLMetricUpdates, SQLPlanMetric, SparkListenerOnQueryStageSubmitted}
+ import org.apache.spark.sql.internal.SQLConf
+ import org.apache.spark.sql.vectorized.ColumnarBatch
+ import org.apache.spark.util.{SparkFatalException, ThreadUtils}
+@@ -281,8 +282,12 @@ case class AdaptiveSparkPlanExec(
+               case _ => false
+             }
+
++          var idInWave = 0
++          val waveId: Int = context.stageSubmissionWave.getAndIncrement()
+           // Start materialization of all new stages and fail fast if any stages failed eagerly
+           reorderedNewStages.foreach { stage =>
++            onQueryStageSubmitted(stage, waveId, idInWave)
++            idInWave += 1
+             try {
+               stage.materialize().onComplete { res =>
+                 if (res.isSuccess) {
+@@ -354,7 +359,11 @@ case class AdaptiveSparkPlanExec(
+         optimizeQueryStage(result.newPlan, isFinalStage = true),
+         postStageCreationRules(supportsColumnar),
+         Some((planChangeLogger, "AQE Post Stage Creation")))
+-      _isFinalPlan = true
++
++      val waveId: Int = context.stageSubmissionWave.getAndIncrement()
++      onLastQueryStageSubmitted(currentPhysicalPlan, waveId, 0)
++
++      `_isFinalPlan = true
+       executionId.foreach(onUpdatePlan(_, Seq(currentPhysicalPlan)))
+       currentPhysicalPlan
+     }
+@@ -755,6 +764,41 @@ case class AdaptiveSparkPlanExec(
+     }
+   }
+
++  private def getOptimizedStageOrder(plan: SparkPlan): Option[Int] = {
++    plan.getTagValue(TEMP_OPTIMIZED_STAGE_ORDER_TAG).orElse {
++      plan.collectFirst {
++        case p if p.getTagValue(TEMP_OPTIMIZED_STAGE_ORDER_TAG).isDefined =>
++          p.getTagValue(TEMP_OPTIMIZED_STAGE_ORDER_TAG).get
++      }
++    }
++  }
++
++  private def onQueryStageSubmitted(stage: QueryStageExec, waveId: Int, idInWave: Int): Unit = {
++    context.session.sparkContext.listenerBus.post(SparkListenerOnQueryStageSubmitted(
++      waveId = waveId,
++      idInWave = idInWave,
++      planId = this.id,
++      qsId = stage.id,
++      optimizedStageOrder = getOptimizedStageOrder(stage.plan),
++      subqueryIds = stage.plan.subqueriesAll.map(_.asInstanceOf[BaseSubqueryExec].child.id),
++      isSubquery = this.isSubquery,
++      isLastQueryStage = false
++    ))
++  }
++
++  private def onLastQueryStageSubmitted(stage: SparkPlan, waveId: Int, idInWave: Int): Unit = {
++    context.session.sparkContext.listenerBus.post(SparkListenerOnQueryStageSubmitted(
++      waveId = waveId,
++      idInWave = idInWave,
++      planId = this.id,
++      qsId = stage.id,
++      optimizedStageOrder = getOptimizedStageOrder(stage),
++      subqueryIds = stage.subqueriesAll.map(_.asInstanceOf[BaseSubqueryExec].child.id),
++      isSubquery = this.isSubquery,
++      isLastQueryStage = true
++    ))
++  }
++
+   /**
+    * Cancel all running stages with best effort and throw an Exception containing all stage
+    * materialization errors and stage cancellation errors.
+@@ -805,6 +849,7 @@ object AdaptiveSparkPlanExec {
+    * the temp logical links.
+    */
+   val TEMP_LOGICAL_PLAN_TAG = TreeNodeTag[LogicalPlan]("temp_logical_plan")
++  val TEMP_OPTIMIZED_STAGE_ORDER_TAG = TreeNodeTag[Int]("temp_optimized_stage_order")
+
+   /**
+    * Apply a list of physical operator rules on a [[SparkPlan]].
+@@ -844,6 +889,9 @@ case class AdaptiveExecutionContext(session: SparkSession, qe: QueryExecution) {
+    */
+   val stageCache: TrieMap[SparkPlan, ExchangeQueryStageExec] =
+     new TrieMap[SparkPlan, ExchangeQueryStageExec]()
++
++  val stageSubmissionWave: AtomicInteger = new AtomicInteger(1)
++
+ }
+
+ /**
+diff --git a/sql/core/src/main/scala/org/apache/spark/sql/execution/ui/SQLListener.scala b/sql/core/src/main/scala/org/apache/spark/sql/execution/ui/SQLListener.scala
+index d4c8f600a4..308551c3dd 100644
+--- a/sql/core/src/main/scala/org/apache/spark/sql/execution/ui/SQLListener.scala
++++ b/sql/core/src/main/scala/org/apache/spark/sql/execution/ui/SQLListener.scala
+@@ -40,6 +40,18 @@ case class SparkListenerSQLAdaptiveSQLMetricUpdates(
+     sqlPlanMetrics: Seq[SQLPlanMetric])
+   extends SparkListenerEvent
+
++@DeveloperApi
++case class SparkListenerOnQueryStageSubmitted(
++    waveId: Int, // the input wave cover both main query and subqueries
++    idInWave: Int, // the id in a wave, where QSs are sorted
++    planId: Int, // the plan Id, key to the subquery
++    qsId: Int, // AQE `currentStageId`, used for debugging
++    optimizedStageOrder: Option[Int], // key to the QSMetrics
++    subqueryIds: Seq[Int], // used to resort the order
++    isSubquery: Boolean, // used to identify whether it is a subquery
++    isLastQueryStage: Boolean, // used to determine whether is it the last query stage for a plan or subquery.
++) extends SparkListenerEvent
++
+ @DeveloperApi
+ case class SparkListenerSQLExecutionStart(
+     executionId: Long,
+--
+2.45.2
