@@ -1,0 +1,3132 @@
+{
+  "CompileTimeLQP" : {
+    "LQP" : {
+      "operators" : {
+        "12" : {
+          "sign" : 275157926,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 3951706360,
+          "rowCount" : 141132370,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+        },
+        "8" : {
+          "sign" : -695785748,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 7252210372,
+          "rowCount" : 164822963,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55] "
+        },
+        "19" : {
+          "sign" : -1389526726,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 2360,
+          "rowCount" : 20,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: isnotnull(sm_ship_mode_sk#53) "
+        },
+        "23" : {
+          "sign" : -290972551,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 3810,
+          "rowCount" : 15,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [w_warehouse_sk#39, w_warehouse_id#40, w_warehouse_name#41, w_warehouse_sq_ft#42, w_street_number#43, w_street_name#44, w_street_type#45, w_suite_number#46, w_city#47, w_county#48, w_state#49, w_zip#50, w_country#51, w_gmt_offset#52], `spark_catalog`.`tpcds_100`.`warehouse`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "4" : {
+          "sign" : 1317143853,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 14416944226,
+          "rowCount" : 175816393,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#137] "
+        },
+        "15" : {
+          "sign" : -1914771779,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 4032,
+          "rowCount" : 336,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [d_date_sk#90] "
+        },
+        "11" : {
+          "sign" : 1451775040,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+          "sizeInBytes" : 4429377440,
+          "rowCount" : 138418045,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_date_sk#6 = d_date_sk#90) "
+        },
+        "9" : {
+          "sign" : -1523368520,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+          "sizeInBytes" : 8570794076,
+          "rowCount" : 164822963,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53) "
+        },
+        "22" : {
+          "sign" : 1460384489,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 3810,
+          "rowCount" : 15,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: isnotnull(w_warehouse_sk#39) "
+        },
+        "26" : {
+          "sign" : -1491418427,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 15990,
+          "rowCount" : 30,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cc_call_center_sk#59, cc_call_center_id#60, cc_rec_start_date#61, cc_rec_end_date#62, cc_closed_date_sk#63, cc_open_date_sk#64, cc_name#65, cc_class#66, cc_employees#67, cc_sq_ft#68, cc_hours#69, cc_manager#70, cc_mkt_id#71, cc_mkt_class#72, cc_mkt_desc#73, cc_market_manager#74, cc_division#75, cc_division_name#76, cc_company#77, cc_company_name#78, cc_street_number#79, cc_street_name#80, cc_street_type#81, cc_suite_number#82, ... 7 more fields], `spark_catalog`.`tpcds_100`.`call_center`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "13" : {
+          "sign" : 1591668007,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 29355532960,
+          "rowCount" : 141132370,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6))) "
+        },
+        "24" : {
+          "sign" : -131241975,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 1140,
+          "rowCount" : 30,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [cc_call_center_sk#59, cc_name#65] "
+        },
+        "16" : {
+          "sign" : 1573616158,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 82656,
+          "rowCount" : 336,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: ((isnotnull(d_month_seq#93) AND ((d_month_seq#93 >= 1212) AND (d_month_seq#93 <= 1223))) AND isnotnull(d_date_sk#90)) "
+        },
+        "5" : {
+          "sign" : -1953614073,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+          "sizeInBytes" : 16878373728,
+          "rowCount" : 175816393,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Join Arguments: Inner, (cs_call_center_sk#15 = cc_call_center_sk#59) "
+        },
+        "10" : {
+          "sign" : 269392891,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 3875705260,
+          "rowCount" : 138418045,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+        },
+        "21" : {
+          "sign" : -273131104,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 570,
+          "rowCount" : 15,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [w_warehouse_sk#39, w_warehouse_name#41] "
+        },
+        "6" : {
+          "sign" : 1236981073,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 10500228882,
+          "rowCount" : 159094377,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41] "
+        },
+        "1" : {
+          "sign" : -1979913018,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.LocalLimit",
+          "sizeInBytes" : 20487236531,
+          "rowCount" : -1,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LocalLimit Arguments: 100 "
+        },
+        "17" : {
+          "sign" : 2067458488,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 17970054,
+          "rowCount" : 73049,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [d_date_sk#90, d_date_id#91, d_date#92, d_month_seq#93, d_week_seq#94, d_quarter_seq#95, d_year#96, d_dow#97, d_moy#98, d_dom#99, d_qoy#100, d_fy_year#101, d_fy_quarter_seq#102, d_fy_week_seq#103, d_day_name#104, d_quarter_name#105, d_holiday#106, d_weekend#107, d_following_holiday#108, d_first_dom#109, d_last_dom#110, d_same_day_ly#111, d_same_day_lq#112, d_current_day#113, ... 4 more fields], `spark_catalog`.`tpcds_100`.`date_dim`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "25" : {
+          "sign" : 687315183,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 15990,
+          "rowCount" : 30,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: isnotnull(cc_call_center_sk#59) "
+        },
+        "14" : {
+          "sign" : -1961883062,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 29950777792,
+          "rowCount" : 143994124,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cs_sold_time_sk#5, cs_ship_date_sk#6, cs_bill_customer_sk#7, cs_bill_cdemo_sk#8, cs_bill_hdemo_sk#9, cs_bill_addr_sk#10, cs_ship_customer_sk#11, cs_ship_cdemo_sk#12, cs_ship_hdemo_sk#13, cs_ship_addr_sk#14, cs_call_center_sk#15, cs_catalog_page_sk#16, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_item_sk#19, cs_promo_sk#20, cs_order_number#21L, cs_quantity#22, cs_wholesale_cost#23, cs_list_price#24, cs_sales_price#25, cs_ext_discount_amt#26, cs_ext_sales_price#27, cs_ext_wholesale_cost#28, ... 10 more fields], `spark_catalog`.`tpcds_100`.`catalog_sales`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "0" : {
+          "sign" : -351860009,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.GlobalLimit",
+          "sizeInBytes" : 10800,
+          "rowCount" : 100,
+          "isRuntime" : false,
+          "predicate" : " (unknown) GlobalLimit Arguments: 100 "
+        },
+        "20" : {
+          "sign" : -588610836,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 2360,
+          "rowCount" : 20,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [sm_ship_mode_sk#53, sm_ship_mode_id#54, sm_type#55, sm_code#56, sm_carrier#57, sm_contract#58], `spark_catalog`.`tpcds_100`.`ship_mode`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "2" : {
+          "sign" : 2079996717,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+          "sizeInBytes" : 20487236531,
+          "rowCount" : -1,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Sort Arguments: [substr(w_warehouse_name, 1, 20)#123 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true "
+        },
+        "18" : {
+          "sign" : 1126159132,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 640,
+          "rowCount" : 20,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [sm_ship_mode_sk#53, sm_type#55] "
+        },
+        "7" : {
+          "sign" : 321182169,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+          "sizeInBytes" : 11772983898,
+          "rowCount" : 159094377,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Join Arguments: Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39) "
+        },
+        "3" : {
+          "sign" : 995059899,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+          "sizeInBytes" : 20487236531,
+          "rowCount" : -1,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Aggregate Arguments: [_groupingexpression#137, sm_type#55, cc_name#65], [_groupingexpression#137 AS substr(w_warehouse_name, 1, 20)#123, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#0L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#1L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#2L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#3L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#4L] "
+        }
+      },
+      "links" : [ {
+        "fromId" : 14,
+        "fromName" : "LogicalRelation",
+        "toId" : 13,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 13,
+        "fromName" : "Filter",
+        "toId" : 12,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 12,
+        "fromName" : "Project",
+        "toId" : 11,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 17,
+        "fromName" : "LogicalRelation",
+        "toId" : 16,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 16,
+        "fromName" : "Filter",
+        "toId" : 15,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 15,
+        "fromName" : "Project",
+        "toId" : 11,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 11,
+        "fromName" : "Join",
+        "toId" : 10,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 10,
+        "fromName" : "Project",
+        "toId" : 9,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 20,
+        "fromName" : "LogicalRelation",
+        "toId" : 19,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 19,
+        "fromName" : "Filter",
+        "toId" : 18,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 18,
+        "fromName" : "Project",
+        "toId" : 9,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 9,
+        "fromName" : "Join",
+        "toId" : 8,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 8,
+        "fromName" : "Project",
+        "toId" : 7,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 23,
+        "fromName" : "LogicalRelation",
+        "toId" : 22,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 22,
+        "fromName" : "Filter",
+        "toId" : 21,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 21,
+        "fromName" : "Project",
+        "toId" : 7,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 7,
+        "fromName" : "Join",
+        "toId" : 6,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 6,
+        "fromName" : "Project",
+        "toId" : 5,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 26,
+        "fromName" : "LogicalRelation",
+        "toId" : 25,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 25,
+        "fromName" : "Filter",
+        "toId" : 24,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 24,
+        "fromName" : "Project",
+        "toId" : 5,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 5,
+        "fromName" : "Join",
+        "toId" : 4,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 4,
+        "fromName" : "Project",
+        "toId" : 3,
+        "toName" : "Aggregate",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 3,
+        "fromName" : "Aggregate",
+        "toId" : 2,
+        "toName" : "Sort",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 2,
+        "fromName" : "Sort",
+        "toId" : 1,
+        "toName" : "LocalLimit",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 1,
+        "fromName" : "LocalLimit",
+        "toId" : 0,
+        "toName" : "GlobalLimit",
+        "linkType" : "Operator"
+      } ],
+      "rawPlan" : "GlobalLimit 100\n+- LocalLimit 100\n   +- Sort [substr(w_warehouse_name, 1, 20)#123 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true\n      +- Aggregate [_groupingexpression#137, sm_type#55, cc_name#65], [_groupingexpression#137 AS substr(w_warehouse_name, 1, 20)#123, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#0L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#1L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#2L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#3L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#4L]\n         +- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#137]\n            +- Join Inner, (cs_call_center_sk#15 = cc_call_center_sk#59)\n               :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n               :  +- Join Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39)\n               :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n               :     :  +- Join Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53)\n               :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :  +- Join Inner, (cs_ship_date_sk#6 = d_date_sk#90)\n               :     :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :     :  +- Filter ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6)))\n               :     :     :     :     +- Relation spark_catalog.tpcds_100.catalog_sales[cs_sold_time_sk#5,cs_ship_date_sk#6,cs_bill_customer_sk#7,cs_bill_cdemo_sk#8,cs_bill_hdemo_sk#9,cs_bill_addr_sk#10,cs_ship_customer_sk#11,cs_ship_cdemo_sk#12,cs_ship_hdemo_sk#13,cs_ship_addr_sk#14,cs_call_center_sk#15,cs_catalog_page_sk#16,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_item_sk#19,cs_promo_sk#20,cs_order_number#21L,cs_quantity#22,cs_wholesale_cost#23,cs_list_price#24,cs_sales_price#25,cs_ext_discount_amt#26,cs_ext_sales_price#27,cs_ext_wholesale_cost#28,... 10 more fields] parquet\n               :     :     :     +- Project [d_date_sk#90]\n               :     :     :        +- Filter ((isnotnull(d_month_seq#93) AND ((d_month_seq#93 >= 1212) AND (d_month_seq#93 <= 1223))) AND isnotnull(d_date_sk#90))\n               :     :     :           +- Relation spark_catalog.tpcds_100.date_dim[d_date_sk#90,d_date_id#91,d_date#92,d_month_seq#93,d_week_seq#94,d_quarter_seq#95,d_year#96,d_dow#97,d_moy#98,d_dom#99,d_qoy#100,d_fy_year#101,d_fy_quarter_seq#102,d_fy_week_seq#103,d_day_name#104,d_quarter_name#105,d_holiday#106,d_weekend#107,d_following_holiday#108,d_first_dom#109,d_last_dom#110,d_same_day_ly#111,d_same_day_lq#112,d_current_day#113,... 4 more fields] parquet\n               :     :     +- Project [sm_ship_mode_sk#53, sm_type#55]\n               :     :        +- Filter isnotnull(sm_ship_mode_sk#53)\n               :     :           +- Relation spark_catalog.tpcds_100.ship_mode[sm_ship_mode_sk#53,sm_ship_mode_id#54,sm_type#55,sm_code#56,sm_carrier#57,sm_contract#58] parquet\n               :     +- Project [w_warehouse_sk#39, w_warehouse_name#41]\n               :        +- Filter isnotnull(w_warehouse_sk#39)\n               :           +- Relation spark_catalog.tpcds_100.warehouse[w_warehouse_sk#39,w_warehouse_id#40,w_warehouse_name#41,w_warehouse_sq_ft#42,w_street_number#43,w_street_name#44,w_street_type#45,w_suite_number#46,w_city#47,w_county#48,w_state#49,w_zip#50,w_country#51,w_gmt_offset#52] parquet\n               +- Project [cc_call_center_sk#59, cc_name#65]\n                  +- Filter isnotnull(cc_call_center_sk#59)\n                     +- Relation spark_catalog.tpcds_100.call_center[cc_call_center_sk#59,cc_call_center_id#60,cc_rec_start_date#61,cc_rec_end_date#62,cc_closed_date_sk#63,cc_open_date_sk#64,cc_name#65,cc_class#66,cc_employees#67,cc_sq_ft#68,cc_hours#69,cc_manager#70,cc_mkt_id#71,cc_mkt_class#72,cc_mkt_desc#73,cc_market_manager#74,cc_division#75,cc_division_name#76,cc_company#77,cc_company_name#78,cc_street_number#79,cc_street_name#80,cc_street_type#81,cc_suite_number#82,... 7 more fields] parquet\n"
+    },
+    "IM" : {
+      "inputSizeInBytes" : 29968770006,
+      "inputRowCount" : 144067238
+    },
+    "PD" : { },
+    "Configuration" : {
+      "theta_c" : [ {
+        "spark.executor.memory" : "1g"
+      }, {
+        "spark.executor.cores" : "1"
+      }, {
+        "spark.executor.instances" : "16"
+      }, {
+        "spark.default.parallelism" : "16"
+      }, {
+        "spark.reducer.maxSizeInFlight" : "48m"
+      }, {
+        "spark.shuffle.sort.bypassMergeThreshold" : "200"
+      }, {
+        "spark.shuffle.compress" : "true"
+      }, {
+        "spark.memory.fraction" : "0.6"
+      } ],
+      "theta_p" : [ {
+        "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+      }, {
+        "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+      }, {
+        "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+      }, {
+        "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+      }, {
+        "spark.sql.shuffle.partitions" : "200"
+      }, {
+        "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+      }, {
+        "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+      }, {
+        "spark.sql.files.maxPartitionBytes" : "128MB"
+      }, {
+        "spark.sql.files.openCostInBytes" : "4MB"
+      } ],
+      "theta_s" : [ {
+        "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+      }, {
+        "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+      } ]
+    }
+  },
+  "RuntimeLQPs" : {
+    "4" : {
+      "LQP" : {
+        "operators" : {
+          "12" : {
+            "sign" : 275157926,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 3951706360,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "8" : {
+            "sign" : -1502647665,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 45331717244000,
+            "rowCount" : 1030266301000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55] "
+          },
+          "4" : {
+            "sign" : 55716275,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 35235107494200000,
+            "rowCount" : 463619835450000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157] "
+          },
+          "15" : {
+            "sign" : 763288373,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1051496,
+            "rowCount" : 365,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [d_date_sk#90], BroadcastQueryStage 0 "
+          },
+          "11" : {
+            "sign" : 1794687006,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 1648426081600,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_date_sk#6 = d_date_sk#90) "
+          },
+          "9" : {
+            "sign" : -1491784709,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 53573847652000,
+            "rowCount" : 1030266301000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53) "
+          },
+          "13" : {
+            "sign" : 1591668007,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "sizeInBytes" : 29355532960,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6))) "
+          },
+          "16" : {
+            "sign" : -682187427,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1048736,
+            "rowCount" : 20,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1 "
+          },
+          "5" : {
+            "sign" : 1670849205,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 38944066177800000,
+            "rowCount" : 463619835450000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_call_center_sk#15 = cc_call_center_sk#59) "
+          },
+          "10" : {
+            "sign" : -1456049481,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 1442372821400,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "6" : {
+            "sign" : -1050093525,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 927239670900000,
+            "rowCount" : 15453994515000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41] "
+          },
+          "1" : {
+            "sign" : 105657833,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.LocalLimit",
+            "sizeInBytes" : 50070942228600000,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LocalLimit Arguments: 100 "
+          },
+          "17" : {
+            "sign" : -1227308657,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1048696,
+            "rowCount" : 15,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2 "
+          },
+          "14" : {
+            "sign" : -1961883062,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "sizeInBytes" : 29950777792,
+            "rowCount" : 143994124,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cs_sold_time_sk#5, cs_ship_date_sk#6, cs_bill_customer_sk#7, cs_bill_cdemo_sk#8, cs_bill_hdemo_sk#9, cs_bill_addr_sk#10, cs_ship_customer_sk#11, cs_ship_cdemo_sk#12, cs_ship_hdemo_sk#13, cs_ship_addr_sk#14, cs_call_center_sk#15, cs_catalog_page_sk#16, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_item_sk#19, cs_promo_sk#20, cs_order_number#21L, cs_quantity#22, cs_wholesale_cost#23, cs_list_price#24, cs_sales_price#25, cs_ext_discount_amt#26, cs_ext_sales_price#27, cs_ext_wholesale_cost#28, ... 10 more fields], `spark_catalog`.`tpcds_100`.`catalog_sales`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          },
+          "0" : {
+            "sign" : -276541084,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.GlobalLimit",
+            "sizeInBytes" : 10800,
+            "rowCount" : 100,
+            "isRuntime" : false,
+            "predicate" : " (unknown) GlobalLimit Arguments: 100 "
+          },
+          "2" : {
+            "sign" : 1557739642,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 50070942228600000,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true "
+          },
+          "18" : {
+            "sign" : 724372939,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1048816,
+            "rowCount" : 30,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3 "
+          },
+          "7" : {
+            "sign" : -1387681115,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 1050871627020000,
+            "rowCount" : 15453994515000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39) "
+          },
+          "3" : {
+            "sign" : 574945089,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "sizeInBytes" : 50070942228600000,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L] "
+          }
+        },
+        "links" : [ {
+          "fromId" : 14,
+          "fromName" : "LogicalRelation",
+          "toId" : 13,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 13,
+          "fromName" : "Filter",
+          "toId" : 12,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 12,
+          "fromName" : "Project",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 15,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 11,
+          "fromName" : "Join",
+          "toId" : 10,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 10,
+          "fromName" : "Project",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 16,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "Join",
+          "toId" : 8,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "Project",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 17,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 7,
+          "fromName" : "Join",
+          "toId" : 6,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "Project",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 18,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Join",
+          "toId" : 4,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "Project",
+          "toId" : 3,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Aggregate",
+          "toId" : 2,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Sort",
+          "toId" : 1,
+          "toName" : "LocalLimit",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "LocalLimit",
+          "toId" : 0,
+          "toName" : "GlobalLimit",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "GlobalLimit 100\n+- LocalLimit 100\n   +- Sort [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true\n      +- Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L]\n         +- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n            +- Join Inner, (cs_call_center_sk#15 = cc_call_center_sk#59)\n               :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n               :  +- Join Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39)\n               :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n               :     :  +- Join Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53)\n               :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :  +- Join Inner, (cs_ship_date_sk#6 = d_date_sk#90)\n               :     :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :     :  +- Filter ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6)))\n               :     :     :     :     +- Relation spark_catalog.tpcds_100.catalog_sales[cs_sold_time_sk#5,cs_ship_date_sk#6,cs_bill_customer_sk#7,cs_bill_cdemo_sk#8,cs_bill_hdemo_sk#9,cs_bill_addr_sk#10,cs_ship_customer_sk#11,cs_ship_cdemo_sk#12,cs_ship_hdemo_sk#13,cs_ship_addr_sk#14,cs_call_center_sk#15,cs_catalog_page_sk#16,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_item_sk#19,cs_promo_sk#20,cs_order_number#21L,cs_quantity#22,cs_wholesale_cost#23,cs_list_price#24,cs_sales_price#25,cs_ext_discount_amt#26,cs_ext_sales_price#27,cs_ext_wholesale_cost#28,... 10 more fields] parquet\n               :     :     :     +- LogicalQueryStage Project [d_date_sk#90], BroadcastQueryStage 0\n               :     :     +- LogicalQueryStage Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1\n               :     +- LogicalQueryStage Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2\n               +- LogicalQueryStage Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 29954975536,
+        "inputRowCount" : 143994554
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702227542558,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 26910,
+        "IOBytes" : {
+          "Total" : 390540561,
+          "Details" : {
+            "IR" : 365021311,
+            "IW" : 0,
+            "SR" : 12759625,
+            "SW" : 12759625
+          }
+        }
+      }
+    },
+    "5" : {
+      "LQP" : {
+        "operators" : {
+          "0" : {
+            "sign" : -494790355,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.GlobalLimit",
+            "sizeInBytes" : 10800,
+            "rowCount" : 100,
+            "isRuntime" : false,
+            "predicate" : " (unknown) GlobalLimit Arguments: 100 "
+          },
+          "1" : {
+            "sign" : -424245394,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.LocalLimit",
+            "sizeInBytes" : 21003840,
+            "rowCount" : 183600,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LocalLimit Arguments: 100 "
+          },
+          "2" : {
+            "sign" : -298479145,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 21003840,
+            "rowCount" : 183600,
+            "isRuntime" : true,
+            "predicate" : " (unknown) Sort Arguments: [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true "
+          },
+          "3" : {
+            "sign" : -492242938,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 21003840,
+            "rowCount" : 183600,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L], HashAggregate(keys=[_groupingexpression#157, sm_type#55, cc_name#65], functions=[sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END), sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)]) "
+          }
+        },
+        "links" : [ {
+          "fromId" : 3,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 2,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Sort",
+          "toId" : 1,
+          "toName" : "LocalLimit",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "LocalLimit",
+          "toId" : 0,
+          "toName" : "GlobalLimit",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "GlobalLimit 100\n+- LocalLimit 100\n   +- Sort [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true\n      +- LogicalQueryStage Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L], HashAggregate(keys=[_groupingexpression#157, sm_type#55, cc_name#65], functions=[sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END), sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)])\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 21003840,
+        "inputRowCount" : 183600
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702227568680,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 788,
+        "IOBytes" : {
+          "Total" : 12759625,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 12759625,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "1" : {
+      "LQP" : {
+        "operators" : {
+          "12" : {
+            "sign" : 275157926,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 3951706360,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "8" : {
+            "sign" : -1502647665,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 7252210372,
+            "rowCount" : 164822963,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55] "
+          },
+          "4" : {
+            "sign" : 55716275,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 14416944226,
+            "rowCount" : 175816393,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157] "
+          },
+          "15" : {
+            "sign" : 763288373,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1051496,
+            "rowCount" : 365,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [d_date_sk#90], BroadcastQueryStage 0 "
+          },
+          "11" : {
+            "sign" : 1794687006,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 1648426081600,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_date_sk#6 = d_date_sk#90) "
+          },
+          "9" : {
+            "sign" : -1491784709,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 8570794076,
+            "rowCount" : 164822963,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53) "
+          },
+          "13" : {
+            "sign" : 1591668007,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "sizeInBytes" : 29355532960,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6))) "
+          },
+          "16" : {
+            "sign" : -682187427,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 640,
+            "rowCount" : 20,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1 "
+          },
+          "5" : {
+            "sign" : 1670849205,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 16878373728,
+            "rowCount" : 175816393,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_call_center_sk#15 = cc_call_center_sk#59) "
+          },
+          "10" : {
+            "sign" : -1456049481,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 1442372821400,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "6" : {
+            "sign" : -1050093525,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 10500228882,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41] "
+          },
+          "1" : {
+            "sign" : 105657833,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.LocalLimit",
+            "sizeInBytes" : 20487236531,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LocalLimit Arguments: 100 "
+          },
+          "17" : {
+            "sign" : -1227308657,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 570,
+            "rowCount" : 15,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2 "
+          },
+          "14" : {
+            "sign" : -1961883062,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "sizeInBytes" : 29950777792,
+            "rowCount" : 143994124,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cs_sold_time_sk#5, cs_ship_date_sk#6, cs_bill_customer_sk#7, cs_bill_cdemo_sk#8, cs_bill_hdemo_sk#9, cs_bill_addr_sk#10, cs_ship_customer_sk#11, cs_ship_cdemo_sk#12, cs_ship_hdemo_sk#13, cs_ship_addr_sk#14, cs_call_center_sk#15, cs_catalog_page_sk#16, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_item_sk#19, cs_promo_sk#20, cs_order_number#21L, cs_quantity#22, cs_wholesale_cost#23, cs_list_price#24, cs_sales_price#25, cs_ext_discount_amt#26, cs_ext_sales_price#27, cs_ext_wholesale_cost#28, ... 10 more fields], `spark_catalog`.`tpcds_100`.`catalog_sales`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          },
+          "0" : {
+            "sign" : -276541084,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.GlobalLimit",
+            "sizeInBytes" : 10800,
+            "rowCount" : 100,
+            "isRuntime" : false,
+            "predicate" : " (unknown) GlobalLimit Arguments: 100 "
+          },
+          "2" : {
+            "sign" : 1557739642,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 20487236531,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true "
+          },
+          "18" : {
+            "sign" : 724372939,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1140,
+            "rowCount" : 30,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3 "
+          },
+          "7" : {
+            "sign" : -1387681115,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 11772983898,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39) "
+          },
+          "3" : {
+            "sign" : 574945089,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "sizeInBytes" : 20487236531,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L] "
+          }
+        },
+        "links" : [ {
+          "fromId" : 14,
+          "fromName" : "LogicalRelation",
+          "toId" : 13,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 13,
+          "fromName" : "Filter",
+          "toId" : 12,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 12,
+          "fromName" : "Project",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 15,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 11,
+          "fromName" : "Join",
+          "toId" : 10,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 10,
+          "fromName" : "Project",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 16,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "Join",
+          "toId" : 8,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "Project",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 17,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 7,
+          "fromName" : "Join",
+          "toId" : 6,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "Project",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 18,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Join",
+          "toId" : 4,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "Project",
+          "toId" : 3,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Aggregate",
+          "toId" : 2,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Sort",
+          "toId" : 1,
+          "toName" : "LocalLimit",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "LocalLimit",
+          "toId" : 0,
+          "toName" : "GlobalLimit",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "GlobalLimit 100\n+- LocalLimit 100\n   +- Sort [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true\n      +- Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L]\n         +- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n            +- Join Inner, (cs_call_center_sk#15 = cc_call_center_sk#59)\n               :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n               :  +- Join Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39)\n               :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n               :     :  +- Join Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53)\n               :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :  +- Join Inner, (cs_ship_date_sk#6 = d_date_sk#90)\n               :     :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :     :  +- Filter ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6)))\n               :     :     :     :     +- Relation spark_catalog.tpcds_100.catalog_sales[cs_sold_time_sk#5,cs_ship_date_sk#6,cs_bill_customer_sk#7,cs_bill_cdemo_sk#8,cs_bill_hdemo_sk#9,cs_bill_addr_sk#10,cs_ship_customer_sk#11,cs_ship_cdemo_sk#12,cs_ship_hdemo_sk#13,cs_ship_addr_sk#14,cs_call_center_sk#15,cs_catalog_page_sk#16,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_item_sk#19,cs_promo_sk#20,cs_order_number#21L,cs_quantity#22,cs_wholesale_cost#23,cs_list_price#24,cs_sales_price#25,cs_ext_discount_amt#26,cs_ext_sales_price#27,cs_ext_wholesale_cost#28,... 10 more fields] parquet\n               :     :     :     +- LogicalQueryStage Project [d_date_sk#90], BroadcastQueryStage 0\n               :     :     +- LogicalQueryStage Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1\n               :     +- LogicalQueryStage Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2\n               +- LogicalQueryStage Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 29951831638,
+        "inputRowCount" : 143994554
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 3,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702227539653,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 29815,
+        "IOBytes" : {
+          "Total" : 390562955,
+          "Details" : {
+            "IR" : 365043705,
+            "IW" : 0,
+            "SR" : 12759625,
+            "SW" : 12759625
+          }
+        }
+      }
+    },
+    "2" : {
+      "LQP" : {
+        "operators" : {
+          "12" : {
+            "sign" : 275157926,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 3951706360,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "8" : {
+            "sign" : -1502647665,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 7252210372,
+            "rowCount" : 164822963,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55] "
+          },
+          "4" : {
+            "sign" : 55716275,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 362735179560,
+            "rowCount" : 4772831310,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157] "
+          },
+          "15" : {
+            "sign" : 763288373,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1051496,
+            "rowCount" : 365,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [d_date_sk#90], BroadcastQueryStage 0 "
+          },
+          "11" : {
+            "sign" : 1794687006,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 1648426081600,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_date_sk#6 = d_date_sk#90) "
+          },
+          "9" : {
+            "sign" : -1491784709,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 8570794076,
+            "rowCount" : 164822963,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53) "
+          },
+          "13" : {
+            "sign" : 1591668007,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "sizeInBytes" : 29355532960,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6))) "
+          },
+          "16" : {
+            "sign" : -682187427,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 640,
+            "rowCount" : 20,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1 "
+          },
+          "5" : {
+            "sign" : 1670849205,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 429554817900,
+            "rowCount" : 4772831310,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_call_center_sk#15 = cc_call_center_sk#59) "
+          },
+          "10" : {
+            "sign" : -1456049481,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 1442372821400,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "6" : {
+            "sign" : -1050093525,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 10500228882,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41] "
+          },
+          "1" : {
+            "sign" : 105657833,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.LocalLimit",
+            "sizeInBytes" : 515465781480,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LocalLimit Arguments: 100 "
+          },
+          "17" : {
+            "sign" : -1227308657,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 570,
+            "rowCount" : 15,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2 "
+          },
+          "14" : {
+            "sign" : -1961883062,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "sizeInBytes" : 29950777792,
+            "rowCount" : 143994124,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cs_sold_time_sk#5, cs_ship_date_sk#6, cs_bill_customer_sk#7, cs_bill_cdemo_sk#8, cs_bill_hdemo_sk#9, cs_bill_addr_sk#10, cs_ship_customer_sk#11, cs_ship_cdemo_sk#12, cs_ship_hdemo_sk#13, cs_ship_addr_sk#14, cs_call_center_sk#15, cs_catalog_page_sk#16, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_item_sk#19, cs_promo_sk#20, cs_order_number#21L, cs_quantity#22, cs_wholesale_cost#23, cs_list_price#24, cs_sales_price#25, cs_ext_discount_amt#26, cs_ext_sales_price#27, cs_ext_wholesale_cost#28, ... 10 more fields], `spark_catalog`.`tpcds_100`.`catalog_sales`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          },
+          "0" : {
+            "sign" : -276541084,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.GlobalLimit",
+            "sizeInBytes" : 10800,
+            "rowCount" : 100,
+            "isRuntime" : false,
+            "predicate" : " (unknown) GlobalLimit Arguments: 100 "
+          },
+          "2" : {
+            "sign" : 1557739642,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 515465781480,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true "
+          },
+          "18" : {
+            "sign" : 724372939,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1048816,
+            "rowCount" : 30,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3 "
+          },
+          "7" : {
+            "sign" : -1387681115,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 11772983898,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39) "
+          },
+          "3" : {
+            "sign" : 574945089,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "sizeInBytes" : 515465781480,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L] "
+          }
+        },
+        "links" : [ {
+          "fromId" : 14,
+          "fromName" : "LogicalRelation",
+          "toId" : 13,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 13,
+          "fromName" : "Filter",
+          "toId" : 12,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 12,
+          "fromName" : "Project",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 15,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 11,
+          "fromName" : "Join",
+          "toId" : 10,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 10,
+          "fromName" : "Project",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 16,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "Join",
+          "toId" : 8,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "Project",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 17,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 7,
+          "fromName" : "Join",
+          "toId" : 6,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "Project",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 18,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Join",
+          "toId" : 4,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "Project",
+          "toId" : 3,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Aggregate",
+          "toId" : 2,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Sort",
+          "toId" : 1,
+          "toName" : "LocalLimit",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "LocalLimit",
+          "toId" : 0,
+          "toName" : "GlobalLimit",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "GlobalLimit 100\n+- LocalLimit 100\n   +- Sort [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true\n      +- Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L]\n         +- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n            +- Join Inner, (cs_call_center_sk#15 = cc_call_center_sk#59)\n               :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n               :  +- Join Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39)\n               :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n               :     :  +- Join Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53)\n               :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :  +- Join Inner, (cs_ship_date_sk#6 = d_date_sk#90)\n               :     :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :     :  +- Filter ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6)))\n               :     :     :     :     +- Relation spark_catalog.tpcds_100.catalog_sales[cs_sold_time_sk#5,cs_ship_date_sk#6,cs_bill_customer_sk#7,cs_bill_cdemo_sk#8,cs_bill_hdemo_sk#9,cs_bill_addr_sk#10,cs_ship_customer_sk#11,cs_ship_cdemo_sk#12,cs_ship_hdemo_sk#13,cs_ship_addr_sk#14,cs_call_center_sk#15,cs_catalog_page_sk#16,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_item_sk#19,cs_promo_sk#20,cs_order_number#21L,cs_quantity#22,cs_wholesale_cost#23,cs_list_price#24,cs_sales_price#25,cs_ext_discount_amt#26,cs_ext_sales_price#27,cs_ext_wholesale_cost#28,... 10 more fields] parquet\n               :     :     :     +- LogicalQueryStage Project [d_date_sk#90], BroadcastQueryStage 0\n               :     :     +- LogicalQueryStage Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1\n               :     +- LogicalQueryStage Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2\n               +- LogicalQueryStage Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 29952879314,
+        "inputRowCount" : 143994554
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 2,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702227539738,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 29730,
+        "IOBytes" : {
+          "Total" : 390549793,
+          "Details" : {
+            "IR" : 365030543,
+            "IW" : 0,
+            "SR" : 12759625,
+            "SW" : 12759625
+          }
+        }
+      }
+    },
+    "3" : {
+      "LQP" : {
+        "operators" : {
+          "12" : {
+            "sign" : 275157926,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 3951706360,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "8" : {
+            "sign" : -1502647665,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 45331717244000,
+            "rowCount" : 1030266301000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55] "
+          },
+          "4" : {
+            "sign" : 55716275,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 362735179560,
+            "rowCount" : 4772831310,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157] "
+          },
+          "15" : {
+            "sign" : 763288373,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1051496,
+            "rowCount" : 365,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [d_date_sk#90], BroadcastQueryStage 0 "
+          },
+          "11" : {
+            "sign" : 1794687006,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 1648426081600,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_date_sk#6 = d_date_sk#90) "
+          },
+          "9" : {
+            "sign" : -1491784709,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 53573847652000,
+            "rowCount" : 1030266301000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53) "
+          },
+          "13" : {
+            "sign" : 1591668007,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "sizeInBytes" : 29355532960,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6))) "
+          },
+          "16" : {
+            "sign" : -682187427,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1048736,
+            "rowCount" : 20,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1 "
+          },
+          "5" : {
+            "sign" : 1670849205,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 429554817900,
+            "rowCount" : 4772831310,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_call_center_sk#15 = cc_call_center_sk#59) "
+          },
+          "10" : {
+            "sign" : -1456049481,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 1442372821400,
+            "rowCount" : 51513315050,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "6" : {
+            "sign" : -1050093525,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 10500228882,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41] "
+          },
+          "1" : {
+            "sign" : 105657833,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.LocalLimit",
+            "sizeInBytes" : 515465781480,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LocalLimit Arguments: 100 "
+          },
+          "17" : {
+            "sign" : -1227308657,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 570,
+            "rowCount" : 15,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2 "
+          },
+          "14" : {
+            "sign" : -1961883062,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "sizeInBytes" : 29950777792,
+            "rowCount" : 143994124,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cs_sold_time_sk#5, cs_ship_date_sk#6, cs_bill_customer_sk#7, cs_bill_cdemo_sk#8, cs_bill_hdemo_sk#9, cs_bill_addr_sk#10, cs_ship_customer_sk#11, cs_ship_cdemo_sk#12, cs_ship_hdemo_sk#13, cs_ship_addr_sk#14, cs_call_center_sk#15, cs_catalog_page_sk#16, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_item_sk#19, cs_promo_sk#20, cs_order_number#21L, cs_quantity#22, cs_wholesale_cost#23, cs_list_price#24, cs_sales_price#25, cs_ext_discount_amt#26, cs_ext_sales_price#27, cs_ext_wholesale_cost#28, ... 10 more fields], `spark_catalog`.`tpcds_100`.`catalog_sales`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          },
+          "0" : {
+            "sign" : -276541084,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.GlobalLimit",
+            "sizeInBytes" : 10800,
+            "rowCount" : 100,
+            "isRuntime" : false,
+            "predicate" : " (unknown) GlobalLimit Arguments: 100 "
+          },
+          "2" : {
+            "sign" : 1557739642,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 515465781480,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true "
+          },
+          "18" : {
+            "sign" : 724372939,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1048816,
+            "rowCount" : 30,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3 "
+          },
+          "7" : {
+            "sign" : -1387681115,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 11772983898,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39) "
+          },
+          "3" : {
+            "sign" : 574945089,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "sizeInBytes" : 515465781480,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L] "
+          }
+        },
+        "links" : [ {
+          "fromId" : 14,
+          "fromName" : "LogicalRelation",
+          "toId" : 13,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 13,
+          "fromName" : "Filter",
+          "toId" : 12,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 12,
+          "fromName" : "Project",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 15,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 11,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 11,
+          "fromName" : "Join",
+          "toId" : 10,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 10,
+          "fromName" : "Project",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 16,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 9,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "Join",
+          "toId" : 8,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "Project",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 17,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 7,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 7,
+          "fromName" : "Join",
+          "toId" : 6,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "Project",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 18,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 5,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Join",
+          "toId" : 4,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "Project",
+          "toId" : 3,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Aggregate",
+          "toId" : 2,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Sort",
+          "toId" : 1,
+          "toName" : "LocalLimit",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "LocalLimit",
+          "toId" : 0,
+          "toName" : "GlobalLimit",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "GlobalLimit 100\n+- LocalLimit 100\n   +- Sort [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true\n      +- Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L]\n         +- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n            +- Join Inner, (cs_call_center_sk#15 = cc_call_center_sk#59)\n               :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n               :  +- Join Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39)\n               :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n               :     :  +- Join Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53)\n               :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :  +- Join Inner, (cs_ship_date_sk#6 = d_date_sk#90)\n               :     :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :     :  +- Filter ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6)))\n               :     :     :     :     +- Relation spark_catalog.tpcds_100.catalog_sales[cs_sold_time_sk#5,cs_ship_date_sk#6,cs_bill_customer_sk#7,cs_bill_cdemo_sk#8,cs_bill_hdemo_sk#9,cs_bill_addr_sk#10,cs_ship_customer_sk#11,cs_ship_cdemo_sk#12,cs_ship_hdemo_sk#13,cs_ship_addr_sk#14,cs_call_center_sk#15,cs_catalog_page_sk#16,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_item_sk#19,cs_promo_sk#20,cs_order_number#21L,cs_quantity#22,cs_wholesale_cost#23,cs_list_price#24,cs_sales_price#25,cs_ext_discount_amt#26,cs_ext_sales_price#27,cs_ext_wholesale_cost#28,... 10 more fields] parquet\n               :     :     :     +- LogicalQueryStage Project [d_date_sk#90], BroadcastQueryStage 0\n               :     :     +- LogicalQueryStage Project [sm_ship_mode_sk#53, sm_type#55], BroadcastQueryStage 1\n               :     +- LogicalQueryStage Project [w_warehouse_sk#39, w_warehouse_name#41], BroadcastQueryStage 2\n               +- LogicalQueryStage Project [cc_call_center_sk#59, cc_name#65], BroadcastQueryStage 3\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 29953927410,
+        "inputRowCount" : 143994554
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 1,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702227540033,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 29435,
+        "IOBytes" : {
+          "Total" : 390546800,
+          "Details" : {
+            "IR" : 365027550,
+            "IW" : 0,
+            "SR" : 12759625,
+            "SW" : 12759625
+          }
+        }
+      }
+    }
+  },
+  "RuntimeQSs" : {
+    "4" : {
+      "QSLogical" : {
+        "operators" : {
+          "8" : {
+            "sign" : 1451775040,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 4429377440,
+                "rowCount" : 138418045
+              },
+              "compileTime" : {
+                "sizeInBytes" : 4429377440,
+                "rowCount" : 138418045
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_date_sk#6 = d_date_sk#90) "
+          },
+          "4" : {
+            "sign" : 321182169,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 11772983898,
+                "rowCount" : 159094377
+              },
+              "compileTime" : {
+                "sizeInBytes" : 11772983898,
+                "rowCount" : 159094377
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39) "
+          },
+          "11" : {
+            "sign" : -1961883062,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 29950777792,
+                "rowCount" : 143994124
+              },
+              "compileTime" : {
+                "sizeInBytes" : 29950777792,
+                "rowCount" : 143994124
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cs_sold_time_sk#5, cs_ship_date_sk#6, cs_bill_customer_sk#7, cs_bill_cdemo_sk#8, cs_bill_hdemo_sk#9, cs_bill_addr_sk#10, cs_ship_customer_sk#11, cs_ship_cdemo_sk#12, cs_ship_hdemo_sk#13, cs_ship_addr_sk#14, cs_call_center_sk#15, cs_catalog_page_sk#16, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_item_sk#19, cs_promo_sk#20, cs_order_number#21L, cs_quantity#22, cs_wholesale_cost#23, cs_list_price#24, cs_sales_price#25, cs_ext_discount_amt#26, cs_ext_sales_price#27, cs_ext_wholesale_cost#28, ... 10 more fields], `spark_catalog`.`tpcds_100`.`catalog_sales`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          },
+          "9" : {
+            "sign" : 275157926,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 3951706360,
+                "rowCount" : 141132370
+              },
+              "compileTime" : {
+                "sizeInBytes" : 3951706360,
+                "rowCount" : 141132370
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "5" : {
+            "sign" : -695785748,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 7252210372,
+                "rowCount" : 164822963
+              },
+              "compileTime" : {
+                "sizeInBytes" : 7252210372,
+                "rowCount" : 164822963
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55] "
+          },
+          "10" : {
+            "sign" : 1591668007,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 29355532960,
+                "rowCount" : 141132370
+              },
+              "compileTime" : {
+                "sizeInBytes" : 29355532960,
+                "rowCount" : 141132370
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6))) "
+          },
+          "6" : {
+            "sign" : -1523368520,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 8570794076,
+                "rowCount" : 164822963
+              },
+              "compileTime" : {
+                "sizeInBytes" : 8570794076,
+                "rowCount" : 164822963
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53) "
+          },
+          "1" : {
+            "sign" : -384151761,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 14416944226,
+                "rowCount" : 175816393
+              },
+              "compileTime" : {
+                "sizeInBytes" : 14416944226,
+                "rowCount" : 175816393
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157] "
+          },
+          "0" : {
+            "sign" : -1406931117,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 20487236531,
+                "rowCount" : -1
+              },
+              "compileTime" : {
+                "sizeInBytes" : 20487236531,
+                "rowCount" : -1
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L] "
+          },
+          "2" : {
+            "sign" : -1953614073,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 16878373728,
+                "rowCount" : 175816393
+              },
+              "compileTime" : {
+                "sizeInBytes" : 16878373728,
+                "rowCount" : 175816393
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (cs_call_center_sk#15 = cc_call_center_sk#59) "
+          },
+          "7" : {
+            "sign" : 269392891,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 3875705260,
+                "rowCount" : 138418045
+              },
+              "compileTime" : {
+                "sizeInBytes" : 3875705260,
+                "rowCount" : 138418045
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] "
+          },
+          "3" : {
+            "sign" : 1236981073,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 10500228882,
+                "rowCount" : 159094377
+              },
+              "compileTime" : {
+                "sizeInBytes" : 10500228882,
+                "rowCount" : 159094377
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41] "
+          }
+        },
+        "links" : [ {
+          "fromId" : 11,
+          "fromName" : "LogicalRelation",
+          "toId" : 10,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 10,
+          "fromName" : "Filter",
+          "toId" : 9,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "Project",
+          "toId" : 8,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "Join",
+          "toId" : 7,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 7,
+          "fromName" : "Project",
+          "toId" : 6,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "Join",
+          "toId" : 5,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Project",
+          "toId" : 4,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "Join",
+          "toId" : 3,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Project",
+          "toId" : 2,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Join",
+          "toId" : 1,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Project",
+          "toId" : 0,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L]\n+- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n   +- Join Inner, (cs_call_center_sk#15 = cc_call_center_sk#59)\n      :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n      :  +- Join Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39)\n      :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n      :     :  +- Join Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53)\n      :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n      :     :     :  +- Join Inner, (cs_ship_date_sk#6 = d_date_sk#90)\n      :     :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n      :     :     :     :  +- Filter ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6)))\n      :     :     :     :     +- Relation spark_catalog.tpcds_100.catalog_sales[cs_sold_time_sk#5,cs_ship_date_sk#6,cs_bill_customer_sk#7,cs_bill_cdemo_sk#8,cs_bill_hdemo_sk#9,cs_bill_addr_sk#10,cs_ship_customer_sk#11,cs_ship_cdemo_sk#12,cs_ship_hdemo_sk#13,cs_ship_addr_sk#14,cs_call_center_sk#15,cs_catalog_page_sk#16,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_item_sk#19,cs_promo_sk#20,cs_order_number#21L,cs_quantity#22,cs_wholesale_cost#23,cs_list_price#24,cs_sales_price#25,cs_ext_discount_amt#26,cs_ext_sales_price#27,cs_ext_wholesale_cost#28,... 10 more fields] parquet\n      :     :     :     +- Project [d_date_sk#90]\n      :     :     :        +- Filter ((isnotnull(d_month_seq#93) AND ((d_month_seq#93 >= 1212) AND (d_month_seq#93 <= 1223))) AND isnotnull(d_date_sk#90))\n      :     :     :           +- Relation spark_catalog.tpcds_100.date_dim[d_date_sk#90,d_date_id#91,d_date#92,d_month_seq#93,d_week_seq#94,d_quarter_seq#95,d_year#96,d_dow#97,d_moy#98,d_dom#99,d_qoy#100,d_fy_year#101,d_fy_quarter_seq#102,d_fy_week_seq#103,d_day_name#104,d_quarter_name#105,d_holiday#106,d_weekend#107,d_following_holiday#108,d_first_dom#109,d_last_dom#110,d_same_day_ly#111,d_same_day_lq#112,d_current_day#113,... 4 more fields] parquet\n      :     :     +- Project [sm_ship_mode_sk#53, sm_type#55]\n      :     :        +- Filter isnotnull(sm_ship_mode_sk#53)\n      :     :           +- Relation spark_catalog.tpcds_100.ship_mode[sm_ship_mode_sk#53,sm_ship_mode_id#54,sm_type#55,sm_code#56,sm_carrier#57,sm_contract#58] parquet\n      :     +- Project [w_warehouse_sk#39, w_warehouse_name#41]\n      :        +- Filter isnotnull(w_warehouse_sk#39)\n      :           +- Relation spark_catalog.tpcds_100.warehouse[w_warehouse_sk#39,w_warehouse_id#40,w_warehouse_name#41,w_warehouse_sq_ft#42,w_street_number#43,w_street_name#44,w_street_type#45,w_suite_number#46,w_city#47,w_county#48,w_state#49,w_zip#50,w_country#51,w_gmt_offset#52] parquet\n      +- Project [cc_call_center_sk#59, cc_name#65]\n         +- Filter isnotnull(cc_call_center_sk#59)\n            +- Relation spark_catalog.tpcds_100.call_center[cc_call_center_sk#59,cc_call_center_id#60,cc_rec_start_date#61,cc_rec_end_date#62,cc_closed_date_sk#63,cc_open_date_sk#64,cc_name#65,cc_class#66,cc_employees#67,cc_sq_ft#68,cc_hours#69,cc_manager#70,cc_mkt_id#71,cc_mkt_class#72,cc_mkt_desc#73,cc_market_manager#74,cc_division#75,cc_division_name#76,cc_company#77,cc_company_name#78,cc_street_number#79,cc_street_name#80,cc_street_type#81,cc_suite_number#82,... 7 more fields] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "12" : {
+            "sign" : 887416947,
+            "className" : "org.apache.spark.sql.execution.adaptive.BroadcastQueryStageExec",
+            "sizeInBytes" : 1048736,
+            "rowCount" : 20,
+            "isRuntime" : true,
+            "predicate" : " (unknown) BroadcastQueryStage Output [2]: [sm_ship_mode_sk#53, sm_type#55] Arguments: 1 "
+          },
+          "8" : {
+            "sign" : 2109269951,
+            "className" : "org.apache.spark.sql.execution.joins.BroadcastHashJoinExec",
+            "sizeInBytes" : 4429377440,
+            "rowCount" : 138418045,
+            "isRuntime" : false,
+            "predicate" : " (unknown) BroadcastHashJoin Left keys [1]: [cs_ship_date_sk#6] Right keys [1]: [d_date_sk#90] Join type: Inner Join condition: None "
+          },
+          "4" : {
+            "sign" : 1950956692,
+            "className" : "org.apache.spark.sql.execution.joins.BroadcastHashJoinExec",
+            "sizeInBytes" : 11772983898,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) BroadcastHashJoin Left keys [1]: [cs_warehouse_sk#18] Right keys [1]: [w_warehouse_sk#39] Join type: Inner Join condition: None "
+          },
+          "11" : {
+            "sign" : -761964057,
+            "className" : "org.apache.spark.sql.execution.adaptive.BroadcastQueryStageExec",
+            "sizeInBytes" : 1051496,
+            "rowCount" : 365,
+            "isRuntime" : true,
+            "predicate" : " (unknown) BroadcastQueryStage Output [1]: [d_date_sk#90] Arguments: 0 "
+          },
+          "9" : {
+            "sign" : 1761783905,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 3951706360,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [5]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] Condition : (((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND isnotnull(cs_call_center_sk#15)) AND isnotnull(cs_ship_date_sk#6)) "
+          },
+          "13" : {
+            "sign" : 189482411,
+            "className" : "org.apache.spark.sql.execution.adaptive.BroadcastQueryStageExec",
+            "sizeInBytes" : 1048696,
+            "rowCount" : 15,
+            "isRuntime" : true,
+            "predicate" : " (unknown) BroadcastQueryStage Output [2]: [w_warehouse_sk#39, w_warehouse_name#41] Arguments: 2 "
+          },
+          "5" : {
+            "sign" : 823759984,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 7252210372,
+            "rowCount" : 164822963,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [5]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55] Input [7]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_ship_mode_sk#53, sm_type#55] "
+          },
+          "10" : {
+            "sign" : 412419662,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 3951706360,
+            "rowCount" : 141132370,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpcds_100.catalog_sales Output [5]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] Batched: true Location: CatalogFileIndex [hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/catalog_sales] PushedFilters: [IsNotNull(cs_warehouse_sk), IsNotNull(cs_ship_mode_sk), IsNotNull(cs_call_center_sk), IsNotNull(cs_ship_date_sk)] ReadSchema: struct<cs_ship_date_sk:int,cs_call_center_sk:int,cs_ship_mode_sk:int,cs_warehouse_sk:int> "
+          },
+          "6" : {
+            "sign" : -509796386,
+            "className" : "org.apache.spark.sql.execution.joins.BroadcastHashJoinExec",
+            "sizeInBytes" : 8570794076,
+            "rowCount" : 164822963,
+            "isRuntime" : false,
+            "predicate" : " (unknown) BroadcastHashJoin Left keys [1]: [cs_ship_mode_sk#17] Right keys [1]: [sm_ship_mode_sk#53] Join type: Inner Join condition: None "
+          },
+          "1" : {
+            "sign" : 873143495,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 14416944226,
+            "rowCount" : 175816393,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [5]: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157] Input [7]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41, cc_call_center_sk#59, cc_name#65] "
+          },
+          "14" : {
+            "sign" : 287912950,
+            "className" : "org.apache.spark.sql.execution.adaptive.BroadcastQueryStageExec",
+            "sizeInBytes" : 1048816,
+            "rowCount" : 30,
+            "isRuntime" : true,
+            "predicate" : " (unknown) BroadcastQueryStage Output [2]: [cc_call_center_sk#59, cc_name#65] Arguments: 3 "
+          },
+          "0" : {
+            "sign" : 1001075772,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 20487236531,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) HashAggregate Input [5]: [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, _groupingexpression#157] Keys [3]: [_groupingexpression#157, sm_type#55, cc_name#65] Functions [5]: [partial_sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)] Aggregate Attributes [5]: [sum#158L, sum#159L, sum#160L, sum#161L, sum#162L] Results [8]: [_groupingexpression#157, sm_type#55, cc_name#65, sum#163L, sum#164L, sum#165L, sum#166L, sum#167L] "
+          },
+          "2" : {
+            "sign" : -1655718255,
+            "className" : "org.apache.spark.sql.execution.joins.BroadcastHashJoinExec",
+            "sizeInBytes" : 16878373728,
+            "rowCount" : 175816393,
+            "isRuntime" : false,
+            "predicate" : " (unknown) BroadcastHashJoin Left keys [1]: [cs_call_center_sk#15] Right keys [1]: [cc_call_center_sk#59] Join type: Inner Join condition: None "
+          },
+          "7" : {
+            "sign" : 80175816,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 3875705260,
+            "rowCount" : 138418045,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [5]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38] Input [6]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38, d_date_sk#90] "
+          },
+          "3" : {
+            "sign" : -525972816,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 10500228882,
+            "rowCount" : 159094377,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [5]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41] Input [7]: [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55, w_warehouse_sk#39, w_warehouse_name#41] "
+          }
+        },
+        "links" : [ {
+          "fromId" : 10,
+          "fromName" : "Scan parquet spark_catalog.tpcds_100.catalog_sales",
+          "toId" : 9,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "Filter",
+          "toId" : 8,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 11,
+          "fromName" : "BroadcastQueryStage",
+          "toId" : 8,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "BroadcastHashJoin",
+          "toId" : 7,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 7,
+          "fromName" : "Project",
+          "toId" : 6,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 12,
+          "fromName" : "BroadcastQueryStage",
+          "toId" : 6,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "BroadcastHashJoin",
+          "toId" : 5,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Project",
+          "toId" : 4,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 13,
+          "fromName" : "BroadcastQueryStage",
+          "toId" : 4,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "BroadcastHashJoin",
+          "toId" : 3,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Project",
+          "toId" : 2,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 14,
+          "fromName" : "BroadcastQueryStage",
+          "toId" : 2,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "BroadcastHashJoin",
+          "toId" : 1,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Project",
+          "toId" : 0,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "HashAggregate(keys=[_groupingexpression#157, sm_type#55, cc_name#65], functions=[partial_sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)], output=[_groupingexpression#157, sm_type#55, cc_name#65, sum#163L, sum#164L, sum#165L, sum#166L, sum#167L])\n+- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n   +- BroadcastHashJoin [cs_call_center_sk#15], [cc_call_center_sk#59], Inner, BuildRight, false\n      :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n      :  +- BroadcastHashJoin [cs_warehouse_sk#18], [w_warehouse_sk#39], Inner, BuildRight, false\n      :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n      :     :  +- BroadcastHashJoin [cs_ship_mode_sk#17], [sm_ship_mode_sk#53], Inner, BuildRight, false\n      :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n      :     :     :  +- BroadcastHashJoin [cs_ship_date_sk#6], [d_date_sk#90], Inner, BuildRight, false\n      :     :     :     :- Filter (((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND isnotnull(cs_call_center_sk#15)) AND isnotnull(cs_ship_date_sk#6))\n      :     :     :     :  +- FileScan parquet spark_catalog.tpcds_100.catalog_sales[cs_ship_date_sk#6,cs_call_center_sk#15,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_sold_date_sk#38] Batched: true, DataFilters: [isnotnull(cs_warehouse_sk#18), isnotnull(cs_ship_mode_sk#17), isnotnull(cs_call_center_sk#15), i..., Format: Parquet, Location: CatalogFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/catalog_sa..., PartitionFilters: [], PushedFilters: [IsNotNull(cs_warehouse_sk), IsNotNull(cs_ship_mode_sk), IsNotNull(cs_call_center_sk), IsNotNull(..., ReadSchema: struct<cs_ship_date_sk:int,cs_call_center_sk:int,cs_ship_mode_sk:int,cs_warehouse_sk:int>\n      :     :     :     +- BroadcastQueryStage 0\n      :     :     :        +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)),false), [plan_id=166]\n      :     :     :           +- *(1) Project [d_date_sk#90]\n      :     :     :              +- *(1) Filter (((isnotnull(d_month_seq#93) AND (d_month_seq#93 >= 1212)) AND (d_month_seq#93 <= 1223)) AND isnotnull(d_date_sk#90))\n      :     :     :                 +- *(1) ColumnarToRow\n      :     :     :                    +- FileScan parquet spark_catalog.tpcds_100.date_dim[d_date_sk#90,d_month_seq#93] Batched: true, DataFilters: [isnotnull(d_month_seq#93), (d_month_seq#93 >= 1212), (d_month_seq#93 <= 1223), isnotnull(d_date_..., Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/date_dim], PartitionFilters: [], PushedFilters: [IsNotNull(d_month_seq), GreaterThanOrEqual(d_month_seq,1212), LessThanOrEqual(d_month_seq,1223),..., ReadSchema: struct<d_date_sk:int,d_month_seq:int>\n      :     :     +- BroadcastQueryStage 1\n      :     :        +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=185]\n      :     :           +- *(2) Filter isnotnull(sm_ship_mode_sk#53)\n      :     :              +- *(2) ColumnarToRow\n      :     :                 +- FileScan parquet spark_catalog.tpcds_100.ship_mode[sm_ship_mode_sk#53,sm_type#55] Batched: true, DataFilters: [isnotnull(sm_ship_mode_sk#53)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/ship_mode], PartitionFilters: [], PushedFilters: [IsNotNull(sm_ship_mode_sk)], ReadSchema: struct<sm_ship_mode_sk:int,sm_type:string>\n      :     +- BroadcastQueryStage 2\n      :        +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=202]\n      :           +- *(3) Filter isnotnull(w_warehouse_sk#39)\n      :              +- *(3) ColumnarToRow\n      :                 +- FileScan parquet spark_catalog.tpcds_100.warehouse[w_warehouse_sk#39,w_warehouse_name#41] Batched: true, DataFilters: [isnotnull(w_warehouse_sk#39)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/warehouse], PartitionFilters: [], PushedFilters: [IsNotNull(w_warehouse_sk)], ReadSchema: struct<w_warehouse_sk:int,w_warehouse_name:string>\n      +- BroadcastQueryStage 3\n         +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=219]\n            +- *(4) Filter isnotnull(cc_call_center_sk#59)\n               +- *(4) ColumnarToRow\n                  +- FileScan parquet spark_catalog.tpcds_100.call_center[cc_call_center_sk#59,cc_name#65] Batched: true, DataFilters: [isnotnull(cc_call_center_sk#59)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/call_center], PartitionFilters: [], PushedFilters: [IsNotNull(cc_call_center_sk)], ReadSchema: struct<cc_call_center_sk:int,cc_name:string>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 3955904104,
+        "inputRowCount" : 141132800
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 4,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 5 ],
+      "Objectives" : {
+        "DurationInMs" : 19842,
+        "TotalTasksDurationInMs" : 245895,
+        "IOBytes" : {
+          "Total" : 377780936,
+          "Details" : {
+            "IR" : 365021311,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 12759625
+          }
+        }
+      }
+    },
+    "5" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 708512416,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.GlobalLimit",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 10800,
+                "rowCount" : 100
+              },
+              "compileTime" : {
+                "sizeInBytes" : 10800,
+                "rowCount" : 100
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) GlobalLimit Arguments: 100 "
+          },
+          "1" : {
+            "sign" : 751251643,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.LocalLimit",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 20487236531,
+                "rowCount" : -1
+              },
+              "compileTime" : {
+                "sizeInBytes" : 20487236531,
+                "rowCount" : -1
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LocalLimit Arguments: 100 "
+          },
+          "2" : {
+            "sign" : 1120677622,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 20487236531,
+                "rowCount" : -1
+              },
+              "compileTime" : {
+                "sizeInBytes" : 20487236531,
+                "rowCount" : -1
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "Sort",
+          "toId" : 1,
+          "toName" : "LocalLimit",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "LocalLimit",
+          "toId" : 0,
+          "toName" : "GlobalLimit",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "GlobalLimit 100\n+- LocalLimit 100\n   +- Sort [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], true\n      +- Aggregate [_groupingexpression#157, sm_type#55, cc_name#65], [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END) AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END) AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END) AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END) AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END) AS >120 days#142L]\n         +- Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n            +- Join Inner, (cs_call_center_sk#15 = cc_call_center_sk#59)\n               :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n               :  +- Join Inner, (cs_warehouse_sk#18 = w_warehouse_sk#39)\n               :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n               :     :  +- Join Inner, (cs_ship_mode_sk#17 = sm_ship_mode_sk#53)\n               :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :  +- Join Inner, (cs_ship_date_sk#6 = d_date_sk#90)\n               :     :     :     :- Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n               :     :     :     :  +- Filter ((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND (isnotnull(cs_call_center_sk#15) AND isnotnull(cs_ship_date_sk#6)))\n               :     :     :     :     +- Relation spark_catalog.tpcds_100.catalog_sales[cs_sold_time_sk#5,cs_ship_date_sk#6,cs_bill_customer_sk#7,cs_bill_cdemo_sk#8,cs_bill_hdemo_sk#9,cs_bill_addr_sk#10,cs_ship_customer_sk#11,cs_ship_cdemo_sk#12,cs_ship_hdemo_sk#13,cs_ship_addr_sk#14,cs_call_center_sk#15,cs_catalog_page_sk#16,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_item_sk#19,cs_promo_sk#20,cs_order_number#21L,cs_quantity#22,cs_wholesale_cost#23,cs_list_price#24,cs_sales_price#25,cs_ext_discount_amt#26,cs_ext_sales_price#27,cs_ext_wholesale_cost#28,... 10 more fields] parquet\n               :     :     :     +- Project [d_date_sk#90]\n               :     :     :        +- Filter ((isnotnull(d_month_seq#93) AND ((d_month_seq#93 >= 1212) AND (d_month_seq#93 <= 1223))) AND isnotnull(d_date_sk#90))\n               :     :     :           +- Relation spark_catalog.tpcds_100.date_dim[d_date_sk#90,d_date_id#91,d_date#92,d_month_seq#93,d_week_seq#94,d_quarter_seq#95,d_year#96,d_dow#97,d_moy#98,d_dom#99,d_qoy#100,d_fy_year#101,d_fy_quarter_seq#102,d_fy_week_seq#103,d_day_name#104,d_quarter_name#105,d_holiday#106,d_weekend#107,d_following_holiday#108,d_first_dom#109,d_last_dom#110,d_same_day_ly#111,d_same_day_lq#112,d_current_day#113,... 4 more fields] parquet\n               :     :     +- Project [sm_ship_mode_sk#53, sm_type#55]\n               :     :        +- Filter isnotnull(sm_ship_mode_sk#53)\n               :     :           +- Relation spark_catalog.tpcds_100.ship_mode[sm_ship_mode_sk#53,sm_ship_mode_id#54,sm_type#55,sm_code#56,sm_carrier#57,sm_contract#58] parquet\n               :     +- Project [w_warehouse_sk#39, w_warehouse_name#41]\n               :        +- Filter isnotnull(w_warehouse_sk#39)\n               :           +- Relation spark_catalog.tpcds_100.warehouse[w_warehouse_sk#39,w_warehouse_id#40,w_warehouse_name#41,w_warehouse_sq_ft#42,w_street_number#43,w_street_name#44,w_street_type#45,w_suite_number#46,w_city#47,w_county#48,w_state#49,w_zip#50,w_country#51,w_gmt_offset#52] parquet\n               +- Project [cc_call_center_sk#59, cc_name#65]\n                  +- Filter isnotnull(cc_call_center_sk#59)\n                     +- Relation spark_catalog.tpcds_100.call_center[cc_call_center_sk#59,cc_call_center_id#60,cc_rec_start_date#61,cc_rec_end_date#62,cc_closed_date_sk#63,cc_open_date_sk#64,cc_name#65,cc_class#66,cc_employees#67,cc_sq_ft#68,cc_hours#69,cc_manager#70,cc_mkt_id#71,cc_mkt_class#72,cc_mkt_desc#73,cc_market_manager#74,cc_division#75,cc_division_name#76,cc_company#77,cc_company_name#78,cc_street_number#79,cc_street_name#80,cc_street_type#81,cc_suite_number#82,... 7 more fields] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -480211434,
+            "className" : "org.apache.spark.sql.execution.TakeOrderedAndProjectExec",
+            "sizeInBytes" : 10800,
+            "rowCount" : 100,
+            "isRuntime" : false,
+            "predicate" : " (unknown) TakeOrderedAndProject Input [8]: [substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, 30 days#138L, 31-60 days#139L, 61-90 days#140L, 91-120 days#141L, >120 days#142L] Arguments: 100, [substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST, sm_type#55 ASC NULLS FIRST, cc_name#65 ASC NULLS FIRST], [substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, 30 days#138L, 31-60 days#139L, 61-90 days#140L, 91-120 days#141L, >120 days#142L] "
+          },
+          "1" : {
+            "sign" : -592405200,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 21003840,
+            "rowCount" : 183600,
+            "isRuntime" : true,
+            "predicate" : " (unknown) HashAggregate Input [8]: [_groupingexpression#157, sm_type#55, cc_name#65, sum#163L, sum#164L, sum#165L, sum#166L, sum#167L] Keys [3]: [_groupingexpression#157, sm_type#55, cc_name#65] Functions [5]: [sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END), sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)] Aggregate Attributes [5]: [sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END)#143L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END)#144L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END)#145L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END)#146L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)#147L] Results [8]: [_groupingexpression#157 AS substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END)#143L AS 30 days#138L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END)#144L AS 31-60 days#139L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END)#145L AS 61-90 days#140L, sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END)#146L AS 91-120 days#141L, sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)#147L AS >120 days#142L] "
+          },
+          "2" : {
+            "sign" : -144738592,
+            "className" : "org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec",
+            "sizeInBytes" : 20487236531,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) ShuffleQueryStage Output [8]: [_groupingexpression#157, sm_type#55, cc_name#65, sum#163L, sum#164L, sum#165L, sum#166L, sum#167L] Arguments: 4 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "ShuffleQueryStage",
+          "toId" : 1,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "HashAggregate",
+          "toId" : 0,
+          "toName" : "TakeOrderedAndProject",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "TakeOrderedAndProject(limit=100, orderBy=[substr(w_warehouse_name, 1, 20)#148 ASC NULLS FIRST,sm_type#55 ASC NULLS FIRST,cc_name#65 ASC NULLS FIRST], output=[substr(w_warehouse_name, 1, 20)#148,sm_type#55,cc_name#65,30 days#138L,31-60 days#139L,61-90 days#140L,91-120 days#141L,>120 days#142L])\n+- HashAggregate(keys=[_groupingexpression#157, sm_type#55, cc_name#65], functions=[sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END), sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END), sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)], output=[substr(w_warehouse_name, 1, 20)#148, sm_type#55, cc_name#65, 30 days#138L, 31-60 days#139L, 61-90 days#140L, 91-120 days#141L, >120 days#142L])\n   +- ShuffleQueryStage 4\n      +- Exchange hashpartitioning(_groupingexpression#157, sm_type#55, cc_name#65, 200), ENSURE_REQUIREMENTS, [plan_id=510]\n         +- *(5) HashAggregate(keys=[_groupingexpression#157, sm_type#55, cc_name#65], functions=[partial_sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 30) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 30) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 60)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 60) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 90)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 90) AND ((cs_ship_date_sk#6 - cs_sold_date_sk#38) <= 120)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN ((cs_ship_date_sk#6 - cs_sold_date_sk#38) > 120) THEN 1 ELSE 0 END)], output=[_groupingexpression#157, sm_type#55, cc_name#65, sum#163L, sum#164L, sum#165L, sum#166L, sum#167L])\n            +- *(5) Project [cs_ship_date_sk#6, cs_sold_date_sk#38, sm_type#55, cc_name#65, substr(w_warehouse_name#41, 1, 20) AS _groupingexpression#157]\n               +- *(5) BroadcastHashJoin [cs_call_center_sk#15], [cc_call_center_sk#59], Inner, BuildRight, false\n                  :- *(5) Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_sold_date_sk#38, sm_type#55, w_warehouse_name#41]\n                  :  +- *(5) BroadcastHashJoin [cs_warehouse_sk#18], [w_warehouse_sk#39], Inner, BuildRight, false\n                  :     :- *(5) Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_warehouse_sk#18, cs_sold_date_sk#38, sm_type#55]\n                  :     :  +- *(5) BroadcastHashJoin [cs_ship_mode_sk#17], [sm_ship_mode_sk#53], Inner, BuildRight, false\n                  :     :     :- *(5) Project [cs_ship_date_sk#6, cs_call_center_sk#15, cs_ship_mode_sk#17, cs_warehouse_sk#18, cs_sold_date_sk#38]\n                  :     :     :  +- *(5) BroadcastHashJoin [cs_ship_date_sk#6], [d_date_sk#90], Inner, BuildRight, false\n                  :     :     :     :- *(5) Filter (((isnotnull(cs_warehouse_sk#18) AND isnotnull(cs_ship_mode_sk#17)) AND isnotnull(cs_call_center_sk#15)) AND isnotnull(cs_ship_date_sk#6))\n                  :     :     :     :  +- *(5) ColumnarToRow\n                  :     :     :     :     +- FileScan parquet spark_catalog.tpcds_100.catalog_sales[cs_ship_date_sk#6,cs_call_center_sk#15,cs_ship_mode_sk#17,cs_warehouse_sk#18,cs_sold_date_sk#38] Batched: true, DataFilters: [isnotnull(cs_warehouse_sk#18), isnotnull(cs_ship_mode_sk#17), isnotnull(cs_call_center_sk#15), i..., Format: Parquet, Location: CatalogFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/catalog_sa..., PartitionFilters: [], PushedFilters: [IsNotNull(cs_warehouse_sk), IsNotNull(cs_ship_mode_sk), IsNotNull(cs_call_center_sk), IsNotNull(..., ReadSchema: struct<cs_ship_date_sk:int,cs_call_center_sk:int,cs_ship_mode_sk:int,cs_warehouse_sk:int>\n                  :     :     :     +- BroadcastQueryStage 0\n                  :     :     :        +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)),false), [plan_id=166]\n                  :     :     :           +- *(1) Project [d_date_sk#90]\n                  :     :     :              +- *(1) Filter (((isnotnull(d_month_seq#93) AND (d_month_seq#93 >= 1212)) AND (d_month_seq#93 <= 1223)) AND isnotnull(d_date_sk#90))\n                  :     :     :                 +- *(1) ColumnarToRow\n                  :     :     :                    +- FileScan parquet spark_catalog.tpcds_100.date_dim[d_date_sk#90,d_month_seq#93] Batched: true, DataFilters: [isnotnull(d_month_seq#93), (d_month_seq#93 >= 1212), (d_month_seq#93 <= 1223), isnotnull(d_date_..., Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/date_dim], PartitionFilters: [], PushedFilters: [IsNotNull(d_month_seq), GreaterThanOrEqual(d_month_seq,1212), LessThanOrEqual(d_month_seq,1223),..., ReadSchema: struct<d_date_sk:int,d_month_seq:int>\n                  :     :     +- BroadcastQueryStage 1\n                  :     :        +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=185]\n                  :     :           +- *(2) Filter isnotnull(sm_ship_mode_sk#53)\n                  :     :              +- *(2) ColumnarToRow\n                  :     :                 +- FileScan parquet spark_catalog.tpcds_100.ship_mode[sm_ship_mode_sk#53,sm_type#55] Batched: true, DataFilters: [isnotnull(sm_ship_mode_sk#53)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/ship_mode], PartitionFilters: [], PushedFilters: [IsNotNull(sm_ship_mode_sk)], ReadSchema: struct<sm_ship_mode_sk:int,sm_type:string>\n                  :     +- BroadcastQueryStage 2\n                  :        +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=202]\n                  :           +- *(3) Filter isnotnull(w_warehouse_sk#39)\n                  :              +- *(3) ColumnarToRow\n                  :                 +- FileScan parquet spark_catalog.tpcds_100.warehouse[w_warehouse_sk#39,w_warehouse_name#41] Batched: true, DataFilters: [isnotnull(w_warehouse_sk#39)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/warehouse], PartitionFilters: [], PushedFilters: [IsNotNull(w_warehouse_sk)], ReadSchema: struct<w_warehouse_sk:int,w_warehouse_name:string>\n                  +- BroadcastQueryStage 3\n                     +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=219]\n                        +- *(4) Filter isnotnull(cc_call_center_sk#59)\n                           +- *(4) ColumnarToRow\n                              +- FileScan parquet spark_catalog.tpcds_100.call_center[cc_call_center_sk#59,cc_name#65] Batched: true, DataFilters: [isnotnull(cc_call_center_sk#59)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/call_center], PartitionFilters: [], PushedFilters: [IsNotNull(cc_call_center_sk)], ReadSchema: struct<cc_call_center_sk:int,cc_name:string>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 21003840,
+        "inputRowCount" : 183600
+      },
+      "InitialPartitionNum" : 1,
+      "PD" : {
+        "0" : [ 86263, 52613, 59520, 54987, 48594, 69939, 88655, 76392, 87987, 28104, 30840, 60705, 69355, 91178, 49342, 36336, 117194, 40952, 71160, 30777, 79519, 49538, 67007, 78076, 30294, 85629, 43478, 52166, 72279, 71450, 62125, 36188, 66619, 71593, 61990, 80226, 79308, 29016, 66905, 94221, 97712, 78611, 46102, 50436, 74188, 70086, 55935, 60040, 78390, 42704, 47510, 60905, 80207, 28125, 75543, 54491, 80860, 91036, 73290, 63895, 54229, 46124, 41708, 73442, 36538, 92998, 79573, 66268, 38743, 70139, 49674, 87266, 27270, 136252, 59046, 45388, 81386, 87153, 77217, 60870, 65475, 63105, 60960, 60040, 73874, 65529, 81037, 64130, 55061, 61850, 49674, 58249, 71307, 59163, 40196, 72426, 62925, 54861, 59083, 87266, 106022, 54454, 79308, 60175, 81175, 46064, 35819, 59680, 57532, 96361, 55202, 95196, 77629, 127658, 38911, 48144, 72922, 66153, 64010, 95983, 45712, 74419, 66476, 45244, 74841, 89689, 48624, 97208, 85968, 80054, 71789, 49677, 58569, 80128, 82153, 52425, 84380, 75008, 93832, 41384, 127634, 45216, 54303, 90522, 62745, 106619, 68375, 54198, 63050, 27036, 65335, 92147, 73285, 81794, 48930, 44046, 72475, 67991, 64180, 67301, 73020, 81799, 83564, 35913, 81263, 105943, 58532, 63720, 64720, 66476, 80865, 46056, 67064, 88584, 72863, 57209, 59523, 84031, 80801, 66145, 65430, 80285, 87148, 62385, 80226, 45286, 71548, 54904, 71936, 55855, 86450, 75440, 89807, 77256, 54451, 71156, 59803, 67763, 66570, 27936 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 5,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 7 ],
+      "Objectives" : {
+        "DurationInMs" : 568,
+        "TotalTasksDurationInMs" : 560,
+        "IOBytes" : {
+          "Total" : 12759625,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 12759625,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "1" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1126159132,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 640,
+                "rowCount" : 20
+              },
+              "compileTime" : {
+                "sizeInBytes" : 640,
+                "rowCount" : 20
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [sm_ship_mode_sk#53, sm_type#55] "
+          },
+          "1" : {
+            "sign" : -1389526726,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 2360,
+                "rowCount" : 20
+              },
+              "compileTime" : {
+                "sizeInBytes" : 2360,
+                "rowCount" : 20
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: isnotnull(sm_ship_mode_sk#53) "
+          },
+          "2" : {
+            "sign" : -588610836,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 2360,
+                "rowCount" : 20
+              },
+              "compileTime" : {
+                "sizeInBytes" : 2360,
+                "rowCount" : 20
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [sm_ship_mode_sk#53, sm_ship_mode_id#54, sm_type#55, sm_code#56, sm_carrier#57, sm_contract#58], `spark_catalog`.`tpcds_100`.`ship_mode`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "LogicalRelation",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [sm_ship_mode_sk#53, sm_type#55]\n+- Filter isnotnull(sm_ship_mode_sk#53)\n   +- Relation spark_catalog.tpcds_100.ship_mode[sm_ship_mode_sk#53,sm_ship_mode_id#54,sm_type#55,sm_code#56,sm_carrier#57,sm_contract#58] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1481396314,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 640,
+            "rowCount" : 20,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [2]: [sm_ship_mode_sk#53, sm_type#55] Condition : isnotnull(sm_ship_mode_sk#53) "
+          },
+          "1" : {
+            "sign" : 1738524520,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 640,
+            "rowCount" : 20,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpcds_100.ship_mode Output [2]: [sm_ship_mode_sk#53, sm_type#55] Batched: true Location: InMemoryFileIndex [hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/ship_mode] PushedFilters: [IsNotNull(sm_ship_mode_sk)] ReadSchema: struct<sm_ship_mode_sk:int,sm_type:string> "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "Scan parquet spark_catalog.tpcds_100.ship_mode",
+          "toId" : 0,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Filter isnotnull(sm_ship_mode_sk#53)\n+- FileScan parquet spark_catalog.tpcds_100.ship_mode[sm_ship_mode_sk#53,sm_type#55] Batched: true, DataFilters: [isnotnull(sm_ship_mode_sk#53)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/ship_mode], PartitionFilters: [], PushedFilters: [IsNotNull(sm_ship_mode_sk)], ReadSchema: struct<sm_ship_mode_sk:int,sm_type:string>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 640,
+        "inputRowCount" : 20
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 1,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 2 ],
+      "Objectives" : {
+        "DurationInMs" : 3809,
+        "TotalTasksDurationInMs" : 3803,
+        "IOBytes" : {
+          "Total" : 2993,
+          "Details" : {
+            "IR" : 2993,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "0" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -1914771779,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 4032,
+                "rowCount" : 336
+              },
+              "compileTime" : {
+                "sizeInBytes" : 4032,
+                "rowCount" : 336
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [d_date_sk#90] "
+          },
+          "1" : {
+            "sign" : 1573616158,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 82656,
+                "rowCount" : 336
+              },
+              "compileTime" : {
+                "sizeInBytes" : 82656,
+                "rowCount" : 336
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: ((isnotnull(d_month_seq#93) AND ((d_month_seq#93 >= 1212) AND (d_month_seq#93 <= 1223))) AND isnotnull(d_date_sk#90)) "
+          },
+          "2" : {
+            "sign" : 2067458488,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 17970054,
+                "rowCount" : 73049
+              },
+              "compileTime" : {
+                "sizeInBytes" : 17970054,
+                "rowCount" : 73049
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [d_date_sk#90, d_date_id#91, d_date#92, d_month_seq#93, d_week_seq#94, d_quarter_seq#95, d_year#96, d_dow#97, d_moy#98, d_dom#99, d_qoy#100, d_fy_year#101, d_fy_quarter_seq#102, d_fy_week_seq#103, d_day_name#104, d_quarter_name#105, d_holiday#106, d_weekend#107, d_following_holiday#108, d_first_dom#109, d_last_dom#110, d_same_day_ly#111, d_same_day_lq#112, d_current_day#113, ... 4 more fields], `spark_catalog`.`tpcds_100`.`date_dim`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "LogicalRelation",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [d_date_sk#90]\n+- Filter ((isnotnull(d_month_seq#93) AND ((d_month_seq#93 >= 1212) AND (d_month_seq#93 <= 1223))) AND isnotnull(d_date_sk#90))\n   +- Relation spark_catalog.tpcds_100.date_dim[d_date_sk#90,d_date_id#91,d_date#92,d_month_seq#93,d_week_seq#94,d_quarter_seq#95,d_year#96,d_dow#97,d_moy#98,d_dom#99,d_qoy#100,d_fy_year#101,d_fy_quarter_seq#102,d_fy_week_seq#103,d_day_name#104,d_quarter_name#105,d_holiday#106,d_weekend#107,d_following_holiday#108,d_first_dom#109,d_last_dom#110,d_same_day_ly#111,d_same_day_lq#112,d_current_day#113,... 4 more fields] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -1653658171,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 4032,
+            "rowCount" : 336,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [1]: [d_date_sk#90] Input [2]: [d_date_sk#90, d_month_seq#93] "
+          },
+          "1" : {
+            "sign" : 315832902,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 4032,
+            "rowCount" : 336,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [2]: [d_date_sk#90, d_month_seq#93] Condition : (((isnotnull(d_month_seq#93) AND (d_month_seq#93 >= 1212)) AND (d_month_seq#93 <= 1223)) AND isnotnull(d_date_sk#90)) "
+          },
+          "2" : {
+            "sign" : 1075187824,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 4032,
+            "rowCount" : 336,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpcds_100.date_dim Output [2]: [d_date_sk#90, d_month_seq#93] Batched: true Location: InMemoryFileIndex [hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/date_dim] PushedFilters: [IsNotNull(d_month_seq), GreaterThanOrEqual(d_month_seq,1212), LessThanOrEqual(d_month_seq,1223), IsNotNull(d_date_sk)] ReadSchema: struct<d_date_sk:int,d_month_seq:int> "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "Scan parquet spark_catalog.tpcds_100.date_dim",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [d_date_sk#90]\n+- Filter (((isnotnull(d_month_seq#93) AND (d_month_seq#93 >= 1212)) AND (d_month_seq#93 <= 1223)) AND isnotnull(d_date_sk#90))\n   +- FileScan parquet spark_catalog.tpcds_100.date_dim[d_date_sk#90,d_month_seq#93] Batched: true, DataFilters: [isnotnull(d_month_seq#93), (d_month_seq#93 >= 1212), (d_month_seq#93 <= 1223), isnotnull(d_date_..., Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/date_dim], PartitionFilters: [], PushedFilters: [IsNotNull(d_month_seq), GreaterThanOrEqual(d_month_seq,1212), LessThanOrEqual(d_month_seq,1223),..., ReadSchema: struct<d_date_sk:int,d_month_seq:int>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 4032,
+        "inputRowCount" : 336
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 0,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 0 ],
+      "Objectives" : {
+        "DurationInMs" : 3411,
+        "TotalTasksDurationInMs" : 3358,
+        "IOBytes" : {
+          "Total" : 112967,
+          "Details" : {
+            "IR" : 112967,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "2" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -273131104,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 570,
+                "rowCount" : 15
+              },
+              "compileTime" : {
+                "sizeInBytes" : 570,
+                "rowCount" : 15
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [w_warehouse_sk#39, w_warehouse_name#41] "
+          },
+          "1" : {
+            "sign" : 1460384489,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 3810,
+                "rowCount" : 15
+              },
+              "compileTime" : {
+                "sizeInBytes" : 3810,
+                "rowCount" : 15
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: isnotnull(w_warehouse_sk#39) "
+          },
+          "2" : {
+            "sign" : -290972551,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 3810,
+                "rowCount" : 15
+              },
+              "compileTime" : {
+                "sizeInBytes" : 3810,
+                "rowCount" : 15
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [w_warehouse_sk#39, w_warehouse_id#40, w_warehouse_name#41, w_warehouse_sq_ft#42, w_street_number#43, w_street_name#44, w_street_type#45, w_suite_number#46, w_city#47, w_county#48, w_state#49, w_zip#50, w_country#51, w_gmt_offset#52], `spark_catalog`.`tpcds_100`.`warehouse`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "LogicalRelation",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [w_warehouse_sk#39, w_warehouse_name#41]\n+- Filter isnotnull(w_warehouse_sk#39)\n   +- Relation spark_catalog.tpcds_100.warehouse[w_warehouse_sk#39,w_warehouse_id#40,w_warehouse_name#41,w_warehouse_sq_ft#42,w_street_number#43,w_street_name#44,w_street_type#45,w_suite_number#46,w_city#47,w_county#48,w_state#49,w_zip#50,w_country#51,w_gmt_offset#52] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -232559147,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 570,
+            "rowCount" : 15,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [2]: [w_warehouse_sk#39, w_warehouse_name#41] Condition : isnotnull(w_warehouse_sk#39) "
+          },
+          "1" : {
+            "sign" : 1096884805,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 570,
+            "rowCount" : 15,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpcds_100.warehouse Output [2]: [w_warehouse_sk#39, w_warehouse_name#41] Batched: true Location: InMemoryFileIndex [hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/warehouse] PushedFilters: [IsNotNull(w_warehouse_sk)] ReadSchema: struct<w_warehouse_sk:int,w_warehouse_name:string> "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "Scan parquet spark_catalog.tpcds_100.warehouse",
+          "toId" : 0,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Filter isnotnull(w_warehouse_sk#39)\n+- FileScan parquet spark_catalog.tpcds_100.warehouse[w_warehouse_sk#39,w_warehouse_name#41] Batched: true, DataFilters: [isnotnull(w_warehouse_sk#39)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/warehouse], PartitionFilters: [], PushedFilters: [IsNotNull(w_warehouse_sk)], ReadSchema: struct<w_warehouse_sk:int,w_warehouse_name:string>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 570,
+        "inputRowCount" : 15
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 2,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 3 ],
+      "Objectives" : {
+        "DurationInMs" : 6334,
+        "TotalTasksDurationInMs" : 6325,
+        "IOBytes" : {
+          "Total" : 6239,
+          "Details" : {
+            "IR" : 6239,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "3" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -131241975,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 1140,
+                "rowCount" : 30
+              },
+              "compileTime" : {
+                "sizeInBytes" : 1140,
+                "rowCount" : 30
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [cc_call_center_sk#59, cc_name#65] "
+          },
+          "1" : {
+            "sign" : 687315183,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 15990,
+                "rowCount" : 30
+              },
+              "compileTime" : {
+                "sizeInBytes" : 15990,
+                "rowCount" : 30
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: isnotnull(cc_call_center_sk#59) "
+          },
+          "2" : {
+            "sign" : -1491418427,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 15990,
+                "rowCount" : 30
+              },
+              "compileTime" : {
+                "sizeInBytes" : 15990,
+                "rowCount" : 30
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [cc_call_center_sk#59, cc_call_center_id#60, cc_rec_start_date#61, cc_rec_end_date#62, cc_closed_date_sk#63, cc_open_date_sk#64, cc_name#65, cc_class#66, cc_employees#67, cc_sq_ft#68, cc_hours#69, cc_manager#70, cc_mkt_id#71, cc_mkt_class#72, cc_mkt_desc#73, cc_market_manager#74, cc_division#75, cc_division_name#76, cc_company#77, cc_company_name#78, cc_street_number#79, cc_street_name#80, cc_street_type#81, cc_suite_number#82, ... 7 more fields], `spark_catalog`.`tpcds_100`.`call_center`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "LogicalRelation",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [cc_call_center_sk#59, cc_name#65]\n+- Filter isnotnull(cc_call_center_sk#59)\n   +- Relation spark_catalog.tpcds_100.call_center[cc_call_center_sk#59,cc_call_center_id#60,cc_rec_start_date#61,cc_rec_end_date#62,cc_closed_date_sk#63,cc_open_date_sk#64,cc_name#65,cc_class#66,cc_employees#67,cc_sq_ft#68,cc_hours#69,cc_manager#70,cc_mkt_id#71,cc_mkt_class#72,cc_mkt_desc#73,cc_market_manager#74,cc_division#75,cc_division_name#76,cc_company#77,cc_company_name#78,cc_street_number#79,cc_street_name#80,cc_street_type#81,cc_suite_number#82,... 7 more fields] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1703882555,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 1140,
+            "rowCount" : 30,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [2]: [cc_call_center_sk#59, cc_name#65] Condition : isnotnull(cc_call_center_sk#59) "
+          },
+          "1" : {
+            "sign" : 1123557157,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 1140,
+            "rowCount" : 30,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpcds_100.call_center Output [2]: [cc_call_center_sk#59, cc_name#65] Batched: true Location: InMemoryFileIndex [hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/call_center] PushedFilters: [IsNotNull(cc_call_center_sk)] ReadSchema: struct<cc_call_center_sk:int,cc_name:string> "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "Scan parquet spark_catalog.tpcds_100.call_center",
+          "toId" : 0,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Filter isnotnull(cc_call_center_sk#59)\n+- FileScan parquet spark_catalog.tpcds_100.call_center[cc_call_center_sk#59,cc_name#65] Batched: true, DataFilters: [isnotnull(cc_call_center_sk#59)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node7-opa:8020/user/spark_benchmark/tpcds_100/dataset/call_center], PartitionFilters: [], PushedFilters: [IsNotNull(cc_call_center_sk)], ReadSchema: struct<cc_call_center_sk:int,cc_name:string>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 1140,
+        "inputRowCount" : 30
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 3,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 1 ],
+      "Objectives" : {
+        "DurationInMs" : 3527,
+        "TotalTasksDurationInMs" : 3487,
+        "IOBytes" : {
+          "Total" : 13162,
+          "Details" : {
+            "IR" : 13162,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 0
+          }
+        }
+      }
+    }
+  },
+  "SQLStartTimeInMs" : 1702227534971,
+  "SQLEndTimeInMs" : 1702227569468,
+  "Objectives" : {
+    "DurationInMs" : 34497,
+    "IOBytes" : {
+      "Total" : 390675922,
+      "Details" : {
+        "IR" : 365156672,
+        "IW" : 0,
+        "SR" : 12759625,
+        "SW" : 12759625
+      }
+    }
+  }
+}

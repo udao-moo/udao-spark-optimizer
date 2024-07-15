@@ -1,0 +1,86 @@
+{
+  "4": {
+    "path": "AutogluonModels/tpch_fail_clf/template_4",
+    "eval_stats": {
+      "accuracy": 0.9868131868131869,
+      "balanced_accuracy": 0.5000000000000001,
+      "mcc": 0.0,
+      "roc_auc": 0.5003711952487008,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 2273,
+    "n_succ": 2241
+  },
+  "5": {
+    "path": "AutogluonModels/tpch_fail_clf/template_5",
+    "eval_stats": {
+      "accuracy": 0.9978021978021978,
+      "balanced_accuracy": 0.9943181818181819,
+      "mcc": 0.9929500751692686,
+      "roc_auc": 0.9955876888778796,
+      "f1": 0.9942857142857142,
+      "precision": 1.0,
+      "recall": 0.9886363636363636
+    },
+    "n_all": 2273,
+    "n_succ": 1831
+  },
+  "7": {
+    "path": "AutogluonModels/tpch_fail_clf/template_7",
+    "eval_stats": {
+      "accuracy": 0.989010989010989,
+      "balanced_accuracy": 0.9781167108753316,
+      "mcc": 0.9611488104742165,
+      "roc_auc": 0.9919744269876897,
+      "f1": 0.967741935483871,
+      "precision": 0.974025974025974,
+      "recall": 0.9615384615384616
+    },
+    "n_all": 2273,
+    "n_succ": 1881
+  },
+  "9": {
+    "path": "AutogluonModels/tpch_fail_clf/template_9",
+    "eval_stats": {
+      "accuracy": 0.9846153846153847,
+      "balanced_accuracy": 0.986471528717255,
+      "mcc": 0.9677989430804355,
+      "roc_auc": 0.9977350059443283,
+      "f1": 0.9800569800569802,
+      "precision": 0.9662921348314607,
+      "recall": 0.9942196531791907
+    },
+    "n_all": 2273,
+    "n_succ": 1407
+  },
+  "13": {
+    "path": "AutogluonModels/tpch_fail_clf/template_13",
+    "eval_stats": {
+      "accuracy": 0.9802197802197802,
+      "balanced_accuracy": 0.5909090909090909,
+      "mcc": 0.42214440664327735,
+      "roc_auc": 0.7073095823095823,
+      "f1": 0.3076923076923077,
+      "precision": 1.0,
+      "recall": 0.18181818181818182
+    },
+    "n_all": 2273,
+    "n_succ": 2216
+  },
+  "21": {
+    "path": "AutogluonModels/tpch_fail_clf/template_21",
+    "eval_stats": {
+      "accuracy": 0.9758241758241758,
+      "balanced_accuracy": 0.7608643167551907,
+      "mcc": 0.651286732712751,
+      "roc_auc": 0.9500845002414292,
+      "f1": 0.6451612903225806,
+      "precision": 0.8333333333333334,
+      "recall": 0.5263157894736842
+    },
+    "n_all": 2273,
+    "n_succ": 2177
+  }
+}

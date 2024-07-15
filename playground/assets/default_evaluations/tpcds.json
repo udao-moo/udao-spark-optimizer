@@ -1,0 +1,5514 @@
+{
+  "stats": {
+    "1-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_1-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6460.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_1-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6562.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_1-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6664.json"
+      ],
+      "latency_s": [
+        23.317,
+        24.476,
+        25.198
+      ],
+      "io_mb": [
+        535.6858005523682,
+        535.674129486084,
+        535.6816444396973
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006430585714583333,
+        0.006750225841666666,
+        0.006949345920833333
+      ],
+      "cost_w_io": [
+        0.016893199006621774,
+        0.017212611183191746,
+        0.01741187803879617
+      ]
+    },
+    "2-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_2-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6665.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_2-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6461.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_2-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6563.json"
+      ],
+      "latency_s": [
+        14.446,
+        20.393,
+        18.27
+      ],
+      "io_mb": [
+        1746.9593858718872,
+        1746.9593858718872,
+        1746.9594221115112
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.003984056320833333,
+        0.005624176972916667,
+        0.005038675687499999
+      ],
+      "cost_w_io": [
+        0.03810435682614363,
+        0.039744477478226965,
+        0.039158976900615455
+      ]
+    },
+    "3-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_3-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6462.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_3-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6564.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_3-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6666.json"
+      ],
+      "latency_s": [
+        12.465,
+        19.375,
+        14.427
+      ],
+      "io_mb": [
+        357.8691749572754,
+        357.8691749572754,
+        357.8691749572754
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0034377171562499998,
+        0.005343423177083333,
+        0.003978816318749999
+      ],
+      "cost_w_io": [
+        0.010427349479634286,
+        0.012333055500467618,
+        0.010968448642134285
+      ]
+    },
+    "4-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_4-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6463.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_4-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6565.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_4-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6667.json"
+      ],
+      "latency_s": [
+        57.016,
+        54.787,
+        50.607
+      ],
+      "io_mb": [
+        13772.994782447815,
+        13773.004942893982,
+        13772.99674320221
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.015724418883333334,
+        0.01510968390208333,
+        0.013956883443749998
+      ],
+      "cost_w_io": [
+        0.2847282232280172,
+        0.2841136866929814,
+        0.2829607260844182
+      ]
+    },
+    "5-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_5-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6566.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_5-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6464.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_5-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6668.json"
+      ],
+      "latency_s": [
+        12.241,
+        11.904,
+        11.6
+      ],
+      "io_mb": [
+        2358.371911048889,
+        2358.372097969055,
+        2358.371928215027
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.003375940289583333,
+        0.0032829991999999996,
+        0.003199159166666666
+      ],
+      "cost_w_io": [
+        0.04943789167725695,
+        0.049344954238458104,
+        0.04926111088961641
+      ]
+    },
+    "6-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_6-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6567.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_6-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6465.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_6-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6669.json"
+      ],
+      "latency_s": [
+        16.635,
+        18.118,
+        15.382
+      ],
+      "io_mb": [
+        91.56442070007324,
+        127.00619316101074,
+        127.00619316101074
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.00458775971875,
+        0.004996755670833333,
+        0.004242195370833333
+      ],
+      "cost_w_io": [
+        0.0063761273105483055,
+        0.007477345381009324,
+        0.006722785081009324
+      ]
+    },
+    "7-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_7-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6568.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_7-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6670.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_7-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6466.json"
+      ],
+      "latency_s": [
+        17.979,
+        13.825,
+        17.853
+      ],
+      "io_mb": [
+        813.054853439331,
+        813.054853439331,
+        813.054853439331
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0049584209187499995,
+        0.0038127909895833327,
+        0.00492367143125
+      ],
+      "cost_w_io": [
+        0.020838398524986937,
+        0.019692768595820268,
+        0.020803649037486938
+      ]
+    },
+    "8-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_8-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6671.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_8-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6569.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_8-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6467.json"
+      ],
+      "latency_s": [
+        8.977,
+        22.081,
+        10.306
+      ],
+      "io_mb": [
+        208.90853023529053,
+        208.90853023529053,
+        208.90853023529053
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.002475763089583333,
+        0.006089709789583333,
+        0.002842287445833333
+      ],
+      "cost_w_io": [
+        0.006556007820741351,
+        0.010169954520741351,
+        0.006922532176991351
+      ]
+    },
+    "9-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_9-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6468.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_9-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6672.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_9-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6570.json"
+      ],
+      "latency_s": [
+        43.795,
+        43.857,
+        42.557
+      ],
+      "io_mb": [
+        10286.643918037415,
+        10286.643918037415,
+        10286.643918037415
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.012078204802083332,
+        0.012095303756249998,
+        0.011736777297916667
+      ],
+      "cost_w_io": [
+        0.21298921882625158,
+        0.21300631778041826,
+        0.21264779132208492
+      ]
+    },
+    "10-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_10-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6469.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_10-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6673.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_10-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6571.json"
+      ],
+      "latency_s": [
+        20.731,
+        26.833,
+        25.931
+      ],
+      "io_mb": [
+        211.4858169555664,
+        211.4860324859619,
+        211.4860324859619
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.005717393852083334,
+        0.007400261889583332,
+        0.0071514996854166665
+      ],
+      "cost_w_io": [
+        0.009847976214496741,
+        0.011530848461574776,
+        0.01128208625740811
+      ]
+    },
+    "11-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_11-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6470.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_11-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6674.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_11-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6572.json"
+      ],
+      "latency_s": [
+        29.641,
+        35.111,
+        31.652
+      ],
+      "io_mb": [
+        5747.0751953125,
+        5747.0826625823975,
+        5747.073980331421
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.008174679039583332,
+        0.009683248060416665,
+        0.008729291891666666
+      ],
+      "cost_w_io": [
+        0.1204222414480306,
+        0.12193095631397911,
+        0.12097683057001474
+      ]
+    },
+    "12-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_12-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6471.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_12-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6573.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_12-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6675.json"
+      ],
+      "latency_s": [
+        18.593,
+        20.432,
+        12.187
+      ],
+      "io_mb": [
+        62.36673069000244,
+        62.36673069000244,
+        62.36673069000244
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.005127755722916666,
+        0.005634932766666666,
+        0.0033610476520833333
+      ],
+      "cost_w_io": [
+        0.006345855931705776,
+        0.006853032975455777,
+        0.004579147860872443
+      ]
+    },
+    "13-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_13-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6472.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_13-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6574.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_13-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6676.json"
+      ],
+      "latency_s": [
+        16.284,
+        14.789,
+        16.668
+      ],
+      "io_mb": [
+        937.2646312713623,
+        937.2646312713623,
+        937.2646312713623
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004490957574999999,
+        0.004078652147916666,
+        0.004596860774999999
+      ],
+      "cost_w_io": [
+        0.022796907404518795,
+        0.022384601977435463,
+        0.022902810604518795
+      ]
+    },
+    "14a-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_14a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6677.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_14a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6473.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_14a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6575.json"
+      ],
+      "latency_s": [
+        80.922,
+        76.126,
+        94.335
+      ],
+      "io_mb": [
+        3397.4912271499634,
+        3397.4936628341675,
+        3397.4933919906616
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.022317444662499998,
+        0.02099475782083333,
+        0.026016610343749996
+      ],
+      "cost_w_io": [
+        0.08867469519277271,
+        0.08735205592306317,
+        0.09237390315606761
+      ]
+    },
+    "14b-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_14b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6474.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_14b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6576.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_14b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6678.json"
+      ],
+      "latency_s": [
+        79.409,
+        83.648,
+        87.446
+      ],
+      "io_mb": [
+        3267.8380250930786,
+        3267.838032722473,
+        3267.838038444519
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.02190017502291667,
+        0.023069247066666663,
+        0.024116695904166662
+      ],
+      "cost_w_io": [
+        0.08572513645051585,
+        0.08689420864327746,
+        0.08794165759253618
+      ]
+    },
+    "15-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_15-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6679.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_15-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6475.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_15-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6577.json"
+      ],
+      "latency_s": [
+        23.086,
+        15.252,
+        28.338
+      ],
+      "io_mb": [
+        237.36279296875,
+        237.36351013183594,
+        237.36243629455566
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006366878320833333,
+        0.004206342724999999,
+        0.0078153252125
+      ],
+      "cost_w_io": [
+        0.011002870371004232,
+        0.008842348782262421,
+        0.01245131029637804
+      ]
+    },
+    "16-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_16-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6476.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_16-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6680.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_16-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6578.json"
+      ],
+      "latency_s": [
+        45.997,
+        47.695,
+        43.295
+      ],
+      "io_mb": [
+        3940.6319818496704,
+        3940.6319818496704,
+        3940.6319818496704
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.012685493464583333,
+        0.013153784177083334,
+        0.011940310010416665
+      ],
+      "cost_w_io": [
+        0.08965096186008471,
+        0.09011925257258471,
+        0.08890577840591804
+      ]
+    },
+    "17-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_17-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6579.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_17-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6681.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_17-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6477.json"
+      ],
+      "latency_s": [
+        26.239,
+        24.772,
+        27.955
+      ],
+      "io_mb": [
+        2693.51487159729,
+        2693.50616645813,
+        2693.507032394409
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007236442877083333,
+        0.006831859558333333,
+        0.007709697802083332
+      ],
+      "cost_w_io": [
+        0.0598441552129679,
+        0.05943940187196868,
+        0.06031725702853664
+      ]
+    },
+    "18-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_18-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6682.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_18-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6478.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_18-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6580.json"
+      ],
+      "latency_s": [
+        24.596,
+        26.413,
+        27.884
+      ],
+      "io_mb": [
+        819.4638423919678,
+        819.4636917114258,
+        819.4687767028809
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006783320591666667,
+        0.007284430264583333,
+        0.007690116741666668
+      ],
+      "cost_w_io": [
+        0.022788473763384786,
+        0.023289580493322116,
+        0.023695366286644808
+      ]
+    },
+    "19-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_19-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6683.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_19-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6479.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_19-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6581.json"
+      ],
+      "latency_s": [
+        14.263,
+        14.33,
+        13.775
+      ],
+      "io_mb": [
+        178.22260189056396,
+        178.228045463562,
+        178.2208127975464
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0039335868270833334,
+        0.003952064729166667,
+        0.0037990015104166666
+      ],
+      "cost_w_io": [
+        0.00741449702025841,
+        0.007433081242126863,
+        0.007279876760368745
+      ]
+    },
+    "20-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_20-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6684.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_20-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6582.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_20-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6480.json"
+      ],
+      "latency_s": [
+        9.55,
+        7.954,
+        7.213
+      ],
+      "io_mb": [
+        82.0674352645874,
+        82.0674352645874,
+        82.0674352645874
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.002633790520833333,
+        0.002193630345833333,
+        0.0019892702645833327
+      ],
+      "cost_w_io": [
+        0.004236670115844806,
+        0.0037965099408448057,
+        0.0035921498595948053
+      ]
+    },
+    "21-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_21-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6583.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_21-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6481.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_21-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6685.json"
+      ],
+      "latency_s": [
+        6.73,
+        6.985,
+        18.752
+      ],
+      "io_mb": [
+        98.35706424713135,
+        98.35706424713135,
+        98.35706424713135
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0018560638958333335,
+        0.0019263902395833333,
+        0.005171606266666667
+      ],
+      "cost_w_io": [
+        0.003777100306910118,
+        0.0038474266506601175,
+        0.007092642677743451
+      ]
+    },
+    "22-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_22-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6482.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_22-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6584.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_22-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6686.json"
+      ],
+      "latency_s": [
+        20.843,
+        28.041,
+        32.114
+      ],
+      "io_mb": [
+        2023.4959392547607,
+        2023.4959392547607,
+        2023.4959392547607
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.005748282285416666,
+        0.00773341570625,
+        0.008856706679166666
+      ],
+      "cost_w_io": [
+        0.04526968734898622,
+        0.047254820769819544,
+        0.048378111742736214
+      ]
+    },
+    "23a-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_23a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6585.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_23a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6483.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_23a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6687.json"
+      ],
+      "latency_s": [
+        199.069,
+        174.026,
+        193.146
+      ],
+      "io_mb": [
+        20663.548652648926,
+        20663.548496246338,
+        20663.548181533813
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.054901156564583324,
+        0.04799455802916667,
+        0.05326765486249999
+      ],
+      "cost_w_io": [
+        0.4584860911866327,
+        0.451579489596478,
+        0.45685258028308234
+      ]
+    },
+    "23b-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_23b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6484.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_23b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6688.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_23b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6586.json"
+      ],
+      "latency_s": [
+        165.522,
+        165.931,
+        187.66
+      ],
+      "io_mb": [
+        21391.595818519592,
+        21394.711049079895,
+        21397.869661331177
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.04564924341249999,
+        0.04576204135208333,
+        0.051754673208333324
+      ],
+      "cost_w_io": [
+        0.4634538492429608,
+        0.46362749152942506,
+        0.46968181503120787
+      ]
+    },
+    "24a-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_24a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6689.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_24a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6587.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_24a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6485.json"
+      ],
+      "latency_s": [
+        94.267,
+        122.473,
+        92.323
+      ],
+      "io_mb": [
+        19323.262926101685,
+        19323.30634689331,
+        19323.223712921143
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.02599785665208333,
+        0.03377677763958333,
+        0.025461721702083332
+      ],
+      "cost_w_io": [
+        0.40340533567750686,
+        0.41118510472734326,
+        0.4028684348450744
+      ]
+    },
+    "24b-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_24b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6486.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_24b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6588.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_24b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6690.json"
+      ],
+      "latency_s": [
+        88.808,
+        121.764,
+        132.859
+      ],
+      "io_mb": [
+        19264.15456008911,
+        19264.203147888184,
+        19264.256504058838
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.024492321316666666,
+        0.033581242824999996,
+        0.036641128252083335
+      ],
+      "cost_w_io": [
+        0.4007453400684071,
+        0.4098352105571911,
+        0.4128961380969825
+      ]
+    },
+    "25-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_25-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6589.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_25-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6487.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_25-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6691.json"
+      ],
+      "latency_s": [
+        25.974,
+        37.375,
+        37.902
+      ],
+      "io_mb": [
+        1596.0680055618286,
+        1596.063000679016,
+        1596.0657415390015
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0071633586375,
+        0.010307635677083333,
+        0.010452976787499998
+      ],
+      "cost_w_io": [
+        0.038336561871129465,
+        0.04148074115909536,
+        0.041626135801933625
+      ]
+    },
+    "26-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_26-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6488.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_26-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6590.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_26-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6692.json"
+      ],
+      "latency_s": [
+        28.351,
+        23.379,
+        28.873
+      ],
+      "io_mb": [
+        464.3868598937988,
+        464.3868598937988,
+        464.3868598937988
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007818910477083333,
+        0.00644768466875,
+        0.007962872639583332
+      ],
+      "cost_w_io": [
+        0.01688896633438409,
+        0.015517740526050759,
+        0.017032928496884092
+      ]
+    },
+    "27-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_27-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6489.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_27-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6591.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_27-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6693.json"
+      ],
+      "latency_s": [
+        25.786,
+        17.967,
+        15.72
+      ],
+      "io_mb": [
+        789.8210258483887,
+        789.8210258483887,
+        789.8210258483887
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007111510195833334,
+        0.0049551114437499984,
+        0.004335412249999999
+      ],
+      "cost_w_io": [
+        0.022537702106934676,
+        0.02038130335485134,
+        0.01976160416110134
+      ]
+    },
+    "28-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_28-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6592.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_28-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6490.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_28-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6694.json"
+      ],
+      "latency_s": [
+        67.694,
+        67.904,
+        72.25
+      ],
+      "io_mb": [
+        14070.026321411133,
+        14070.026321411133,
+        14070.026321411133
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.018669300054166664,
+        0.018727215866666667,
+        0.01992579739583333
+      ],
+      "cost_w_io": [
+        0.2934745016442279,
+        0.29353241745672787,
+        0.29473099898589455
+      ]
+    },
+    "29-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_29-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6491.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_29-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6593.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_29-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6695.json"
+      ],
+      "latency_s": [
+        30.687,
+        45.177,
+        45.538
+      ],
+      "io_mb": [
+        3968.9437141418457,
+        3968.9394302368164,
+        3968.9412727355957
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.008463154943749999,
+        0.012459346006249998,
+        0.012558906045833332
+      ],
+      "cost_w_io": [
+        0.08598158686058292,
+        0.08997769425306282,
+        0.09007729027895044
+      ]
+    },
+    "30-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_30-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6696.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_30-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6594.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_30-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6492.json"
+      ],
+      "latency_s": [
+        37.28,
+        37.167,
+        27.89
+      ],
+      "io_mb": [
+        322.9448051452637,
+        322.94473457336426,
+        335.8536434173584
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.010281435666666667,
+        0.01025027144375,
+        0.0076917714791666664
+      ],
+      "cost_w_io": [
+        0.016588951392160097,
+        0.016557785790886022,
+        0.014251412952161948
+      ]
+    },
+    "31-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_31-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6697.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_31-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6493.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_31-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6595.json"
+      ],
+      "latency_s": [
+        21.29,
+        21.936,
+        19.601
+      ],
+      "io_mb": [
+        929.2718563079834,
+        929.2152233123779,
+        929.2152233123779
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.005871560229166666,
+        0.006049720299999999,
+        0.0054057516229166665
+      ],
+      "cost_w_io": [
+        0.024021401172681967,
+        0.02419845513031988,
+        0.02355448645323655
+      ]
+    },
+    "32-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_32-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6494.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_32-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6596.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_32-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6698.json"
+      ],
+      "latency_s": [
+        15.882,
+        21.491,
+        9.85
+      ],
+      "io_mb": [
+        68.1636152267456,
+        68.1636152267456,
+        68.1636152267456
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004380090162499999,
+        0.005926993935416666,
+        0.002716527395833333
+      ],
+      "cost_w_io": [
+        0.0057114107723973745,
+        0.007258314545314041,
+        0.004047848005730708
+      ]
+    },
+    "33-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_33-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6699.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_33-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6495.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_33-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6597.json"
+      ],
+      "latency_s": [
+        22.989,
+        11.964,
+        9.392
+      ],
+      "io_mb": [
+        48.56001663208008,
+        48.56013107299805,
+        48.560089111328125
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0063401267312499995,
+        0.003299546575,
+        0.0025902157666666662
+      ],
+      "cost_w_io": [
+        0.007288564556095314,
+        0.004247986635019493,
+        0.0035386550071222936
+      ]
+    },
+    "34-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_34-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6496.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_34-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6598.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_34-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6700.json"
+      ],
+      "latency_s": [
+        12.424,
+        8.088,
+        20.754
+      ],
+      "io_mb": [
+        309.37541484832764,
+        309.3716707229614,
+        309.371356010437
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.003426409783333333,
+        0.00223058615,
+        0.0057237370125
+      ],
+      "cost_w_io": [
+        0.009468898354589732,
+        0.00827300159380784,
+        0.011766146309578847
+      ]
+    },
+    "35-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_35-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6497.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_35-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6701.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_35-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6599.json"
+      ],
+      "latency_s": [
+        40.042,
+        38.37,
+        31.594
+      ],
+      "io_mb": [
+        361.8917112350464,
+        361.8917360305786,
+        361.8917112350464
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.011043166495833333,
+        0.0105820463125,
+        0.008713296095833333
+      ],
+      "cost_w_io": [
+        0.01811136398089283,
+        0.01765024428184724,
+        0.015781493580892834
+      ]
+    },
+    "36-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_36-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6600.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_36-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6498.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_36-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6702.json"
+      ],
+      "latency_s": [
+        10.309,
+        19.16,
+        19.744
+      ],
+      "io_mb": [
+        649.6529989242554,
+        649.653000831604,
+        649.6530046463013
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.002843114814583333,
+        0.005284128416666667,
+        0.005445189533333334
+      ],
+      "cost_w_io": [
+        0.015531649949822694,
+        0.017972663589158933,
+        0.018133724780331408
+      ]
+    },
+    "37-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_37-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6601.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_37-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6499.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_37-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6703.json"
+      ],
+      "latency_s": [
+        19.992,
+        13.599,
+        22.032
+      ],
+      "io_mb": [
+        687.0918807983398,
+        687.0918807983398,
+        687.0918807983398
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.005513585350000001,
+        0.0037504625437499994,
+        0.0060761960999999995
+      ],
+      "cost_w_io": [
+        0.018933348646842575,
+        0.017170225840592575,
+        0.019495959396842576
+      ]
+    },
+    "38-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_38-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6602.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_38-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6704.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_38-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6500.json"
+      ],
+      "latency_s": [
+        49.261,
+        37.849,
+        44.032
+      ],
+      "io_mb": [
+        1350.1723556518555,
+        1350.1836223602295,
+        1350.1767749786377
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.013585670664583332,
+        0.010438359939583334,
+        0.012143566933333332
+      ],
+      "cost_w_io": [
+        0.03995622448590864,
+        0.036809133813806565,
+        0.03851420706963485
+      ]
+    },
+    "39a-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_39a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6705.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_39a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6603.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_39a-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6501.json"
+      ],
+      "latency_s": [
+        10.564,
+        15.999,
+        21.546
+      ],
+      "io_mb": [
+        484.9582176208496,
+        484.3160123825073,
+        591.3365621566772
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.002913441158333333,
+        0.0044123575437499995,
+        0.005942162362499999
+      ],
+      "cost_w_io": [
+        0.012385281346240553,
+        0.013871654660595846,
+        0.0174917045921226
+      ]
+    },
+    "39b-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_39b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6502.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_39b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6706.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_39b-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6604.json"
+      ],
+      "latency_s": [
+        10.343,
+        12.191,
+        19.345
+      ],
+      "io_mb": [
+        479.06174182891846,
+        481.3248405456543,
+        481.3246908187866
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0028524916604166666,
+        0.003362150810416667,
+        0.005335149489583333
+      ],
+      "cost_w_io": [
+        0.01220916630551273,
+        0.012763026602323977,
+        0.01473602235713776
+      ]
+    },
+    "40-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_40-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6605.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_40-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6707.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_40-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6503.json"
+      ],
+      "latency_s": [
+        22.337,
+        28.922,
+        18.529
+      ],
+      "io_mb": [
+        725.0941114425659,
+        725.0941114425659,
+        725.0941114425659
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006160311922916667,
+        0.007976386329166666,
+        0.005110105189583333
+      ],
+      "cost_w_io": [
+        0.02032230628702928,
+        0.02213838069327928,
+        0.019272099553695948
+      ]
+    },
+    "41-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_41-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6504.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_41-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6606.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_41-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6708.json"
+      ],
+      "latency_s": [
+        13.005,
+        9.641,
+        14.373
+      ],
+      "io_mb": [
+        2.7804222106933594,
+        2.7804222106933594,
+        2.7804222106933594
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0035866435312499998,
+        0.0026588873729166663,
+        0.003963923681249999
+      ],
+      "cost_w_io": [
+        0.0036409486525526046,
+        0.002713192494219271,
+        0.004018228802552604
+      ]
+    },
+    "42-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_42-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6607.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_42-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6505.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_42-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6709.json"
+      ],
+      "latency_s": [
+        11.812,
+        5.426,
+        14.072
+      ],
+      "io_mb": [
+        72.33961296081543,
+        72.33961296081543,
+        72.33961296081543
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.003257626558333333,
+        0.0014964342791666666,
+        0.0038809110166666662
+      ],
+      "cost_w_io": [
+        0.004670509623974259,
+        0.002909317344807593,
+        0.005293794082307592
+      ]
+    },
+    "43-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_43-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6608.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_43-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6506.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_43-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6710.json"
+      ],
+      "latency_s": [
+        25.459,
+        6.527,
+        6.857
+      ],
+      "io_mb": [
+        130.275860786438,
+        130.275860786438,
+        130.275860786438
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007021327002083333,
+        0.0018000786104166667,
+        0.0018910891729166665
+      ],
+      "cost_w_io": [
+        0.00956577740806845,
+        0.004344529016401783,
+        0.004435539578901783
+      ]
+    },
+    "44-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_44-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6609.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_44-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6711.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_44-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6507.json"
+      ],
+      "latency_s": [
+        41.751,
+        23.356,
+        28.651
+      ],
+      "io_mb": [
+        3641.383813858032,
+        3641.383813858032,
+        3641.383813858032
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.011514490893749998,
+        0.0064413415083333335,
+        0.007901647352083332
+      ],
+      "cost_w_io": [
+        0.08263526850816469,
+        0.07756211912274803,
+        0.07902242496649803
+      ]
+    },
+    "45-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_45-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6508.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_45-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6610.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_45-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6712.json"
+      ],
+      "latency_s": [
+        17.603,
+        25.835,
+        14.381
+      ],
+      "io_mb": [
+        231.06078052520752,
+        231.05993366241455,
+        231.05955028533936
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0048547240354166665,
+        0.0071250238854166665,
+        0.0039661299979166665
+      ],
+      "cost_w_io": [
+        0.009367629905049626,
+        0.011637913214760702,
+        0.008479011839427201
+      ]
+    },
+    "46-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_46-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6713.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_46-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6509.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_46-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6611.json"
+      ],
+      "latency_s": [
+        16.954,
+        29.672,
+        23.871
+      ],
+      "io_mb": [
+        820.9039545059204,
+        820.9039392471313,
+        820.9039373397827
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004675736595833334,
+        0.008183228516666667,
+        0.006583373143749998
+      ],
+      "cost_w_io": [
+        0.02070901695727709,
+        0.024216508580087198,
+        0.02261665316991763
+      ]
+    },
+    "47-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_47-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6714.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_47-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6510.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_47-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6612.json"
+      ],
+      "latency_s": [
+        34.321,
+        36.21,
+        18.767
+      ],
+      "io_mb": [
+        2415.4313745498657,
+        2415.3972148895264,
+        2415.468632698059
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.009465374289583333,
+        0.009986340812500001,
+        0.005175743110416667
+      ],
+      "cost_w_io": [
+        0.0566417683237604,
+        0.05716206766581106,
+        0.052352864842800634
+      ]
+    },
+    "48-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_48-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6613.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_48-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6715.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_48-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6511.json"
+      ],
+      "latency_s": [
+        7.122,
+        16.563,
+        19.486
+      ],
+      "io_mb": [
+        492.52424335479736,
+        492.52424335479736,
+        492.52424335479736
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0019641734124999995,
+        0.0045679028687499994,
+        0.005374035820833333
+      ],
+      "cost_w_io": [
+        0.011583787540523385,
+        0.014187516996773385,
+        0.014993649948856718
+      ]
+    },
+    "49-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_49-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6512.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_49-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6716.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_49-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6614.json"
+      ],
+      "latency_s": [
+        17.292,
+        21.877,
+        25.429
+      ],
+      "io_mb": [
+        940.7504730224609,
+        940.7501735687256,
+        940.7501564025879
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0047689534750000005,
+        0.006033448714583333,
+        0.0070130533145833325
+      ],
+      "cost_w_io": [
+        0.02314298615121994,
+        0.024407475542097507,
+        0.025387079806821377
+      ]
+    },
+    "50-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_50-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6717.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_50-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6513.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_50-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6615.json"
+      ],
+      "latency_s": [
+        103.285,
+        97.473,
+        103.57
+      ],
+      "io_mb": [
+        42439.128600120544,
+        42439.128600120544,
+        42439.128600120544
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.028484927114583333,
+        0.026882038056249998,
+        0.02856352714583333
+      ],
+      "cost_w_io": [
+        0.8573741575856877,
+        0.8557712685273544,
+        0.8574527576169377
+      ]
+    },
+    "51-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_51-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6514.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_51-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6718.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_51-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6616.json"
+      ],
+      "latency_s": [
+        79.663,
+        77.999,
+        84.6
+      ],
+      "io_mb": [
+        4356.932973861694,
+        4356.9358959198,
+        4356.945468902588
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.021970225577083332,
+        0.021511311710416665,
+        0.023331798749999997
+      ],
+      "cost_w_io": [
+        0.10706657272281955,
+        0.10660771592760025,
+        0.10842838993950367
+      ]
+    },
+    "52-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_52-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6719.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_52-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6617.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_52-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6515.json"
+      ],
+      "latency_s": [
+        7.878,
+        10.424,
+        30.568
+      ],
+      "io_mb": [
+        73.59717845916748,
+        73.59717845916748,
+        73.59717845916748
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0021726703374999995,
+        0.0028748306166666666,
+        0.008430335983333336
+      ],
+      "cost_w_io": [
+        0.003610115229280614,
+        0.004312275508447282,
+        0.00986778087511395
+      ]
+    },
+    "53-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_53-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6720.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_53-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6618.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_53-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6516.json"
+      ],
+      "latency_s": [
+        11.504,
+        10.445,
+        36.438
+      ],
+      "io_mb": [
+        341.46259593963623,
+        341.46256732940674,
+        341.46259021759033
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.003172683366666666,
+        0.0028806221979166663,
+        0.010049220837500001
+      ],
+      "cost_w_io": [
+        0.009841874693612687,
+        0.009549812966069143,
+        0.01671841205268731
+      ]
+    },
+    "54-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_54-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6619.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_54-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6517.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_54-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6721.json"
+      ],
+      "latency_s": [
+        21.721,
+        38.113,
+        43.961
+      ],
+      "io_mb": [
+        239.14359664916992,
+        239.14359664916992,
+        239.14359664916992
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0059904255395833335,
+        0.010511168389583334,
+        0.012123985872916666
+      ],
+      "cost_w_io": [
+        0.010661198911637432,
+        0.015181941761637435,
+        0.016794759244970765
+      ]
+    },
+    "55-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_55-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6518.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_55-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6620.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_55-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6722.json"
+      ],
+      "latency_s": [
+        29.27,
+        6.374,
+        35.942
+      ],
+      "io_mb": [
+        73.57629203796387,
+        73.57629203796387,
+        73.57629203796387
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.008072361104166667,
+        0.0017578828041666665,
+        0.009912429204166665
+      ],
+      "cost_w_io": [
+        0.009509398058033148,
+        0.0031949197580331485,
+        0.011349466158033146
+      ]
+    },
+    "56-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_56-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6723.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_56-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6621.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_56-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6519.json"
+      ],
+      "latency_s": [
+        23.652,
+        29.639,
+        23.206
+      ],
+      "io_mb": [
+        54.9928503036499,
+        54.99305057525635,
+        54.99322986602783
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006522975225,
+        0.008174127460416666,
+        0.006399973070833334
+      ],
+      "cost_w_io": [
+        0.007597054332493162,
+        0.009248210479464641,
+        0.00747405959165419
+      ]
+    },
+    "57-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_57-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6622.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_57-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6724.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_57-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6520.json"
+      ],
+      "latency_s": [
+        35.534,
+        28.865,
+        36.263
+      ],
+      "io_mb": [
+        1401.467776298523,
+        1401.4555349349976,
+        1401.463026046753
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.009799907054166666,
+        0.007960666322916666,
+        0.010000957660416665
+      ],
+      "cost_w_io": [
+        0.037172324559997194,
+        0.035332844739615836,
+        0.03737328238789231
+      ]
+    },
+    "58-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_58-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6725.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_58-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6521.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_58-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6623.json"
+      ],
+      "latency_s": [
+        9.522,
+        10.049,
+        22.101
+      ],
+      "io_mb": [
+        32.77198505401611,
+        32.77198505401611,
+        32.77198505401611
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0026260684125,
+        0.0027714095229166664,
+        0.006095225581249999
+      ],
+      "cost_w_io": [
+        0.003266146245586252,
+        0.0034114873560029185,
+        0.006735303414336251
+      ]
+    },
+    "59-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_59-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6624.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_59-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6726.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_59-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6522.json"
+      ],
+      "latency_s": [
+        18.609,
+        45.37,
+        28.784
+      ],
+      "io_mb": [
+        1323.0000228881836,
+        1321.6952266693115,
+        1322.997413635254
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.00513216835625,
+        0.012512573395833332,
+        0.007938327366666666
+      ],
+      "cost_w_io": [
+        0.030972012553284838,
+        0.038326933291718324,
+        0.033778120601730216
+      ]
+    },
+    "60-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_60-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6523.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_60-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6625.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_60-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6727.json"
+      ],
+      "latency_s": [
+        16.503,
+        9.746,
+        33.083
+      ],
+      "io_mb": [
+        114.49506092071533,
+        114.49388599395752,
+        114.49322414398193
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004551355493749999,
+        0.0026878452791666667,
+        0.009123946785416665
+      ],
+      "cost_w_io": [
+        0.0067875871523577205,
+        0.00492405398998615,
+        0.011360142569478811
+      ]
+    },
+    "62-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_62-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6524.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_62-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6728.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_62-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6626.json"
+      ],
+      "latency_s": [
+        26.316,
+        39.123,
+        37.092
+      ],
+      "io_mb": [
+        206.41164779663086,
+        206.41164779663086,
+        206.41164779663086
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007257678674999999,
+        0.010789715868749999,
+        0.010229587225
+      ],
+      "cost_w_io": [
+        0.011289156171027945,
+        0.014821193364777946,
+        0.014261064721027946
+      ]
+    },
+    "63-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_63-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6729.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_63-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6627.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_63-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6525.json"
+      ],
+      "latency_s": [
+        29.822,
+        26.124,
+        11.901
+      ],
+      "io_mb": [
+        341.4203815460205,
+        341.42040634155273,
+        341.4203853607178
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.008224596954166665,
+        0.007204727075,
+        0.0032821718312499998
+      ],
+      "cost_w_io": [
+        0.014892963781237379,
+        0.013873094386358451,
+        0.00995053873282652
+      ]
+    },
+    "64-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_64-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6526.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_64-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6730.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_64-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6628.json"
+      ],
+      "latency_s": [
+        72.508,
+        64.64,
+        86.075
+      ],
+      "io_mb": [
+        10308.794984817505,
+        10308.796730041504,
+        10308.796937942505
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.01999695110833333,
+        0.01782703866666667,
+        0.02373858838541667
+      ],
+      "cost_w_io": [
+        0.22134060315555024,
+        0.21917072480028982,
+        0.22508227857960622
+      ]
+    },
+    "65-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_65-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6731.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_65-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6527.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_65-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6629.json"
+      ],
+      "latency_s": [
+        26.828,
+        45.57,
+        40.57
+      ],
+      "io_mb": [
+        3627.6722021102905,
+        3627.665301322937,
+        3627.6691007614136
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007398882941666665,
+        0.012567731312499998,
+        0.011188783395833334
+      ],
+      "cost_w_io": [
+        0.07825185563913328,
+        0.08342056922896361,
+        0.0820416955200797
+      ]
+    },
+    "66-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_66-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6630.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_66-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6528.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_66-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6732.json"
+      ],
+      "latency_s": [
+        22.197,
+        17.311,
+        15.17
+      ],
+      "io_mb": [
+        450.42344665527344,
+        450.42344665527344,
+        450.42344665527344
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006121701381249999,
+        0.004774193477083332,
+        0.004183727979166666
+      ],
+      "cost_w_io": [
+        0.014919034323735808,
+        0.013571526419569142,
+        0.012981060921652476
+      ]
+    },
+    "67-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_67-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6529.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_67-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6631.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_67-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6733.json"
+      ],
+      "latency_s": [
+        87.47,
+        89.963,
+        91.071
+      ],
+      "io_mb": [
+        5773.706849098206,
+        5773.706849098206,
+        5773.706849098206
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.024123314854166664,
+        0.024810858285416664,
+        0.02511643314375
+      ],
+      "cost_w_io": [
+        0.13689102675061599,
+        0.13757857018186598,
+        0.13788414504019933
+      ]
+    },
+    "68-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_68-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6632.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_68-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6734.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_68-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6530.json"
+      ],
+      "latency_s": [
+        16.397,
+        23.814,
+        26.99
+      ],
+      "io_mb": [
+        486.30340003967285,
+        486.30340003967285,
+        486.3033924102783
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0045221217979166655,
+        0.0065676531375,
+        0.007443560854166666
+      ],
+      "cost_w_io": [
+        0.014020235079941526,
+        0.01606576641952486,
+        0.016941673987179915
+      ]
+    },
+    "69-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_69-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6633.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_69-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6531.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_69-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6735.json"
+      ],
+      "latency_s": [
+        25.921,
+        20.869,
+        20.959
+      ],
+      "io_mb": [
+        187.4706859588623,
+        187.4706859588623,
+        187.4706859588623
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007148741789583333,
+        0.005755452814583334,
+        0.005780273877083332
+      ],
+      "cost_w_io": [
+        0.010810278624717362,
+        0.009416989649717364,
+        0.009441810712217362
+      ]
+    },
+    "70-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_70-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6634.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_70-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6532.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_70-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6736.json"
+      ],
+      "latency_s": [
+        21.802,
+        19.438,
+        17.627
+      ],
+      "io_mb": [
+        450.0192518234253,
+        450.0192518234253,
+        450.0192518234253
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006012764495833333,
+        0.005360797920833332,
+        0.004861342985416667
+      ],
+      "cost_w_io": [
+        0.014802203008009608,
+        0.014150236433009607,
+        0.013650781497592943
+      ]
+    },
+    "71-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_71-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6737.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_71-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6533.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_71-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6635.json"
+      ],
+      "latency_s": [
+        15.421,
+        16.99,
+        18.897
+      ],
+      "io_mb": [
+        160.1986083984375,
+        160.1997127532959,
+        160.20074844360352
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004252951164583333,
+        0.004685665020833333,
+        0.005211595756249999
+      ],
+      "cost_w_io": [
+        0.007381830234865315,
+        0.007814565660546143,
+        0.00834051662428913
+      ]
+    },
+    "72-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_72-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6636.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_72-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6738.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_72-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6534.json"
+      ],
+      "latency_s": [
+        102.587,
+        94.617,
+        99.109
+      ],
+      "io_mb": [
+        17148.541766166687,
+        17148.541964530945,
+        17148.541485786438
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.028292425985416668,
+        0.02609438300625,
+        0.02733322981458333
+      ],
+      "cost_w_io": [
+        0.36322488235585976,
+        0.36102684325099504,
+        0.3622656807088497
+      ]
+    },
+    "73-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_73-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6637.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_73-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6535.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_73-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6739.json"
+      ],
+      "latency_s": [
+        13.744,
+        16.019,
+        9.292
+      ],
+      "io_mb": [
+        233.31326580047607,
+        233.31330394744873,
+        233.3132963180542
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0037904520333333328,
+        0.004417873335416666,
+        0.0025626368083333335
+      ],
+      "cost_w_io": [
+        0.008347351755998881,
+        0.008974773803140275,
+        0.0071195371270453296
+      ]
+    },
+    "74-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_74-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6536.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_74-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6638.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_74-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6740.json"
+      ],
+      "latency_s": [
+        38.08,
+        52.929,
+        49.481
+      ],
+      "io_mb": [
+        3816.6227264404297,
+        3816.625665664673,
+        3816.6106147766113
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.010502067333333332,
+        0.014597266856249999,
+        0.013646344372916666
+      ],
+      "cost_w_io": [
+        0.08504547995912298,
+        0.08914073688876314,
+        0.08818952044277235
+      ]
+    },
+    "75-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_75-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6741.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_75-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6639.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_75-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6537.json"
+      ],
+      "latency_s": [
+        56.258,
+        50.628,
+        56.537
+      ],
+      "io_mb": [
+        7762.594312667847,
+        7762.592994689941,
+        7762.593912124634
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.015515370379166667,
+        0.013962675025000001,
+        0.015592315672916666
+      ],
+      "cost_w_io": [
+        0.16712854054846055,
+        0.16557581945253794,
+        0.1672054780191009
+      ]
+    },
+    "76-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_76-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6538.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_76-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6742.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_76-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6640.json"
+      ],
+      "latency_s": [
+        17.523,
+        28.46,
+        24.908
+      ],
+      "io_mb": [
+        4086.6750164031982,
+        4086.6750164031982,
+        4086.6750164031982
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.00483266086875,
+        0.007848971541666666,
+        0.0068693669416666665
+      ],
+      "cost_w_io": [
+        0.08465053228287497,
+        0.08766684295579164,
+        0.08668723835579163
+      ]
+    },
+    "77-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_77-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6539.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_77-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6743.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_77-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6641.json"
+      ],
+      "latency_s": [
+        21.108,
+        11.833,
+        12.184
+      ],
+      "io_mb": [
+        96.97171592712402,
+        96.97172546386719,
+        96.97171592712402
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.005821366524999999,
+        0.0032634181395833333,
+        0.003360220283333333
+      ],
+      "cost_w_io": [
+        0.00771534535170164,
+        0.00515739715254949,
+        0.005254199110034974
+      ]
+    },
+    "78-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_78-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6642.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_78-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6744.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_78-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6540.json"
+      ],
+      "latency_s": [
+        78.461,
+        62.937,
+        77.092
+      ],
+      "io_mb": [
+        12817.267770767212,
+        12817.267770767212,
+        12817.267770767212
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.021638726497916663,
+        0.017357369006249998,
+        0.021261170558333334
+      ],
+      "cost_w_io": [
+        0.27197598764571373,
+        0.2676946301540471,
+        0.2715984317061304
+      ]
+    },
+    "79-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_79-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6541.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_79-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6643.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_79-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6745.json"
+      ],
+      "latency_s": [
+        34.383,
+        29.143,
+        11.115
+      ],
+      "io_mb": [
+        476.8968687057495,
+        476.92110538482666,
+        476.89447498321533
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.009482473243750001,
+        0.008037335827083334,
+        0.0030654012187500005
+      ],
+      "cost_w_io": [
+        0.018796865210659174,
+        0.017352201166630728,
+        0.012379746433265924
+      ]
+    },
+    "80-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_80-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6746.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_80-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6644.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_80-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6542.json"
+      ],
+      "latency_s": [
+        42.495,
+        39.598,
+        41.739
+      ],
+      "io_mb": [
+        3226.4727096557617,
+        3226.4726028442383,
+        3226.4726028442383
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.01171967834375,
+        0.010920715920833332,
+        0.011511181418749999
+      ],
+      "cost_w_io": [
+        0.0747367234542141,
+        0.07393775894513487,
+        0.07452822444305153
+      ]
+    },
+    "81-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_81-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6645.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_81-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6543.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_81-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6747.json"
+      ],
+      "latency_s": [
+        24.414,
+        15.358,
+        26.832
+      ],
+      "io_mb": [
+        274.322078704834,
+        258.33100509643555,
+        274.322078704834
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0067331268875000004,
+        0.004235576420833333,
+        0.007399986099999999
+      ],
+      "cost_w_io": [
+        0.01209097998720379,
+        0.00928110386412309,
+        0.012757839199703788
+      ]
+    },
+    "82-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_82-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6544.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_82-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6748.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_82-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6646.json"
+      ],
+      "latency_s": [
+        15.178,
+        27.752,
+        26.526
+      ],
+      "io_mb": [
+        1241.0012645721436,
+        1241.0012645721436,
+        1241.0012645721436
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004185934295833333,
+        0.007653712516666666,
+        0.0073155944874999995
+      ],
+      "cost_w_io": [
+        0.02842424024450801,
+        0.03189201846534134,
+        0.031553900436174676
+      ]
+    },
+    "83-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_83-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6749.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_83-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6545.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_83-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6647.json"
+      ],
+      "latency_s": [
+        12.151,
+        21.441,
+        15.169
+      ],
+      "io_mb": [
+        13.122447967529297,
+        13.122447967529297,
+        13.122447967529297
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.003351119227083333,
+        0.005913204456249999,
+        0.004183452189583333
+      ],
+      "cost_w_io": [
+        0.00360741703894914,
+        0.006169502268115805,
+        0.0044397500014491395
+      ]
+    },
+    "84-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_84-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6648.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_84-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6750.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_84-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6546.json"
+      ],
+      "latency_s": [
+        25.649,
+        19.157,
+        32.44
+      ],
+      "io_mb": [
+        474.8220272064209,
+        474.8220272064209,
+        474.8220272064209
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007073727022916667,
+        0.005283301047916666,
+        0.008946614083333334
+      ],
+      "cost_w_io": [
+        0.016347594741792076,
+        0.014557168766792075,
+        0.01822048180220874
+      ]
+    },
+    "85-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_85-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6649.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_85-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6547.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_85-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6751.json"
+      ],
+      "latency_s": [
+        15.099,
+        24.26,
+        13.778
+      ],
+      "io_mb": [
+        561.8091974258423,
+        561.8092412948608,
+        561.8091955184937
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004164146918749999,
+        0.006690655291666667,
+        0.0037998288791666664
+      ],
+      "cost_w_io": [
+        0.015136982805973483,
+        0.01766349203570692,
+        0.014772664729137245
+      ]
+    },
+    "86-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_86-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6752.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_86-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6650.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_86-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6548.json"
+      ],
+      "latency_s": [
+        7.471,
+        6.682,
+        11.305
+      ],
+      "io_mb": [
+        116.08532047271729,
+        116.08532428741455,
+        116.08532619476318
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0020604239770833335,
+        0.001842825995833333,
+        0.003117801239583333
+      ],
+      "cost_w_io": [
+        0.0043277153925660936,
+        0.004110117485821898,
+        0.005385092766824802
+      ]
+    },
+    "87-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_87-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6753.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_87-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6651.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_87-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6549.json"
+      ],
+      "latency_s": [
+        48.509,
+        53.609,
+        42.139
+      ],
+      "io_mb": [
+        1350.187686920166,
+        1350.193769454956,
+        1350.190631866455
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.013378276897916666,
+        0.014784803772916667,
+        0.011621497252083335
+      ],
+      "cost_w_io": [
+        0.03974913015807616,
+        0.04115577583258378,
+        0.03799240803072504
+      ]
+    },
+    "88-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_88-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6550.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_88-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6652.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_88-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6754.json"
+      ],
+      "latency_s": [
+        52.205,
+        55.82,
+        42.761
+      ],
+      "io_mb": [
+        3663.8933305740356,
+        3663.8933305740356,
+        3663.8933305740356
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.014397595197916667,
+        0.015394574541666668,
+        0.011793038372916665
+      ],
+      "cost_w_io": [
+        0.08595801181069081,
+        0.0869549911544408,
+        0.0833534549856908
+      ]
+    },
+    "89-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_89-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6653.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_89-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6551.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_89-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6755.json"
+      ],
+      "latency_s": [
+        18.003,
+        14.47,
+        19.463
+      ],
+      "io_mb": [
+        351.89292335510254,
+        351.89223289489746,
+        351.89319610595703
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.00496503986875,
+        0.003990675270833333,
+        0.005367692660416668
+      ],
+      "cost_w_io": [
+        0.011837948528029347,
+        0.0108635704445618,
+        0.012240606646861142
+      ]
+    },
+    "90-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_90-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6654.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_90-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6552.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_90-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6756.json"
+      ],
+      "latency_s": [
+        26.342,
+        28.689,
+        19.579
+      ],
+      "io_mb": [
+        388.03831481933594,
+        388.03831481933594,
+        388.03831481933594
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.007264849204166666,
+        0.00791212735625,
+        0.0053996842520833335
+      ],
+      "cost_w_io": [
+        0.014843722540481821,
+        0.015491000692565156,
+        0.012978557588398488
+      ]
+    },
+    "91-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_91-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6757.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_91-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6655.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_91-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6553.json"
+      ],
+      "latency_s": [
+        8.372,
+        18.75,
+        17.27
+      ],
+      "io_mb": [
+        121.54366111755371,
+        121.54366111755371,
+        121.54366111755371
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.002308910391666667,
+        0.0051710546875,
+        0.004762886104166665
+      ],
+      "cost_w_io": [
+        0.004682810022868888,
+        0.00754495431870222,
+        0.007136785735368885
+      ]
+    },
+    "92-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_92-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6554.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_92-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6758.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_92-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6656.json"
+      ],
+      "latency_s": [
+        18.696,
+        14.303,
+        11.774
+      ],
+      "io_mb": [
+        36.764004707336426,
+        36.764004707336426,
+        36.764004707336426
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.005156162050000001,
+        0.003944618410416666,
+        0.003247146554166666
+      ],
+      "cost_w_io": [
+        0.005874209016940166,
+        0.004662665377356831,
+        0.00396519352110683
+      ]
+    },
+    "93-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_93-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6555.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_93-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6657.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_93-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6759.json"
+      ],
+      "latency_s": [
+        84.637,
+        80.855,
+        81.327
+      ],
+      "io_mb": [
+        17341.1515083313,
+        17341.1515083313,
+        17341.1515083313
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.02334200296458333,
+        0.022298966760416667,
+        0.022429139443749996
+      ],
+      "cost_w_io": [
+        0.362036368361679,
+        0.36099333215751234,
+        0.36112350484084565
+      ]
+    },
+    "94-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_94-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6556.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_94-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6760.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_94-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6658.json"
+      ],
+      "latency_s": [
+        58.121,
+        59.131,
+        53.583
+      ],
+      "io_mb": [
+        1907.5012350082397,
+        1907.5012350082397,
+        1907.5012350082397
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.016029166372916664,
+        0.01630771385208333,
+        0.014777633243749998
+      ],
+      "cost_w_io": [
+        0.05328504986917135,
+        0.053563597348338016,
+        0.052033516740004684
+      ]
+    },
+    "95-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_95-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6761.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_95-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6659.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_95-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6557.json"
+      ],
+      "latency_s": [
+        71.819,
+        69.833,
+        57.484
+      ],
+      "io_mb": [
+        3150.3139963150024,
+        3150.3139963150024,
+        3150.3139963150024
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.019806932085416666,
+        0.019259213972916668,
+        0.015853488408333335
+      ],
+      "cost_w_io": [
+        0.08133650232594405,
+        0.08078878421344407,
+        0.07738305864886073
+      ]
+    },
+    "96-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_96-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6762.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_96-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6660.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_96-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6558.json"
+      ],
+      "latency_s": [
+        24.389,
+        30.024,
+        28.127
+      ],
+      "io_mb": [
+        458.00594902038574,
+        458.00594902038574,
+        458.00594902038574
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.006726232147916665,
+        0.00828030645,
+        0.007757133610416667
+      ],
+      "cost_w_io": [
+        0.015671660839721074,
+        0.017225735141804407,
+        0.016702562302221075
+      ]
+    },
+    "97-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_97-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6661.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_97-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6763.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_97-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6559.json"
+      ],
+      "latency_s": [
+        36.319,
+        34.408,
+        33.601
+      ],
+      "io_mb": [
+        2206.81983089447,
+        2206.81983089447,
+        2206.81983089447
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.010016401877083334,
+        0.009489367983333332,
+        0.009266805789583332
+      ],
+      "cost_w_io": [
+        0.05311835169924095,
+        0.05259131780549095,
+        0.05236875561174095
+      ]
+    },
+    "98-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_98-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6662.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_98-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6764.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_98-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6560.json"
+      ],
+      "latency_s": [
+        12.385,
+        25.082,
+        28.656
+      ],
+      "io_mb": [
+        127.42520523071289,
+        127.42520523071289,
+        127.42520523071289
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.0034156539895833326,
+        0.006917354329166667,
+        0.0079030263
+      ],
+      "cost_w_io": [
+        0.005904427529245694,
+        0.009406127868829028,
+        0.01039179983966236
+      ]
+    },
+    "99-1": {
+      "json_trace": [
+        "evaluations/tpcds100/default_conf/trace/tpcds100_99-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6663.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_99-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6561.json",
+        "evaluations/tpcds100/default_conf/trace/tpcds100_99-1_1,1g,16,16,48m,200,true,0.6,64MB,0.2,0MB,10MB,200,256MB,5,128MB,4MB,0.2,1024KB_application_1708608976033_6765.json"
+      ],
+      "latency_s": [
+        16.286,
+        27.992,
+        25.327
+      ],
+      "io_mb": [
+        372.57759284973145,
+        372.57759284973145,
+        372.57759284973145
+      ],
+      "cores": [
+        17,
+        17,
+        17
+      ],
+      "cost_wo_io": [
+        0.004491509154166668,
+        0.007719902016666668,
+        0.006984922777083334
+      ],
+      "cost_w_io": [
+        0.011768415264512985,
+        0.014996808127012986,
+        0.014261828887429651
+      ]
+    }
+  },
+  "agg_stats": {
+    "1-1": {
+      "latency_s": [
+        24.330333333333332,
+        0.7747921585101961
+      ],
+      "io_mb": [
+        535.6805248260498,
+        0.004830017121578664
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006710052492361111,
+        0.00021367960656546085
+      ],
+      "cost_w_io": [
+        0.017172562742869896,
+        0.00021363503580249755
+      ]
+    },
+    "2-1": {
+      "latency_s": [
+        17.703,
+        2.4607341722881544
+      ],
+      "io_mb": [
+        1746.959397951762,
+        1.7083522596415712e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00488230299375,
+        0.0006786448520694452
+      ],
+      "cost_w_io": [
+        0.039002603734995346,
+        0.0006786449064334526
+      ]
+    },
+    "3-1": {
+      "latency_s": [
+        15.422333333333333,
+        2.9074664037420774
+      ],
+      "io_mb": [
+        357.8691749572754,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004253318884027777,
+        0.0008018489480436928
+      ],
+      "cost_w_io": [
+        0.011242951207412063,
+        0.000801848948043692
+      ]
+    },
+    "4-1": {
+      "latency_s": [
+        54.13666666666666,
+        2.656566748434695
+      ],
+      "io_mb": [
+        13772.998822848002,
+        0.004400936381061844
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.014930328743055554,
+        0.0007326534366479934
+      ],
+      "cost_w_io": [
+        0.28393421200180563,
+        0.0007326526742994353
+      ]
+    },
+    "5-1": {
+      "latency_s": [
+        11.915,
+        0.2618027247120753
+      ],
+      "io_mb": [
+        2358.371979077657,
+        8.43605060819712e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0032860328854166666,
+        7.220246436387467e-05
+      ],
+      "cost_w_io": [
+        0.04934798560177716,
+        7.220227878389652e-05
+      ]
+    },
+    "6-1": {
+      "latency_s": [
+        16.711666666666666,
+        1.1182821150715447
+      ],
+      "io_mb": [
+        115.19226900736491,
+        16.707411762933024
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004608903586805556,
+        0.00030841055856470025
+      ],
+      "cost_w_io": [
+        0.006858752590855651,
+        0.00045973592599653
+      ]
+    },
+    "7-1": {
+      "latency_s": [
+        16.552333333333333,
+        1.9292017923368092
+      ],
+      "io_mb": [
+        813.054853439331,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0045649611131944445,
+        0.0005320537584744886
+      ],
+      "cost_w_io": [
+        0.020444938719431382,
+        0.0005320537584744898
+      ]
+    },
+    "8-1": {
+      "latency_s": [
+        13.787999999999998,
+        5.889082950680861
+      ],
+      "io_mb": [
+        208.90853023529053,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0038025867749999997,
+        0.0016241477331837121
+      ],
+      "cost_w_io": [
+        0.007882831506158016,
+        0.0016241477331837121
+      ]
+    },
+    "9-1": {
+      "latency_s": [
+        43.403,
+        0.5987475817626872
+      ],
+      "io_mb": [
+        10286.643918037415,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.011970095285416668,
+        0.0001651283460961717
+      ],
+      "cost_w_io": [
+        0.21288110930958493,
+        0.0001651283460961728
+      ]
+    },
+    "10-1": {
+      "latency_s": [
+        24.498333333333335,
+        2.689237975503262
+      ],
+      "io_mb": [
+        211.48596064249674,
+        0.00010160200281026189
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00675638514236111,
+        0.0007416638207482213
+      ],
+      "cost_w_io": [
+        0.010886970311159877,
+        0.0007416657864703829
+      ]
+    },
+    "11-1": {
+      "latency_s": [
+        32.13466666666667,
+        2.2590485214404357
+      ],
+      "io_mb": [
+        5747.0772794087725,
+        0.0038386597887532683
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.008862406330555553,
+        0.0006230220504578405
+      ],
+      "cost_w_io": [
+        0.12111000944400814,
+        0.0006230877926596041
+      ]
+    },
+    "12-1": {
+      "latency_s": [
+        17.070666666666664,
+        3.5339430605989612
+      ],
+      "io_mb": [
+        62.36673069000244,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004707912047222222,
+        0.0009746246842063122
+      ],
+      "cost_w_io": [
+        0.0059260122560113315,
+        0.0009746246842063124
+      ]
+    },
+    "13-1": {
+      "latency_s": [
+        15.913666666666666,
+        0.810563727016917
+      ],
+      "io_mb": [
+        937.2646312713623,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004388823499305555,
+        0.00022354503253910928
+      ],
+      "cost_w_io": [
+        0.022694773328824348,
+        0.00022354503253910887
+      ]
+    },
+    "14a-1": {
+      "latency_s": [
+        83.79433333333333,
+        7.706259115521324
+      ],
+      "io_mb": [
+        3397.492760658264,
+        0.0010899770127821647
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.023109604275694442,
+        0.0021253059905283283
+      ],
+      "cost_w_io": [
+        0.08946688475730118,
+        0.00212530948923044
+      ]
+    },
+    "14b-1": {
+      "latency_s": [
+        83.501,
+        3.2827375770840983
+      ],
+      "io_mb": [
+        3267.8380320866904,
+        5.469211112367395e-06
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.023028705997916666,
+        0.0009053448285766977
+      ],
+      "cost_w_io": [
+        0.08685366756210983,
+        0.0009053449352603871
+      ]
+    },
+    "15-1": {
+      "latency_s": [
+        22.225333333333335,
+        5.3768893940228635
+      ],
+      "io_mb": [
+        237.36291313171387,
+        0.00044655046712943397
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006129515419444444,
+        0.001482890085606985
+      ],
+      "cost_w_io": [
+        0.010765509816548231,
+        0.0014828813904469165
+      ]
+    },
+    "16-1": {
+      "latency_s": [
+        45.66233333333334,
+        1.8118133335295756
+      ],
+      "io_mb": [
+        3940.6319818496704,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.012593195884027776,
+        0.0004996792443319006
+      ],
+      "cost_w_io": [
+        0.08955866427952915,
+        0.0004996792443319022
+      ]
+    },
+    "17-1": {
+      "latency_s": [
+        26.322,
+        1.3007789973704218
+      ],
+      "io_mb": [
+        2693.50935681661,
+        0.003915530264142781
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.007259333412499999,
+        0.00035874129769353935
+      ],
+      "cost_w_io": [
+        0.05986693803782441,
+        0.0003587447670322822
+      ]
+    },
+    "18-1": {
+      "latency_s": [
+        26.297666666666668,
+        1.3447954821789405
+      ],
+      "io_mb": [
+        819.4654369354248,
+        0.0023623732631720537
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.007252622532638889,
+        0.00037088058569867936
+      ],
+      "cost_w_io": [
+        0.0232578068477839,
+        0.00037091839677510667
+      ]
+    },
+    "19-1": {
+      "latency_s": [
+        14.122666666666667,
+        0.24735444653820585
+      ],
+      "io_mb": [
+        178.22382005055746,
+        0.0030757979724182266
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0038948843555555563,
+        6.821777974641928e-05
+      ],
+      "cost_w_io": [
+        0.007375818340918006,
+        6.826386786742439e-05
+      ]
+    },
+    "20-1": {
+      "latency_s": [
+        8.239,
+        0.9751276839470823
+      ],
+      "io_mb": [
+        82.0674352645874,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.002272230377083333,
+        0.0002689300576525642
+      ],
+      "cost_w_io": [
+        0.0038751099720948055,
+        0.0002689300576525642
+      ]
+    },
+    "21-1": {
+      "latency_s": [
+        10.822333333333333,
+        5.608087394310311
+      ],
+      "io_mb": [
+        98.35706424713135,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0029846868006944446,
+        0.0015466520857737598
+      ],
+      "cost_w_io": [
+        0.004905723211771229,
+        0.00154665208577376
+      ]
+    },
+    "22-1": {
+      "latency_s": [
+        26.99933333333333,
+        4.659947233845273
+      ],
+      "io_mb": [
+        2023.4959392547607,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.007446134890277778,
+        0.0012851649059775073
+      ],
+      "cost_w_io": [
+        0.04696753995384733,
+        0.0012851649059775056
+      ]
+    },
+    "23a-1": {
+      "latency_s": [
+        188.74699999999999,
+        10.686482520767367
+      ],
+      "io_mb": [
+        20663.54844347636,
+        0.00019591812109592417
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.05205445648541666,
+        0.00294722056170138
+      ],
+      "cost_w_io": [
+        0.4556393870220643,
+        0.0029472207018043893
+      ]
+    },
+    "23b-1": {
+      "latency_s": [
+        173.03766666666664,
+        10.340899197952863
+      ],
+      "io_mb": [
+        21394.725509643555,
+        2.561306012830636
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.047721985990972215,
+        0.00285191228109542
+      ],
+      "cost_w_io": [
+        0.4655877186011979,
+        0.0028958311523725943
+      ]
+    },
+    "24a-1": {
+      "latency_s": [
+        103.021,
+        13.777518209024441
+      ],
+      "io_mb": [
+        19323.264328638714,
+        0.033749752311686976
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.028412118664583333,
+        0.003799696006234263
+      ],
+      "cost_w_io": [
+        0.40581962508330816,
+        0.0038002933644551585
+      ]
+    },
+    "24b-1": {
+      "latency_s": [
+        114.47700000000002,
+        18.707359104552054
+      ],
+      "io_mb": [
+        19264.20473734538,
+        0.04163362440409007
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.03157156413125,
+        0.005159294772711451
+      ],
+      "cost_w_io": [
+        0.4078255629075269,
+        0.005160070150663872
+      ]
+    },
+    "25-1": {
+      "latency_s": [
+        33.75033333333334,
+        5.502905434606543
+      ],
+      "io_mb": [
+        1596.065582593282,
+        0.0020463236625717206
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00930799036736111,
+        0.0015176439969328737
+      ],
+      "cost_w_io": [
+        0.04048114627738615,
+        0.0015176114142979253
+      ]
+    },
+    "26-1": {
+      "latency_s": [
+        26.86766666666667,
+        2.476047567304706
+      ],
+      "io_mb": [
+        464.3868598937988,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.007409822595138889,
+        0.0006828681269004781
+      ],
+      "cost_w_io": [
+        0.016479878452439648,
+        0.0006828681269004786
+      ]
+    },
+    "27-1": {
+      "latency_s": [
+        19.824333333333332,
+        4.314190100380629
+      ],
+      "io_mb": [
+        789.8210258483887,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00546734462986111,
+        0.0011898086902047658
+      ],
+      "cost_w_io": [
+        0.02089353654096245,
+        0.001189808690204767
+      ]
+    },
+    "28-1": {
+      "latency_s": [
+        69.28266666666667,
+        2.099972274949257
+      ],
+      "io_mb": [
+        14070.026321411133,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.01910743777222222,
+        0.0005791504787198065
+      ],
+      "cost_w_io": [
+        0.29391263936228346,
+        0.0005791504787198109
+      ]
+    },
+    "29-1": {
+      "latency_s": [
+        40.467333333333336,
+        6.9173101869312035
+      ],
+      "io_mb": [
+        3968.9414723714194,
+        0.0017545847412892188
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.01116046899861111,
+        0.0019077220942411788
+      ],
+      "cost_w_io": [
+        0.08867885713086539,
+        0.0019076914539665302
+      ]
+    },
+    "30-1": {
+      "latency_s": [
+        34.11233333333333,
+        4.400095933297616
+      ],
+      "io_mb": [
+        327.2477277119954,
+        6.085301353650158
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.009407826196527776,
+        0.0012135006240708444
+      ],
+      "cost_w_io": [
+        0.015799383378402688,
+        0.0010946543302378304
+      ]
+    },
+    "31-1": {
+      "latency_s": [
+        20.942333333333334,
+        0.9844491973800491
+      ],
+      "io_mb": [
+        929.2341009775797,
+        0.0266970501543566
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005775677384027777,
+        0.0002715008339582779
+      ],
+      "cost_w_io": [
+        0.02392478091874613,
+        0.0002716315143340124
+      ]
+    },
+    "32-1": {
+      "latency_s": [
+        15.741,
+        4.75346407019835
+      ],
+      "io_mb": [
+        68.1636152267456,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0043412038312499995,
+        0.0013109558753099737
+      ],
+      "cost_w_io": [
+        0.005672524441147375,
+        0.0013109558753099737
+      ]
+    },
+    "33-1": {
+      "latency_s": [
+        14.781666666666666,
+        5.897685214462442
+      ],
+      "io_mb": [
+        48.560078938802086,
+        4.727078830831173e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004076629690972221,
+        0.001626520147927757
+      ],
+      "cost_w_io": [
+        0.005025068732745701,
+        0.0016265193607464749
+      ]
+    },
+    "34-1": {
+      "latency_s": [
+        13.755333333333335,
+        5.255868170171531
+      ],
+      "io_mb": [
+        309.3728138605754,
+        0.0018436583123206264
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.003793577648611111,
+        0.001449513692706535
+      ],
+      "cost_w_io": [
+        0.009836015419325474,
+        0.0014495047903209028
+      ]
+    },
+    "35-1": {
+      "latency_s": [
+        36.66866666666667,
+        3.6526773133628367
+      ],
+      "io_mb": [
+        361.8917195002238,
+        1.168872598702128e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.010112836301388888,
+        0.0010073703543034562
+      ],
+      "cost_w_io": [
+        0.017181033947877632,
+        0.0010073704294935191
+      ]
+    },
+    "36-1": {
+      "latency_s": [
+        16.404333333333334,
+        4.3166406949025635
+      ],
+      "io_mb": [
+        649.6530014673868,
+        2.378881700372023e-06
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004524144254861111,
+        0.001190484538646889
+      ],
+      "cost_w_io": [
+        0.017212679439771013,
+        0.0011904845753956382
+      ]
+    },
+    "37-1": {
+      "latency_s": [
+        18.541,
+        3.5923922391632015
+      ],
+      "io_mb": [
+        687.0918807983398,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005113414664583333,
+        0.00099074435880872
+      ],
+      "cost_w_io": [
+        0.01853317796142591,
+        0.00099074435880872
+      ]
+    },
+    "38-1": {
+      "latency_s": [
+        43.714,
+        4.664352688208732
+      ],
+      "io_mb": [
+        1350.177584330241,
+        0.004635081222554232
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.012055865845833333,
+        0.0012863798844007979
+      ],
+      "cost_w_io": [
+        0.03842652178978335,
+        0.0012862896137948994
+      ]
+    },
+    "39a-1": {
+      "latency_s": [
+        16.036333333333335,
+        4.483460444294736
+      ],
+      "io_mb": [
+        520.2035973866781,
+        50.29928504872608
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004422653688194444,
+        0.0012364916878235264
+      ],
+      "cost_w_io": [
+        0.014582880199653,
+        0.0021444923124252497
+      ]
+    },
+    "39b-1": {
+      "latency_s": [
+        13.959666666666665,
+        3.882021581026508
+      ],
+      "io_mb": [
+        480.57042439778644,
+        1.0667996768557026
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.003849930653472222,
+        0.0010706211143223087
+      ],
+      "cost_w_io": [
+        0.013236071754991488,
+        0.0010844596699909072
+      ]
+    },
+    "40-1": {
+      "latency_s": [
+        23.262666666666664,
+        4.29311513420681
+      ],
+      "io_mb": [
+        725.0941114425659,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006415601147222221,
+        0.0011839964340649236
+      ],
+      "cost_w_io": [
+        0.020577595511334836,
+        0.0011839964340649232
+      ]
+    },
+    "41-1": {
+      "latency_s": [
+        12.339666666666666,
+        1.9882919526289111
+      ],
+      "io_mb": [
+        2.7804222106933594,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0034031515284722222,
+        0.0005483502091605471
+      ],
+      "cost_w_io": [
+        0.0034574566497748266,
+        0.000548350209160547
+      ]
+    },
+    "42-1": {
+      "latency_s": [
+        10.436666666666666,
+        3.6612370708394293
+      ],
+      "io_mb": [
+        72.33961296081543,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0028783239513888886,
+        0.00100973104625136
+      ],
+      "cost_w_io": [
+        0.004291207017029814,
+        0.00100973104625136
+      ]
+    },
+    "43-1": {
+      "latency_s": [
+        12.947666666666668,
+        8.84787437121984
+      ],
+      "io_mb": [
+        130.275860786438,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0035708315951388883,
+        0.0024401515862243982
+      ],
+      "cost_w_io": [
+        0.006115282001124006,
+        0.0024401515862243987
+      ]
+    },
+    "44-1": {
+      "latency_s": [
+        31.252666666666666,
+        7.731774627398866
+      ],
+      "io_mb": [
+        3641.383813858032,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.008619159918055555,
+        0.002132342902917571
+      ],
+      "cost_w_io": [
+        0.07973993753247026,
+        0.0021323429029175677
+      ]
+    },
+    "45-1": {
+      "latency_s": [
+        19.273,
+        4.8228763202056095
+      ],
+      "io_mb": [
+        231.0600881576538,
+        0.00051398710588242
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005315292639583333,
+        0.001330099050817705
+      ],
+      "cost_w_io": [
+        0.009828184986412511,
+        0.001330099673457557
+      ]
+    },
+    "46-1": {
+      "latency_s": [
+        23.499,
+        5.198760685650636
+      ],
+      "io_mb": [
+        820.9039436976115,
+        7.682193739315396e-06
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006480779418749999,
+        0.0014337640433453027
+      ],
+      "cost_w_io": [
+        0.02251405956909397,
+        0.0014337639173909217
+      ]
+    },
+    "47-1": {
+      "latency_s": [
+        29.766000000000002,
+        7.815607504645219
+      ],
+      "io_mb": [
+        2415.4324073791504,
+        0.02916534354506309
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.008209152737500001,
+        0.002155463137202978
+      ],
+      "cost_w_io": [
+        0.05538556694412403,
+        0.002154938417969774
+      ]
+    },
+    "48-1": {
+      "latency_s": [
+        14.390333333333333,
+        5.276203454084091
+      ],
+      "io_mb": [
+        492.52424335479736,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.003968704034027777,
+        0.0014551219521837455
+      ],
+      "cost_w_io": [
+        0.013588318162051164,
+        0.0014551219521837457
+      ]
+    },
+    "49-1": {
+      "latency_s": [
+        21.532666666666668,
+        3.330827358013153
+      ],
+      "io_mb": [
+        940.7502676645914,
+        0.00014537895304937723
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005938485168055556,
+        0.0009186074892217147
+      ],
+      "cost_w_io": [
+        0.02431251383337961,
+        0.000918604876382159
+      ]
+    },
+    "50-1": {
+      "latency_s": [
+        101.44266666666665,
+        2.8093885851234983
+      ],
+      "io_mb": [
+        42439.128600120544,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.02797683077222222,
+        0.0007748001073126327
+      ],
+      "cost_w_io": [
+        0.8568660612433266,
+        0.0007748001073126181
+      ]
+    },
+    "51-1": {
+      "latency_s": [
+        80.75399999999999,
+        2.803094837258751
+      ],
+      "io_mb": [
+        4356.938112894694,
+        0.0053365247739238725
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.022271112012499997,
+        0.0007730643572114083
+      ],
+      "cost_w_io": [
+        0.1073675595299745,
+        0.0007731572750594858
+      ]
+    },
+    "52-1": {
+      "latency_s": [
+        16.290000000000003,
+        10.149433218986502
+      ],
+      "io_mb": [
+        73.59717845916748,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004492612312500001,
+        0.00279910795853378
+      ],
+      "cost_w_io": [
+        0.005930057204280616,
+        0.00279910795853378
+      ]
+    },
+    "53-1": {
+      "latency_s": [
+        19.462333333333333,
+        12.011392212765717
+      ],
+      "io_mb": [
+        341.46258449554443,
+        1.2361031910720559e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005367508800694445,
+        0.003312616853611902
+      ],
+      "cost_w_io": [
+        0.012036699904123047,
+        0.0033126169407971693
+      ]
+    },
+    "54-1": {
+      "latency_s": [
+        34.598333333333336,
+        9.413432294097385
+      ],
+      "io_mb": [
+        239.14359664916992,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.009541859934027778,
+        0.0025961265701256618
+      ],
+      "cost_w_io": [
+        0.014212633306081877,
+        0.002596126570125662
+      ]
+    },
+    "55-1": {
+      "latency_s": [
+        23.862,
+        12.662319534745599
+      ],
+      "io_mb": [
+        73.57629203796387,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006580891037499999,
+        0.003492135828521015
+      ],
+      "cost_w_io": [
+        0.008017927991366481,
+        0.003492135828521015
+      ]
+    },
+    "56-1": {
+      "latency_s": [
+        25.499,
+        2.933079042008017
+      ],
+      "io_mb": [
+        54.99304358164469,
+        0.0001550345824601321
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.007032358585416666,
+        0.0008089126468791234
+      ],
+      "cost_w_io": [
+        0.008106441467870665,
+        0.0008089125554082785
+      ]
+    },
+    "57-1": {
+      "latency_s": [
+        33.554,
+        3.3289538897377353
+      ],
+      "io_mb": [
+        1401.4621124267578,
+        0.005039098554424157
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.009253843679166665,
+        0.0009180908061866494
+      ],
+      "cost_w_io": [
+        0.036626150562501784,
+        0.000918177896989865
+      ]
+    },
+    "58-1": {
+      "latency_s": [
+        13.890666666666666,
+        5.80956753028045
+      ],
+      "io_mb": [
+        32.77198505401611,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0038309011722222216,
+        0.0016022182085229071
+      ],
+      "cost_w_io": [
+        0.004470979005308473,
+        0.0016022182085229071
+      ]
+    },
+    "59-1": {
+      "latency_s": [
+        30.921000000000003,
+        11.02913889053296
+      ],
+      "io_mb": [
+        1322.5642210642498,
+        0.6144727527865687
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00852768970625,
+        0.0030417216191455476
+      ],
+      "cost_w_io": [
+        0.03435902214891113,
+        0.0030305994701596167
+      ]
+    },
+    "60-1": {
+      "latency_s": [
+        19.777333333333335,
+        9.804585197186512
+      ],
+      "io_mb": [
+        114.49405701955159,
+        0.0007595500893994735
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005454382519444444,
+        0.0027040024662882355
+      ],
+      "cost_w_io": [
+        0.007690594570607561,
+        0.0027039940641983232
+      ]
+    },
+    "62-1": {
+      "latency_s": [
+        34.177,
+        5.620067081450184
+      ],
+      "io_mb": [
+        206.41164779663086,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.009425660589583332,
+        0.0015499559586985296
+      ],
+      "cost_w_io": [
+        0.01345713808561128,
+        0.0015499559586985296
+      ]
+    },
+    "63-1": {
+      "latency_s": [
+        22.615666666666666,
+        7.725363522550609
+      ],
+      "io_mb": [
+        341.4203910827637,
+        1.0901405461300053e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006237165286805554,
+        0.002130574786982764
+      ],
+      "cost_w_io": [
+        0.012905532300140785,
+        0.002130574825847739
+      ]
+    },
+    "64-1": {
+      "latency_s": [
+        74.40766666666667,
+        8.853299058668595
+      ],
+      "io_mb": [
+        10308.796217600504,
+        0.0008758314715235154
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.020520859386805555,
+        0.002441647658515604
+      ],
+      "cost_w_io": [
+        0.2218645355118154,
+        0.002441651880304767
+      ]
+    },
+    "65-1": {
+      "latency_s": [
+        37.656,
+        7.9239799764175745
+      ],
+      "io_mb": [
+        3627.6688680648804,
+        0.0028220355870699505
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.01038513255,
+        0.00218535113603788
+      ],
+      "cost_w_io": [
+        0.0812380401293922,
+        0.0021852988405341714
+      ]
+    },
+    "66-1": {
+      "latency_s": [
+        18.226,
+        2.94081632657782
+      ],
+      "io_mb": [
+        450.42344665527344,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005026540945833332,
+        0.0008110465093667608
+      ],
+      "cost_w_io": [
+        0.013823873888319141,
+        0.0008110465093667608
+      ]
+    },
+    "67-1": {
+      "latency_s": [
+        89.50133333333333,
+        1.5059110937310407
+      ],
+      "io_mb": [
+        5773.706849098206,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.024683535427777775,
+        0.00041531459307712855
+      ],
+      "cost_w_io": [
+        0.1374512473242271,
+        0.0004153145930771314
+      ]
+    },
+    "68-1": {
+      "latency_s": [
+        22.400333333333332,
+        4.438599804242575
+      ],
+      "io_mb": [
+        486.3033974965413,
+        3.596531072929624e-06
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006177778596527777,
+        0.001224119590595475
+      ],
+      "cost_w_io": [
+        0.0156758918288821,
+        0.0012241195392344118
+      ]
+    },
+    "69-1": {
+      "latency_s": [
+        22.583,
+        2.3606083961555333
+      ],
+      "io_mb": [
+        187.4706859588623,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006228156160416667,
+        0.0006510312059889026
+      ],
+      "cost_w_io": [
+        0.009889692995550696,
+        0.0006510312059889027
+      ]
+    },
+    "70-1": {
+      "latency_s": [
+        19.62233333333333,
+        1.709413219662103
+      ],
+      "io_mb": [
+        450.0192518234253,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.005411635134027777,
+        0.00047143835959510285
+      ],
+      "cost_w_io": [
+        0.014201073646204052,
+        0.0004714383595951026
+      ]
+    },
+    "71-1": {
+      "latency_s": [
+        17.102666666666668,
+        1.4213055813425748
+      ],
+      "io_mb": [
+        160.1996898651123,
+        0.000873819672418315
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004716737313888888,
+        0.00039198127406780964
+      ],
+      "cost_w_io": [
+        0.007845637506566862,
+        0.0003919982933874152
+      ]
+    },
+    "72-1": {
+      "latency_s": [
+        98.771,
+        3.2625049680677365
+      ],
+      "io_mb": [
+        17148.541738828022,
+        0.00019640031841044957
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.027240012935416665,
+        0.0008997648857663319
+      ],
+      "cost_w_io": [
+        0.36217246877190146,
+        0.0008997630523350178
+      ]
+    },
+    "73-1": {
+      "latency_s": [
+        13.018333333333333,
+        2.7938117728691423
+      ],
+      "io_mb": [
+        233.31328868865967,
+        1.6481375880960746e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0035903207256944444,
+        0.0007705041847513418
+      ],
+      "cost_w_io": [
+        0.00814722089539483,
+        0.0007705041864937289
+      ]
+    },
+    "74-1": {
+      "latency_s": [
+        46.830000000000005,
+        6.3452896440325475
+      ],
+      "io_mb": [
+        3816.6196689605713,
+        0.006513751871925082
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.012915226187499998,
+        0.001749964787057051
+      ],
+      "cost_w_io": [
+        0.08745857909688616,
+        0.0017499502408708431
+      ]
+    },
+    "75-1": {
+      "latency_s": [
+        54.474333333333334,
+        2.7221523755211714
+      ],
+      "io_mb": [
+        7762.593739827474,
+        0.0005516829845491227
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.01502345369236111,
+        0.0007507412694148267
+      ],
+      "cost_w_io": [
+        0.16663661267336646,
+        0.0007507514176316744
+      ]
+    },
+    "76-1": {
+      "latency_s": [
+        23.630333333333336,
+        4.555496045681768
+      ],
+      "io_mb": [
+        4086.6750164031982,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006516999784027778,
+        0.001256358356315222
+      ],
+      "cost_w_io": [
+        0.08633487119815275,
+        0.0012563583563152195
+      ]
+    },
+    "77-1": {
+      "latency_s": [
+        15.041666666666666,
+        4.291938205001973
+      ],
+      "io_mb": [
+        96.9717191060384,
+        4.49566384116203e-06
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004148334982638888,
+        0.001183671849249908
+      ],
+      "cost_w_io": [
+        0.0060423138714287014,
+        0.0011836718028325956
+      ]
+    },
+    "78-1": {
+      "latency_s": [
+        72.83,
+        7.01769796063258
+      ],
+      "io_mb": [
+        12817.267770767212,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.020085755354166665,
+        0.0019354079965220423
+      ],
+      "cost_w_io": [
+        0.2704230165019637,
+        0.0019354079965220293
+      ]
+    },
+    "79-1": {
+      "latency_s": [
+        24.880333333333336,
+        9.965865118270242
+      ],
+      "io_mb": [
+        476.90414969126385,
+        0.012029245890467449
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006861736763194445,
+        0.002748481788523951
+      ],
+      "cost_w_io": [
+        0.01617627093685194,
+        0.002748570814050331
+      ]
+    },
+    "80-1": {
+      "latency_s": [
+        41.27733333333333,
+        1.2269214409334528
+      ],
+      "io_mb": [
+        3226.4726384480796,
+        5.0351435021014734e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.011383858561111111,
+        0.0003383721529777703
+      ],
+      "cost_w_io": [
+        0.07440090228080017,
+        0.0003383728431206503
+      ]
+    },
+    "81-1": {
+      "latency_s": [
+        22.201333333333338,
+        4.938629319513215
+      ],
+      "io_mb": [
+        268.99172083536786,
+        7.53826439130118
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006122896469444444,
+        0.0013620225222663327
+      ],
+      "cost_w_io": [
+        0.011376641017010221,
+        0.0015065705585139964
+      ]
+    },
+    "82-1": {
+      "latency_s": [
+        23.152,
+        5.660640482018502
+      ],
+      "io_mb": [
+        1241.0012645721436,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006385080433333333,
+        0.0015611456799356817
+      ],
+      "cost_w_io": [
+        0.03062338638200801,
+        0.0015611456799356812
+      ]
+    },
+    "83-1": {
+      "latency_s": [
+        16.253666666666664,
+        3.8694014466782267
+      ],
+      "io_mb": [
+        13.122447967529297,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0044825919576388885,
+        0.0010671406127287849
+      ],
+      "cost_w_io": [
+        0.004738889769504695,
+        0.0010671406127287849
+      ]
+    },
+    "84-1": {
+      "latency_s": [
+        25.748666666666665,
+        5.423219974230151
+      ],
+      "io_mb": [
+        474.8220272064209,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.007101214051388889,
+        0.0014956675770179447
+      ],
+      "cost_w_io": [
+        0.016375081770264296,
+        0.001495667577017944
+      ]
+    },
+    "85-1": {
+      "latency_s": [
+        17.712333333333333,
+        4.661202586839105
+      ],
+      "io_mb": [
+        561.8092114130656,
+        2.114396304870083e-05
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004884877029861111,
+        0.0012855111192566122
+      ],
+      "cost_w_io": [
+        0.015857713190272547,
+        0.0012855115309326295
+      ]
+    },
+    "86-1": {
+      "latency_s": [
+        8.485999999999999,
+        2.0191914223272636
+      ],
+      "io_mb": [
+        116.08532365163167,
+        2.3788817003720227e-06
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0023403504041666664,
+        0.0005568719610338768
+      ],
+      "cost_w_io": [
+        0.004607641881737598,
+        0.0005568719908542845
+      ]
+    },
+    "87-1": {
+      "latency_s": [
+        48.08566666666667,
+        4.69216604802326
+      ],
+      "io_mb": [
+        1350.1906960805256,
+        0.002483599532017969
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.013261525974305556,
+        0.001294050519315148
+      ],
+      "cost_w_io": [
+        0.039632438007128325,
+        0.001294072835670072
+      ]
+    },
+    "88-1": {
+      "latency_s": [
+        50.262,
+        5.505500703841567
+      ],
+      "io_mb": [
+        3663.8933305740356,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.013861736037499997,
+        0.0015183597451538405
+      ],
+      "cost_w_io": [
+        0.08542215265027414,
+        0.001518359745153841
+      ]
+    },
+    "89-1": {
+      "latency_s": [
+        17.312,
+        2.0961270635786056
+      ],
+      "io_mb": [
+        351.89278411865234,
+        0.00040536730514179753
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004774469266666667,
+        0.0005780900094780675
+      ],
+      "cost_w_io": [
+        0.011647375206484095,
+        0.0005780979264071332
+      ]
+    },
+    "90-1": {
+      "latency_s": [
+        24.87,
+        3.862047211864022
+      ],
+      "io_mb": [
+        388.03831481933594,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.0068588869375,
+        0.00106511239137364
+      ],
+      "cost_w_io": [
+        0.014437760273815154,
+        0.0010651123913736407
+      ]
+    },
+    "91-1": {
+      "latency_s": [
+        14.797333333333333,
+        4.5833962177504235
+      ],
+      "io_mb": [
+        121.54366111755371,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004080950394444444,
+        0.0012640529331449648
+      ],
+      "cost_w_io": [
+        0.006454850025646664,
+        0.0012640529331449646
+      ]
+    },
+    "92-1": {
+      "latency_s": [
+        14.924333333333335,
+        2.8598440905444873
+      ],
+      "io_mb": [
+        36.764004707336426,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.004115975671527778,
+        0.0007887152101295605
+      ],
+      "cost_w_io": [
+        0.004834022638467943,
+        0.0007887152101295608
+      ]
+    },
+    "93-1": {
+      "latency_s": [
+        82.27300000000001,
+        1.6826701003662794
+      ],
+      "io_mb": [
+        17341.1515083313,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.02269003638958333,
+        0.0004640628858674739
+      ],
+      "cost_w_io": [
+        0.361384401786679,
+        0.00046406288586748397
+      ]
+    },
+    "94-1": {
+      "latency_s": [
+        56.945,
+        2.412786494215075
+      ],
+      "io_mb": [
+        1907.5012350082397,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.01570483782291666,
+        0.0006654213819118686
+      ],
+      "cost_w_io": [
+        0.052960721319171344,
+        0.000665421381911868
+      ]
+    },
+    "95-1": {
+      "latency_s": [
+        66.37866666666666,
+        6.3415229681485465
+      ],
+      "io_mb": [
+        3150.3139963150024,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.018306544822222225,
+        0.0017489259770844504
+      ],
+      "cost_w_io": [
+        0.07983611506274962,
+        0.001748925977084448
+      ]
+    },
+    "96-1": {
+      "latency_s": [
+        27.513333333333332,
+        2.341046252331542
+      ],
+      "io_mb": [
+        458.00594902038574,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00758789073611111,
+        0.0006456361704945781
+      ],
+      "cost_w_io": [
+        0.016533319427915517,
+        0.0006456361704945773
+      ]
+    },
+    "97-1": {
+      "latency_s": [
+        34.776,
+        1.1397218959026816
+      ],
+      "io_mb": [
+        2206.81983089447,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00959085855,
+        0.00031432342678687784
+      ],
+      "cost_w_io": [
+        0.05269280837215762,
+        0.0003143234267868765
+      ]
+    },
+    "98-1": {
+      "latency_s": [
+        22.040999999999997,
+        6.981982574216771
+      ],
+      "io_mb": [
+        127.42520523071289,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.00607867820625,
+        0.001925558064983838
+      ],
+      "cost_w_io": [
+        0.008567451745912362,
+        0.0019255580649838375
+      ]
+    },
+    "99-1": {
+      "latency_s": [
+        23.201666666666668,
+        5.009683312235304
+      ],
+      "io_mb": [
+        372.57759284973145,
+        0.0
+      ],
+      "cores": [
+        17.0,
+        0.0
+      ],
+      "cost_wo_io": [
+        0.006398777982638889,
+        0.0013816184733133278
+      ],
+      "cost_w_io": [
+        0.013675684092985205,
+        0.0013816184733133278
+      ]
+    }
+  }
+}

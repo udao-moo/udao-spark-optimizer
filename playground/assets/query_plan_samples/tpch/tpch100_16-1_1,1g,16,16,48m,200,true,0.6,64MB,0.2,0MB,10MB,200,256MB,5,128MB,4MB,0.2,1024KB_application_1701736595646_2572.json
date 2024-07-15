@@ -1,0 +1,2169 @@
+{
+  "CompileTimeLQP" : {
+    "LQP" : {
+      "operators" : {
+        "12" : {
+          "sign" : 119411986,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 610207290,
+          "rowCount" : 3081855,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: (((((isnotnull(p_brand#15) AND isnotnull(p_type#10)) AND NOT (p_brand#15 = Brand#41)) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L)) "
+        },
+        "8" : {
+          "sign" : 1353218182,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 16000000,
+          "rowCount" : 1000000,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [s_suppkey#16L] "
+        },
+        "4" : {
+          "sign" : -1214676462,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+          "sizeInBytes" : 1920000000,
+          "rowCount" : 80000000,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Join Arguments: LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))) "
+        },
+        "11" : {
+          "sign" : -932841045,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 224975415,
+          "rowCount" : 3081855,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [p_partkey#7L, p_type#10, p_size#11, p_brand#15] "
+        },
+        "9" : {
+          "sign" : -509583360,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 201000000,
+          "rowCount" : 1000000,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%) "
+        },
+        "13" : {
+          "sign" : 1816199199,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 3807692460,
+          "rowCount" : 19230770,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [p_partkey#7L, p_name#8, p_mfgr#9, p_type#10, p_size#11, p_container#12, p_retailprice#13, p_comment#14, p_brand#15], `spark_catalog`.`tpch_100`.`part`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "5" : {
+          "sign" : 2087555312,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 1920000000,
+          "rowCount" : 80000000,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [ps_partkey#2L, ps_suppkey#3L] "
+        },
+        "10" : {
+          "sign" : 1019251165,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 201000000,
+          "rowCount" : 1000000,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [s_suppkey#16L, s_name#17, s_address#18, s_nationkey#19L, s_phone#20, s_acctbal#21, s_comment#22], `spark_catalog`.`tpch_100`.`supplier`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "6" : {
+          "sign" : 1360130543,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 13760000000,
+          "rowCount" : 80000000,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: isnotnull(ps_partkey#2L) "
+        },
+        "1" : {
+          "sign" : -1742137146,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+          "sizeInBytes" : 70080,
+          "rowCount" : 960,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Aggregate Arguments: [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#0L] "
+        },
+        "0" : {
+          "sign" : 1133963700,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+          "sizeInBytes" : 70080,
+          "rowCount" : 960,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Sort Arguments: [supplier_cnt#0L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+        },
+        "2" : {
+          "sign" : -2146077091,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 5844632361,
+          "rowCount" : 80063457,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15] "
+        },
+        "7" : {
+          "sign" : -114112705,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 13760000000,
+          "rowCount" : 80000000,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [ps_partkey#2L, ps_suppkey#3L, ps_availqty#4, ps_supplycost#5, ps_comment#6], `spark_catalog`.`tpch_100`.`partsupp`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        },
+        "3" : {
+          "sign" : 833100922,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+          "sizeInBytes" : 7125647673,
+          "rowCount" : 80063457,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Join Arguments: Inner, (p_partkey#7L = ps_partkey#2L) "
+        }
+      },
+      "links" : [ {
+        "fromId" : 7,
+        "fromName" : "LogicalRelation",
+        "toId" : 6,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 6,
+        "fromName" : "Filter",
+        "toId" : 5,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 5,
+        "fromName" : "Project",
+        "toId" : 4,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 10,
+        "fromName" : "LogicalRelation",
+        "toId" : 9,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 9,
+        "fromName" : "Filter",
+        "toId" : 8,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 8,
+        "fromName" : "Project",
+        "toId" : 4,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 4,
+        "fromName" : "Join",
+        "toId" : 3,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 13,
+        "fromName" : "LogicalRelation",
+        "toId" : 12,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 12,
+        "fromName" : "Filter",
+        "toId" : 11,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 11,
+        "fromName" : "Project",
+        "toId" : 3,
+        "toName" : "Join",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 3,
+        "fromName" : "Join",
+        "toId" : 2,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 2,
+        "fromName" : "Project",
+        "toId" : 1,
+        "toName" : "Aggregate",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 1,
+        "fromName" : "Aggregate",
+        "toId" : 0,
+        "toName" : "Sort",
+        "linkType" : "Operator"
+      } ],
+      "rawPlan" : "Sort [supplier_cnt#0L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#0L]\n   +- Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n      +- Join Inner, (p_partkey#7L = ps_partkey#2L)\n         :- Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L)))\n         :  :- Project [ps_partkey#2L, ps_suppkey#3L]\n         :  :  +- Filter isnotnull(ps_partkey#2L)\n         :  :     +- Relation spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L,ps_availqty#4,ps_supplycost#5,ps_comment#6] parquet\n         :  +- Project [s_suppkey#16L]\n         :     +- Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n         :        +- Relation spark_catalog.tpch_100.supplier[s_suppkey#16L,s_name#17,s_address#18,s_nationkey#19L,s_phone#20,s_acctbal#21,s_comment#22] parquet\n         +- Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15]\n            +- Filter (((((isnotnull(p_brand#15) AND isnotnull(p_type#10)) AND NOT (p_brand#15 = Brand#41)) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L))\n               +- Relation spark_catalog.tpch_100.part[p_partkey#7L,p_name#8,p_mfgr#9,p_type#10,p_size#11,p_container#12,p_retailprice#13,p_comment#14,p_brand#15] parquet\n"
+    },
+    "IM" : {
+      "inputSizeInBytes" : 17768692460,
+      "inputRowCount" : 100230770
+    },
+    "PD" : { },
+    "Configuration" : {
+      "theta_c" : [ {
+        "spark.executor.memory" : "1g"
+      }, {
+        "spark.executor.cores" : "1"
+      }, {
+        "spark.executor.instances" : "16"
+      }, {
+        "spark.default.parallelism" : "16"
+      }, {
+        "spark.reducer.maxSizeInFlight" : "48m"
+      }, {
+        "spark.shuffle.sort.bypassMergeThreshold" : "200"
+      }, {
+        "spark.shuffle.compress" : "true"
+      }, {
+        "spark.memory.fraction" : "0.6"
+      } ],
+      "theta_p" : [ {
+        "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+      }, {
+        "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+      }, {
+        "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+      }, {
+        "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+      }, {
+        "spark.sql.shuffle.partitions" : "200"
+      }, {
+        "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+      }, {
+        "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+      }, {
+        "spark.sql.files.maxPartitionBytes" : "128MB"
+      }, {
+        "spark.sql.files.openCostInBytes" : "4MB"
+      } ],
+      "theta_s" : [ {
+        "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+      }, {
+        "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+      } ]
+    }
+  },
+  "RuntimeLQPs" : {
+    "4" : {
+      "LQP" : {
+        "operators" : {
+          "0" : {
+            "sign" : -2111121093,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 854029376,
+            "rowCount" : 11870836,
+            "isRuntime" : true,
+            "predicate" : " (unknown) Sort Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+          },
+          "1" : {
+            "sign" : 849592241,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 854029376,
+            "rowCount" : 11870836,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)]) "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 0,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- LogicalQueryStage Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)])\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 854029376,
+        "inputRowCount" : 11870836
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702226693524,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 11942,
+        "IOBytes" : {
+          "Total" : 279771388,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 276091292,
+            "SW" : 3680096
+          }
+        }
+      }
+    },
+    "5" : {
+      "LQP" : {
+        "operators" : {
+          "0" : {
+            "sign" : -2111121093,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 10014720,
+            "rowCount" : 139200,
+            "isRuntime" : true,
+            "predicate" : " (unknown) Sort Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+          },
+          "1" : {
+            "sign" : 849592241,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 10014720,
+            "rowCount" : 139200,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)]) "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 0,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- LogicalQueryStage Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)])\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 10014720,
+        "inputRowCount" : 139200
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702226704112,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 1354,
+        "IOBytes" : {
+          "Total" : 7360192,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 6815911,
+            "SW" : 544281
+          }
+        }
+      }
+    },
+    "6" : {
+      "LQP" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1780279426,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 2002944,
+            "rowCount" : 27840,
+            "isRuntime" : true,
+            "predicate" : " (unknown) Sort Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+          },
+          "1" : {
+            "sign" : 1437951352,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 2002944,
+            "rowCount" : 27840,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], ShuffleQueryStage 5 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 0,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- LogicalQueryStage Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], ShuffleQueryStage 5\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 2002944,
+        "inputRowCount" : 27840
+      },
+      "PD" : {
+        "4" : [ 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2726, 2726, 2999, 2726, 2726, 2999, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2999, 2726, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2999, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2999, 2999, 2726, 2999, 2999, 2999, 2726, 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2999 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702226705210,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 256,
+        "IOBytes" : {
+          "Total" : 544281,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 544281,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "1" : {
+      "LQP" : {
+        "operators" : {
+          "8" : {
+            "sign" : 842229362,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 16000000,
+            "rowCount" : 1000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [s_suppkey#16L], BroadcastQueryStage 0 "
+          },
+          "4" : {
+            "sign" : 1658695692,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 1920000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))) "
+          },
+          "9" : {
+            "sign" : 1064285296,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 213611688,
+            "rowCount" : 2969159,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1 "
+          },
+          "5" : {
+            "sign" : 2087555312,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 1920000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [ps_partkey#2L, ps_suppkey#3L] "
+          },
+          "6" : {
+            "sign" : 1360130543,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "sizeInBytes" : 13760000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: isnotnull(ps_partkey#2L) "
+          },
+          "1" : {
+            "sign" : 925828663,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "sizeInBytes" : 14251963200000000,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L] "
+          },
+          "0" : {
+            "sign" : -1091365669,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 14251963200000000,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+          },
+          "2" : {
+            "sign" : 875208508,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 14251963200000000,
+            "rowCount" : 237532720000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15] "
+          },
+          "7" : {
+            "sign" : -114112705,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "sizeInBytes" : 13760000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [ps_partkey#2L, ps_suppkey#3L, ps_availqty#4, ps_supplycost#5, ps_comment#6], `spark_catalog`.`tpch_100`.`partsupp`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          },
+          "3" : {
+            "sign" : -207367879,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 18052486720000000,
+            "rowCount" : 237532720000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (p_partkey#7L = ps_partkey#2L) "
+          }
+        },
+        "links" : [ {
+          "fromId" : 7,
+          "fromName" : "LogicalRelation",
+          "toId" : 6,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "Filter",
+          "toId" : 5,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Project",
+          "toId" : 4,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 4,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "Join",
+          "toId" : 3,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 3,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Join",
+          "toId" : 2,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Project",
+          "toId" : 1,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Aggregate",
+          "toId" : 0,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L]\n   +- Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n      +- Join Inner, (p_partkey#7L = ps_partkey#2L)\n         :- Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L)))\n         :  :- Project [ps_partkey#2L, ps_suppkey#3L]\n         :  :  +- Filter isnotnull(ps_partkey#2L)\n         :  :     +- Relation spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L,ps_availqty#4,ps_supplycost#5,ps_comment#6] parquet\n         :  +- LogicalQueryStage Project [s_suppkey#16L], BroadcastQueryStage 0\n         +- LogicalQueryStage Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 13989611688,
+        "inputRowCount" : 83969159
+      },
+      "PD" : {
+        "0" : [ 357178, 364068, 365446, 368478, 374680, 365722, 365308, 365584, 365584, 359796, 368616, 364344, 365584, 365722, 365722, 358418, 361312, 361174, 364344, 364344, 364068, 368616, 368478, 364206, 370132, 365722, 364206, 354146, 361312, 364068, 365722, 366962, 364068, 361174, 367100, 368478, 365722, 367100, 368340, 363930, 365584, 370132, 364206, 361174, 366962, 361588, 362552, 368340, 371510, 364068, 360072, 368892, 364206, 368616, 361450, 364344, 361450, 366824, 367100, 365446, 358280, 361312, 365584, 361174, 364068, 359796, 361312, 362690, 365998, 361174, 360072, 368478, 362690, 364068, 364068, 371648, 363930, 369856, 362828, 362828, 367100, 367100, 365584, 361450, 365584, 359796, 359934, 362552, 357316, 359658, 364344, 359796, 365722, 365308, 358418, 366962, 368478, 371372, 366824, 362552, 371510, 361174, 366962, 365584, 368478, 368478, 362690, 364206, 365584, 365446, 362690, 361450, 367100, 371510, 368478, 366962, 370270, 358694, 369994, 365584, 359796, 365446, 365446, 366824, 361450, 364344, 357040, 358556, 361450, 361174, 361174, 365584, 362828, 362690, 364068, 365446, 368478, 365584, 361312, 361174, 358418, 362966, 364068, 362552, 361312, 357040, 368340, 368478, 364206, 368478, 364206, 364068, 361174, 365722, 364068, 364068, 364344, 368478, 366824, 365584, 362552, 367100, 362552, 367100, 368478, 364068, 365584, 367100, 366962, 365308, 368754, 366962, 368754, 362690, 356902, 365584, 367100, 368616, 364344, 368616, 359934, 361450, 358418, 361036, 362828, 367100, 365722, 361036, 364068, 366962, 364206, 359796, 362690, 366962, 358556, 361588, 362690, 365860, 367100, 361174 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 5,
+        "FinishedTasksNum" : 11,
+        "FinishedTasksTotalTimeInMs" : 2292.0,
+        "FinishedTasksDistributionInMs" : [ 38.0, 162.0, 237.0, 275.0, 307.0 ]
+      },
+      "StartTimeInMs" : 1702226681723,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 23743,
+        "IOBytes" : {
+          "Total" : 3046353916,
+          "Details" : {
+            "IR" : 758692559,
+            "IW" : 0,
+            "SR" : 1180179211,
+            "SW" : 1107482146
+          }
+        }
+      }
+    },
+    "2" : {
+      "LQP" : {
+        "operators" : {
+          "8" : {
+            "sign" : 842229362,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1064960,
+            "rowCount" : 479,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [s_suppkey#16L], BroadcastQueryStage 0 "
+          },
+          "4" : {
+            "sign" : 1658695692,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 1920000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))) "
+          },
+          "9" : {
+            "sign" : 1064285296,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 213611688,
+            "rowCount" : 2969159,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1 "
+          },
+          "5" : {
+            "sign" : 2087555312,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 1920000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [ps_partkey#2L, ps_suppkey#3L] "
+          },
+          "6" : {
+            "sign" : 1360130543,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "sizeInBytes" : 13760000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: isnotnull(ps_partkey#2L) "
+          },
+          "1" : {
+            "sign" : 925828663,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "sizeInBytes" : 14251963200000000,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L] "
+          },
+          "0" : {
+            "sign" : -1091365669,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 14251963200000000,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+          },
+          "2" : {
+            "sign" : 875208508,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 14251963200000000,
+            "rowCount" : 237532720000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15] "
+          },
+          "7" : {
+            "sign" : -114112705,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "sizeInBytes" : 13760000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [ps_partkey#2L, ps_suppkey#3L, ps_availqty#4, ps_supplycost#5, ps_comment#6], `spark_catalog`.`tpch_100`.`partsupp`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          },
+          "3" : {
+            "sign" : -207367879,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 18052486720000000,
+            "rowCount" : 237532720000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (p_partkey#7L = ps_partkey#2L) "
+          }
+        },
+        "links" : [ {
+          "fromId" : 7,
+          "fromName" : "LogicalRelation",
+          "toId" : 6,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "Filter",
+          "toId" : 5,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Project",
+          "toId" : 4,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 8,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 4,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "Join",
+          "toId" : 3,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 9,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 3,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Join",
+          "toId" : 2,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Project",
+          "toId" : 1,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Aggregate",
+          "toId" : 0,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L]\n   +- Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n      +- Join Inner, (p_partkey#7L = ps_partkey#2L)\n         :- Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L)))\n         :  :- Project [ps_partkey#2L, ps_suppkey#3L]\n         :  :  +- Filter isnotnull(ps_partkey#2L)\n         :  :     +- Relation spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L,ps_availqty#4,ps_supplycost#5,ps_comment#6] parquet\n         :  +- LogicalQueryStage Project [s_suppkey#16L], BroadcastQueryStage 0\n         +- LogicalQueryStage Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 13974676648,
+        "inputRowCount" : 82969638
+      },
+      "PD" : {
+        "0" : [ 357178, 364068, 365446, 368478, 374680, 365722, 365308, 365584, 365584, 359796, 368616, 364344, 365584, 365722, 365722, 358418, 361312, 361174, 364344, 364344, 364068, 368616, 368478, 364206, 370132, 365722, 364206, 354146, 361312, 364068, 365722, 366962, 364068, 361174, 367100, 368478, 365722, 367100, 368340, 363930, 365584, 370132, 364206, 361174, 366962, 361588, 362552, 368340, 371510, 364068, 360072, 368892, 364206, 368616, 361450, 364344, 361450, 366824, 367100, 365446, 358280, 361312, 365584, 361174, 364068, 359796, 361312, 362690, 365998, 361174, 360072, 368478, 362690, 364068, 364068, 371648, 363930, 369856, 362828, 362828, 367100, 367100, 365584, 361450, 365584, 359796, 359934, 362552, 357316, 359658, 364344, 359796, 365722, 365308, 358418, 366962, 368478, 371372, 366824, 362552, 371510, 361174, 366962, 365584, 368478, 368478, 362690, 364206, 365584, 365446, 362690, 361450, 367100, 371510, 368478, 366962, 370270, 358694, 369994, 365584, 359796, 365446, 365446, 366824, 361450, 364344, 357040, 358556, 361450, 361174, 361174, 365584, 362828, 362690, 364068, 365446, 368478, 365584, 361312, 361174, 358418, 362966, 364068, 362552, 361312, 357040, 368340, 368478, 364206, 368478, 364206, 364068, 361174, 365722, 364068, 364068, 364344, 368478, 366824, 365584, 362552, 367100, 362552, 367100, 368478, 364068, 365584, 367100, 366962, 365308, 368754, 366962, 368754, 362690, 356902, 365584, 367100, 368616, 364344, 368616, 359934, 361450, 358418, 361036, 362828, 367100, 365722, 361036, 364068, 366962, 364206, 359796, 362690, 366962, 358556, 361588, 362690, 365860, 367100, 361174 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702226683796,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 21670,
+        "IOBytes" : {
+          "Total" : 3017131967,
+          "Details" : {
+            "IR" : 729470610,
+            "IW" : 0,
+            "SR" : 1180179211,
+            "SW" : 1107482146
+          }
+        }
+      }
+    },
+    "3" : {
+      "LQP" : {
+        "operators" : {
+          "4" : {
+            "sign" : -221963403,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1919080320,
+            "rowCount" : 79961680,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))), ShuffleQueryStage 2 "
+          },
+          "5" : {
+            "sign" : 1064285296,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 213611688,
+            "rowCount" : 2969159,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1 "
+          },
+          "1" : {
+            "sign" : 628368558,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L] "
+          },
+          "0" : {
+            "sign" : -1672774966,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+          },
+          "2" : {
+            "sign" : -2112434935,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : 237418941827120,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15] "
+          },
+          "3" : {
+            "sign" : 1863604332,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "sizeInBytes" : 18043839578861120,
+            "rowCount" : 237418941827120,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (p_partkey#7L = ps_partkey#2L) "
+          }
+        },
+        "links" : [ {
+          "fromId" : 4,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 3,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 3,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Join",
+          "toId" : 2,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Project",
+          "toId" : 1,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Aggregate",
+          "toId" : 0,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L]\n   +- Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n      +- Join Inner, (p_partkey#7L = ps_partkey#2L)\n         :- LogicalQueryStage Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))), ShuffleQueryStage 2\n         +- LogicalQueryStage Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 2132692008,
+        "inputRowCount" : 82930839
+      },
+      "PD" : {
+        "1" : [ 4272049, 4309069, 4309069, 4296729, 4346089, 4309069, 4333749, 4321409, 4326783, 4333749, 4333749, 4296729, 4333749, 4321409, 4321409, 4316730, 4321409, 4284389, 4296729, 4383109, 4309069, 4321409, 4358429, 4333749, 4284389, 4296729, 4346089, 4296729, 4333749, 4309069, 4309069, 4333749, 4346089, 4284389, 4321409, 4309069, 4296729, 4321409, 4296729, 4346089, 4321409, 4309069, 4333749, 4296729, 4309069, 4309069, 4296729, 4383109, 4309069, 4296729, 4284389, 4346089, 4292050, 4383109, 4321409, 4321409, 4309069, 4321409, 4383109, 4296729, 4321409, 4346089, 4321409, 4284389, 4284389, 4296729, 4284389, 4296729, 4309069, 4296729, 4284389, 4370769, 4284389, 4321409, 4309069, 4314443, 4284389, 4346089, 4296729, 4284389, 4284389, 4309069, 4296729, 4326783, 4309069, 4321409, 4284389, 4309069, 4296729, 4309069, 4321409, 4296729, 4346089, 4333749, 4333749, 4284389, 4309069, 4309069, 4321409, 4272049, 4346089, 4309069, 4321409, 4296729, 4333749, 4333749, 4284389, 4309069, 4296729, 4346089, 4296729, 4309069, 4309069, 4358429, 4284389, 4346089, 4309069, 4309069, 4370769, 4333749, 4333749, 4284389, 4284389, 4321409, 4296729, 4333749, 4321409, 4296729, 4321409, 4296729, 4321409, 4333749, 4304390, 4296729, 4370769, 4333749, 4346089, 4296729, 4309069, 4333749, 4358429, 4321409, 4296729, 4296729, 4358429, 4296729, 4309069, 4370769, 4321409, 4321409, 4284389, 4346089, 4273171, 4309069, 4296729, 4296729, 4333749, 4272049, 4333749, 4341410, 4333749, 4296729, 4370769, 4296729, 4346089, 4284389, 4284389, 4309069, 4272049, 4346089, 4333749, 4346089, 4358429, 4309069, 4370769, 4333749, 4321409, 4309069, 4321409, 4321409, 4309069, 4309069, 4309069, 4358429, 4316730, 4370769, 4333749, 4333749, 4346089, 4333749, 4296729, 4346089, 4321409, 4358429, 4321409, 4309069, 4333749, 4309069, 4302103, 4321409 ],
+        "0" : [ 357178, 364068, 365446, 368478, 374680, 365722, 365308, 365584, 365584, 359796, 368616, 364344, 365584, 365722, 365722, 358418, 361312, 361174, 364344, 364344, 364068, 368616, 368478, 364206, 370132, 365722, 364206, 354146, 361312, 364068, 365722, 366962, 364068, 361174, 367100, 368478, 365722, 367100, 368340, 363930, 365584, 370132, 364206, 361174, 366962, 361588, 362552, 368340, 371510, 364068, 360072, 368892, 364206, 368616, 361450, 364344, 361450, 366824, 367100, 365446, 358280, 361312, 365584, 361174, 364068, 359796, 361312, 362690, 365998, 361174, 360072, 368478, 362690, 364068, 364068, 371648, 363930, 369856, 362828, 362828, 367100, 367100, 365584, 361450, 365584, 359796, 359934, 362552, 357316, 359658, 364344, 359796, 365722, 365308, 358418, 366962, 368478, 371372, 366824, 362552, 371510, 361174, 366962, 365584, 368478, 368478, 362690, 364206, 365584, 365446, 362690, 361450, 367100, 371510, 368478, 366962, 370270, 358694, 369994, 365584, 359796, 365446, 365446, 366824, 361450, 364344, 357040, 358556, 361450, 361174, 361174, 365584, 362828, 362690, 364068, 365446, 368478, 365584, 361312, 361174, 358418, 362966, 364068, 362552, 361312, 357040, 368340, 368478, 364206, 368478, 364206, 364068, 361174, 365722, 364068, 364068, 364344, 368478, 366824, 365584, 362552, 367100, 362552, 367100, 368478, 364068, 365584, 367100, 366962, 365308, 368754, 366962, 368754, 362690, 356902, 365584, 367100, 368616, 364344, 368616, 359934, 361450, 358418, 361036, 362828, 367100, 365722, 361036, 364068, 366962, 364206, 359796, 362690, 366962, 358556, 361588, 362690, 365860, 367100, 361174 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702226686920,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 18546,
+        "IOBytes" : {
+          "Total" : 1453134688,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 1180179211,
+            "SW" : 272955477
+          }
+        }
+      }
+    }
+  },
+  "RuntimeQSs" : {
+    "4" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 849592241,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 854029376,
+                "rowCount" : 11870836
+              },
+              "compileTime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : -1
+              }
+            },
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)]) "
+          }
+        },
+        "links" : [ ],
+        "rawPlan" : "LogicalQueryStage Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)])\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 62139005,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 854029376,
+            "rowCount" : 11870836,
+            "isRuntime" : true,
+            "predicate" : " (unknown) HashAggregate Input [4]: [p_brand#15, p_type#10, p_size#11, ps_suppkey#3L] Keys [3]: [p_brand#15, p_type#10, p_size#11] Functions [1]: [partial_count(distinct ps_suppkey#3L)] Aggregate Attributes [1]: [count(ps_suppkey#3L)#33L] Results [4]: [p_brand#15, p_type#10, p_size#11, count#40L] "
+          },
+          "1" : {
+            "sign" : -2037049627,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 854029376,
+            "rowCount" : 11870836,
+            "isRuntime" : true,
+            "predicate" : " (unknown) HashAggregate Input [4]: [p_brand#15, p_type#10, p_size#11, ps_suppkey#3L] Keys [4]: [p_brand#15, p_type#10, p_size#11, ps_suppkey#3L] Functions: [] Aggregate Attributes: [] Results [4]: [p_brand#15, p_type#10, p_size#11, ps_suppkey#3L] "
+          },
+          "2" : {
+            "sign" : 223022462,
+            "className" : "org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) ShuffleQueryStage Output [4]: [p_brand#15, p_type#10, p_size#11, ps_suppkey#3L] Arguments: 3 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "ShuffleQueryStage",
+          "toId" : 1,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "HashAggregate",
+          "toId" : 0,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[partial_count(distinct ps_suppkey#3L)], output=[p_brand#15, p_type#10, p_size#11, count#40L])\n+- HashAggregate(keys=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L], functions=[], output=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L])\n   +- ShuffleQueryStage 3\n      +- Exchange hashpartitioning(p_brand#15, p_type#10, p_size#11, ps_suppkey#3L, 200), ENSURE_REQUIREMENTS, [plan_id=452]\n         +- *(6) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L], functions=[], output=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L])\n            +- *(6) Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n               +- *(6) SortMergeJoin [ps_partkey#2L], [p_partkey#7L], Inner\n                  :- *(4) Sort [ps_partkey#2L ASC NULLS FIRST], false, 0\n                  :  +- AQEShuffleRead coalesced\n                  :     +- ShuffleQueryStage 2\n                  :        +- Exchange hashpartitioning(ps_partkey#2L, 200), ENSURE_REQUIREMENTS, [plan_id=350]\n                  :           +- *(3) BroadcastHashJoin [ps_suppkey#3L], [s_suppkey#16L], LeftAnti, BuildRight, true\n                  :              :- *(3) Filter isnotnull(ps_partkey#2L)\n                  :              :  +- *(3) ColumnarToRow\n                  :              :     +- FileScan parquet spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L] Batched: true, DataFilters: [isnotnull(ps_partkey#2L)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/partsupp], PartitionFilters: [], PushedFilters: [IsNotNull(ps_partkey)], ReadSchema: struct<ps_partkey:bigint,ps_suppkey:bigint>\n                  :              +- BroadcastQueryStage 0\n                  :                 +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, bigint, true]),true), [plan_id=134]\n                  :                    +- *(1) Project [s_suppkey#16L]\n                  :                       +- *(1) Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n                  :                          +- *(1) ColumnarToRow\n                  :                             +- FileScan parquet spark_catalog.tpch_100.supplier[s_suppkey#16L,s_comment#22] Batched: true, DataFilters: [isnotnull(s_comment#22), s_comment#22 LIKE %Customer%Complaints%], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/supplier], PartitionFilters: [], PushedFilters: [IsNotNull(s_comment)], ReadSchema: struct<s_suppkey:bigint,s_comment:string>\n                  +- *(5) Sort [p_partkey#7L ASC NULLS FIRST], false, 0\n                     +- AQEShuffleRead coalesced\n                        +- ShuffleQueryStage 1\n                           +- Exchange hashpartitioning(p_partkey#7L, 200), ENSURE_REQUIREMENTS, [plan_id=154]\n                              +- *(2) Filter (((isnotnull(p_type#10) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L))\n                                 +- *(2) ColumnarToRow\n                                    +- FileScan parquet spark_catalog.tpch_100.part[p_partkey#7L,p_type#10,p_size#11,p_brand#15] Batched: true, DataFilters: [isnotnull(p_type#10), NOT StartsWith(p_type#10, MEDIUM BURNISHED), p_size#11 IN (4,22,35,31,47,4..., Format: Parquet, Location: InMemoryFileIndex(24 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/part/p_br..., PartitionFilters: [isnotnull(p_brand#15), NOT (p_brand#15 = Brand#41)], PushedFilters: [IsNotNull(p_type), Not(StringStartsWith(p_type,MEDIUM BURNISHED)), In(p_size, [11,22,30,31,35,4,..., ReadSchema: struct<p_partkey:bigint,p_type:string,p_size:int>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 854029376,
+        "inputRowCount" : 11870836
+      },
+      "InitialPartitionNum" : 200,
+      "PD" : {
+        "2" : [ 1429435, 1445290, 1436020, 1457245, 1438705, 1436020, 1420165, 1438705, 1445290, 1457245, 1438705, 1426750, 1438705, 1447975, 1398940, 1438705, 1438705, 1454560, 1429435, 1447975, 1438705, 1447975, 1438705, 1447975, 1420165, 1447975, 1429435, 1436020, 1445290, 1420165, 1436020, 1429435, 1447975, 1426750, 1457245, 1420165, 1429435, 1438705, 1447975, 1445290, 1438705, 1417480, 1417480, 1457245, 1436020, 1438705, 1429435, 1429435, 1454560, 1447975, 1438705, 1426750, 1438705, 1454560, 1429435, 1438705, 1429435, 1429435, 1420165, 1445290, 1436020, 1454560, 1447975, 1436020, 1429435, 1436020, 1447975, 1447975, 1442849, 1447975, 1426750, 1445290, 1454560, 1447975, 1438705, 1438705, 1436020, 1420165, 1429435, 1457245, 1438705, 1420165, 1426750, 1447975, 1429435, 1438705, 1438705, 1438705, 1426750, 1438705, 1445290, 1447975, 1454560, 1445290, 1429435, 1420165, 1438705, 1438705, 1438705, 1438705, 1408210, 1426750, 1429435, 1417480, 1429435, 1457245, 1438705, 1429435, 1457245, 1447975, 1429435, 1436020, 1438705, 1429435, 1447975, 1429435, 1410895, 1445290, 1429435, 1429435, 1420165, 1457245, 1438705, 1445290, 1429435, 1445290, 1447975, 1457245, 1429435, 1408210, 1429435, 1457245, 1429435, 1429435, 1429435, 1429435, 1438705, 1438705, 1447975, 1429435, 1420165, 1410895, 1438705, 1438705, 1445290, 1420165, 1436020, 1454560, 1438705, 1436020, 1447975, 1436020, 1417480, 1457245, 1445290, 1438705, 1445290, 1454560, 1438705, 1447975, 1447975, 1447975, 1457245, 1438705, 1436020, 1438705, 1420165, 1410895, 1454560, 1457245, 1438705, 1426750, 1429435, 1454560, 1420165, 1447975, 1436020, 1447975, 1426750, 1457245, 1436020, 1436020, 1417480, 1436020, 1447975, 1447975, 1408210, 1426750, 1447975, 1457245, 1447975, 1436020, 1438705, 1454560, 1457245, 1438705, 1426750, 1426750, 1429435, 1429435 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 4,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 9 ],
+      "Objectives" : {
+        "DurationInMs" : 10450,
+        "TotalTasksDurationInMs" : 40875,
+        "IOBytes" : {
+          "Total" : 272411196,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 269275381,
+            "SW" : 3135815
+          }
+        }
+      }
+    },
+    "5" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 849592241,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 10014720,
+                "rowCount" : 139200
+              },
+              "compileTime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : -1
+              }
+            },
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)]) "
+          }
+        },
+        "links" : [ ],
+        "rawPlan" : "LogicalQueryStage Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L], HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)])\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -468970326,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 10014720,
+            "rowCount" : 139200,
+            "isRuntime" : true,
+            "predicate" : " (unknown) HashAggregate Input [4]: [p_brand#15, p_type#10, p_size#11, count#40L] Keys [3]: [p_brand#15, p_type#10, p_size#11] Functions [1]: [count(distinct ps_suppkey#3L)] Aggregate Attributes [1]: [count(ps_suppkey#3L)#33L] Results [4]: [p_brand#15, p_type#10, p_size#11, count(ps_suppkey#3L)#33L AS supplier_cnt#31L] "
+          },
+          "1" : {
+            "sign" : -105487225,
+            "className" : "org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) ShuffleQueryStage Output [4]: [p_brand#15, p_type#10, p_size#11, count#40L] Arguments: 4 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "ShuffleQueryStage",
+          "toId" : 0,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)], output=[p_brand#15, p_type#10, p_size#11, supplier_cnt#31L])\n+- ShuffleQueryStage 4\n   +- Exchange hashpartitioning(p_brand#15, p_type#10, p_size#11, 200), ENSURE_REQUIREMENTS, [plan_id=505]\n      +- *(7) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[partial_count(distinct ps_suppkey#3L)], output=[p_brand#15, p_type#10, p_size#11, count#40L])\n         +- *(7) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L], functions=[], output=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L])\n            +- AQEShuffleRead coalesced\n               +- ShuffleQueryStage 3\n                  +- Exchange hashpartitioning(p_brand#15, p_type#10, p_size#11, ps_suppkey#3L, 200), ENSURE_REQUIREMENTS, [plan_id=452]\n                     +- *(6) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L], functions=[], output=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L])\n                        +- *(6) Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n                           +- *(6) SortMergeJoin [ps_partkey#2L], [p_partkey#7L], Inner\n                              :- *(4) Sort [ps_partkey#2L ASC NULLS FIRST], false, 0\n                              :  +- AQEShuffleRead coalesced\n                              :     +- ShuffleQueryStage 2\n                              :        +- Exchange hashpartitioning(ps_partkey#2L, 200), ENSURE_REQUIREMENTS, [plan_id=350]\n                              :           +- *(3) BroadcastHashJoin [ps_suppkey#3L], [s_suppkey#16L], LeftAnti, BuildRight, true\n                              :              :- *(3) Filter isnotnull(ps_partkey#2L)\n                              :              :  +- *(3) ColumnarToRow\n                              :              :     +- FileScan parquet spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L] Batched: true, DataFilters: [isnotnull(ps_partkey#2L)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/partsupp], PartitionFilters: [], PushedFilters: [IsNotNull(ps_partkey)], ReadSchema: struct<ps_partkey:bigint,ps_suppkey:bigint>\n                              :              +- BroadcastQueryStage 0\n                              :                 +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, bigint, true]),true), [plan_id=134]\n                              :                    +- *(1) Project [s_suppkey#16L]\n                              :                       +- *(1) Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n                              :                          +- *(1) ColumnarToRow\n                              :                             +- FileScan parquet spark_catalog.tpch_100.supplier[s_suppkey#16L,s_comment#22] Batched: true, DataFilters: [isnotnull(s_comment#22), s_comment#22 LIKE %Customer%Complaints%], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/supplier], PartitionFilters: [], PushedFilters: [IsNotNull(s_comment)], ReadSchema: struct<s_suppkey:bigint,s_comment:string>\n                              +- *(5) Sort [p_partkey#7L ASC NULLS FIRST], false, 0\n                                 +- AQEShuffleRead coalesced\n                                    +- ShuffleQueryStage 1\n                                       +- Exchange hashpartitioning(p_partkey#7L, 200), ENSURE_REQUIREMENTS, [plan_id=154]\n                                          +- *(2) Filter (((isnotnull(p_type#10) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L))\n                                             +- *(2) ColumnarToRow\n                                                +- FileScan parquet spark_catalog.tpch_100.part[p_partkey#7L,p_type#10,p_size#11,p_brand#15] Batched: true, DataFilters: [isnotnull(p_type#10), NOT StartsWith(p_type#10, MEDIUM BURNISHED), p_size#11 IN (4,22,35,31,47,4..., Format: Parquet, Location: InMemoryFileIndex(24 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/part/p_br..., PartitionFilters: [isnotnull(p_brand#15), NOT (p_brand#15 = Brand#41)], PushedFilters: [IsNotNull(p_type), Not(StringStartsWith(p_type,MEDIUM BURNISHED)), In(p_size, [11,22,30,31,35,4,..., ReadSchema: struct<p_partkey:bigint,p_type:string,p_size:int>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 10014720,
+        "inputRowCount" : 139200
+      },
+      "InitialPartitionNum" : 200,
+      "PD" : {
+        "3" : [ 18140, 14995, 18140, 16490, 17480, 16490, 18140, 14995, 16490, 16490, 16490, 14995, 16490, 14995, 18140, 19592, 16490, 16490, 14995, 15593, 18503, 12638, 18140, 16490, 16490, 14995, 14995, 14995, 16191, 14995, 16490, 14995, 16490, 16490, 16490, 17480, 17150, 18503, 15294, 15593, 18503, 14995, 14995, 15294, 16490, 16490, 14995, 16820, 16490, 16490, 16490, 17810, 17150, 17480, 16490, 16490, 17150, 18140, 19955, 15892, 16490, 18140, 12390, 15294, 16490, 16490, 14995, 18140, 16490, 16820, 16490, 16490, 16820, 18140, 16820, 18140, 16490, 18140, 16490, 16490, 16490, 16490, 16490, 13903, 16490, 16490, 16820, 18503, 18503, 16490, 14995, 15294, 16490, 13630, 16490, 16820, 16820, 16490, 19955, 15294, 16490, 13630, 16490, 17810, 16490, 16490, 18503, 16490, 17480, 15294, 16490, 16490, 14995, 16490, 16490, 19955, 16820, 16490, 12390, 18140, 14449, 16490, 18140, 16490, 16490, 18140, 16820, 17150, 14176, 16490, 16820, 16490, 15294, 16820, 15892, 14995, 16490, 14995, 18140, 16490, 13903, 13630, 19955, 16820, 15593, 14449, 14995, 16490, 18140, 17810, 14995, 16490, 18140, 14995, 18503, 18140, 18140, 18140, 18503, 16490, 18140, 17150, 14176, 18140, 18140, 18140, 16191, 12886, 14995, 16490, 16490, 14995, 16191, 14995, 14995, 16490, 16820, 16490, 15294, 15593, 16490, 16490, 18140, 16490, 18140, 15294, 16490, 14995, 15593, 16490, 14995, 14995, 16490, 18140, 16490, 18140, 14995, 18140, 14995, 14995 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 5,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 14, 19 ],
+      "Objectives" : {
+        "DurationInMs" : 979,
+        "TotalTasksDurationInMs" : 873,
+        "IOBytes" : {
+          "Total" : 6815911,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 6271630,
+            "SW" : 544281
+          }
+        }
+      }
+    },
+    "6" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -1672774966,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Sort",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : -1
+              },
+              "compileTime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : -1
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true "
+          }
+        },
+        "links" : [ ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true\n+- Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L]\n   +- Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n      +- Join Inner, (p_partkey#7L = ps_partkey#2L)\n         :- LogicalQueryStage Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))), ShuffleQueryStage 2\n         +- LogicalQueryStage Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1997547701,
+            "className" : "org.apache.spark.sql.execution.SortExec",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Input [4]: [p_brand#15, p_type#10, p_size#11, supplier_cnt#31L] Arguments: [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true, 0 "
+          },
+          "1" : {
+            "sign" : -751500367,
+            "className" : "org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec",
+            "sizeInBytes" : 2002944,
+            "rowCount" : 27840,
+            "isRuntime" : true,
+            "predicate" : " (unknown) ShuffleQueryStage Output [4]: [p_brand#15, p_type#10, p_size#11, supplier_cnt#31L] Arguments: 5 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "ShuffleQueryStage",
+          "toId" : 0,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Sort [supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST], true, 0\n+- ShuffleQueryStage 5\n   +- Exchange rangepartitioning(supplier_cnt#31L DESC NULLS LAST, p_brand#15 ASC NULLS FIRST, p_type#10 ASC NULLS FIRST, p_size#11 ASC NULLS FIRST, 200), ENSURE_REQUIREMENTS, [plan_id=535]\n      +- *(8) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[count(distinct ps_suppkey#3L)], output=[p_brand#15, p_type#10, p_size#11, supplier_cnt#31L])\n         +- AQEShuffleRead coalesced\n            +- ShuffleQueryStage 4\n               +- Exchange hashpartitioning(p_brand#15, p_type#10, p_size#11, 200), ENSURE_REQUIREMENTS, [plan_id=505]\n                  +- *(7) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11], functions=[partial_count(distinct ps_suppkey#3L)], output=[p_brand#15, p_type#10, p_size#11, count#40L])\n                     +- *(7) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L], functions=[], output=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L])\n                        +- AQEShuffleRead coalesced\n                           +- ShuffleQueryStage 3\n                              +- Exchange hashpartitioning(p_brand#15, p_type#10, p_size#11, ps_suppkey#3L, 200), ENSURE_REQUIREMENTS, [plan_id=452]\n                                 +- *(6) HashAggregate(keys=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L], functions=[], output=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L])\n                                    +- *(6) Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n                                       +- *(6) SortMergeJoin [ps_partkey#2L], [p_partkey#7L], Inner\n                                          :- *(4) Sort [ps_partkey#2L ASC NULLS FIRST], false, 0\n                                          :  +- AQEShuffleRead coalesced\n                                          :     +- ShuffleQueryStage 2\n                                          :        +- Exchange hashpartitioning(ps_partkey#2L, 200), ENSURE_REQUIREMENTS, [plan_id=350]\n                                          :           +- *(3) BroadcastHashJoin [ps_suppkey#3L], [s_suppkey#16L], LeftAnti, BuildRight, true\n                                          :              :- *(3) Filter isnotnull(ps_partkey#2L)\n                                          :              :  +- *(3) ColumnarToRow\n                                          :              :     +- FileScan parquet spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L] Batched: true, DataFilters: [isnotnull(ps_partkey#2L)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/partsupp], PartitionFilters: [], PushedFilters: [IsNotNull(ps_partkey)], ReadSchema: struct<ps_partkey:bigint,ps_suppkey:bigint>\n                                          :              +- BroadcastQueryStage 0\n                                          :                 +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, bigint, true]),true), [plan_id=134]\n                                          :                    +- *(1) Project [s_suppkey#16L]\n                                          :                       +- *(1) Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n                                          :                          +- *(1) ColumnarToRow\n                                          :                             +- FileScan parquet spark_catalog.tpch_100.supplier[s_suppkey#16L,s_comment#22] Batched: true, DataFilters: [isnotnull(s_comment#22), s_comment#22 LIKE %Customer%Complaints%], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/supplier], PartitionFilters: [], PushedFilters: [IsNotNull(s_comment)], ReadSchema: struct<s_suppkey:bigint,s_comment:string>\n                                          +- *(5) Sort [p_partkey#7L ASC NULLS FIRST], false, 0\n                                             +- AQEShuffleRead coalesced\n                                                +- ShuffleQueryStage 1\n                                                   +- Exchange hashpartitioning(p_partkey#7L, 200), ENSURE_REQUIREMENTS, [plan_id=154]\n                                                      +- *(2) Filter (((isnotnull(p_type#10) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L))\n                                                         +- *(2) ColumnarToRow\n                                                            +- FileScan parquet spark_catalog.tpch_100.part[p_partkey#7L,p_type#10,p_size#11,p_brand#15] Batched: true, DataFilters: [isnotnull(p_type#10), NOT StartsWith(p_type#10, MEDIUM BURNISHED), p_size#11 IN (4,22,35,31,47,4..., Format: Parquet, Location: InMemoryFileIndex(24 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/part/p_br..., PartitionFilters: [isnotnull(p_brand#15), NOT (p_brand#15 = Brand#41)], PushedFilters: [IsNotNull(p_type), Not(StringStartsWith(p_type,MEDIUM BURNISHED)), In(p_size, [11,22,30,31,35,4,..., ReadSchema: struct<p_partkey:bigint,p_type:string,p_size:int>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 2002944,
+        "inputRowCount" : 27840
+      },
+      "InitialPartitionNum" : 200,
+      "PD" : {
+        "4" : [ 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2726, 2726, 2999, 2726, 2726, 2999, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2999, 2726, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2726, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2999, 2726, 2726, 2726, 2999, 2726, 2726, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2999, 2726, 2726, 2999, 2999, 2726, 2726, 2999, 2999, 2999, 2999, 2726, 2999, 2999, 2999, 2726, 2999, 2999, 2999, 2999, 2999, 2999, 2999, 2999 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 6,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 25 ],
+      "Objectives" : {
+        "DurationInMs" : 142,
+        "TotalTasksDurationInMs" : 132,
+        "IOBytes" : {
+          "Total" : 544281,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 544281,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "1" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -932841045,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 224975415,
+                "rowCount" : 3081855
+              },
+              "compileTime" : {
+                "sizeInBytes" : 224975415,
+                "rowCount" : 3081855
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [p_partkey#7L, p_type#10, p_size#11, p_brand#15] "
+          },
+          "1" : {
+            "sign" : 119411986,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 610207290,
+                "rowCount" : 3081855
+              },
+              "compileTime" : {
+                "sizeInBytes" : 610207290,
+                "rowCount" : 3081855
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: (((((isnotnull(p_brand#15) AND isnotnull(p_type#10)) AND NOT (p_brand#15 = Brand#41)) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L)) "
+          },
+          "2" : {
+            "sign" : 1816199199,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 3807692460,
+                "rowCount" : 19230770
+              },
+              "compileTime" : {
+                "sizeInBytes" : 3807692460,
+                "rowCount" : 19230770
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [p_partkey#7L, p_name#8, p_mfgr#9, p_type#10, p_size#11, p_container#12, p_retailprice#13, p_comment#14, p_brand#15], `spark_catalog`.`tpch_100`.`part`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "LogicalRelation",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15]\n+- Filter (((((isnotnull(p_brand#15) AND isnotnull(p_type#10)) AND NOT (p_brand#15 = Brand#41)) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L))\n   +- Relation spark_catalog.tpch_100.part[p_partkey#7L,p_name#8,p_mfgr#9,p_type#10,p_size#11,p_container#12,p_retailprice#13,p_comment#14,p_brand#15] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -1718652443,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 224975415,
+            "rowCount" : 3081855,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [4]: [p_partkey#7L, p_type#10, p_size#11, p_brand#15] Condition : (((isnotnull(p_type#10) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L)) "
+          },
+          "1" : {
+            "sign" : 2133374207,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 224975415,
+            "rowCount" : 3081855,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpch_100.part Output [4]: [p_partkey#7L, p_type#10, p_size#11, p_brand#15] Batched: true Location: InMemoryFileIndex [hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/part/p_brand=Brand%2311, ... 23 entries] PartitionFilters: [isnotnull(p_brand#15), NOT (p_brand#15 = Brand#41)] PushedFilters: [IsNotNull(p_type), Not(StringStartsWith(p_type,MEDIUM BURNISHED)), In(p_size, [11,22,30,31,35,4,44,47]), IsNotNull(p_partkey)] ReadSchema: struct<p_partkey:bigint,p_type:string,p_size:int> "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "Scan parquet spark_catalog.tpch_100.part",
+          "toId" : 0,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Filter (((isnotnull(p_type#10) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L))\n+- FileScan parquet spark_catalog.tpch_100.part[p_partkey#7L,p_type#10,p_size#11,p_brand#15] Batched: true, DataFilters: [isnotnull(p_type#10), NOT StartsWith(p_type#10, MEDIUM BURNISHED), p_size#11 IN (4,22,35,31,47,4..., Format: Parquet, Location: InMemoryFileIndex(24 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/part/p_br..., PartitionFilters: [isnotnull(p_brand#15), NOT (p_brand#15 = Brand#41)], PushedFilters: [IsNotNull(p_type), Not(StringStartsWith(p_type,MEDIUM BURNISHED)), In(p_size, [11,22,30,31,35,4,..., ReadSchema: struct<p_partkey:bigint,p_type:string,p_size:int>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 224975415,
+        "inputRowCount" : 3081855
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 1,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 0 ],
+      "Objectives" : {
+        "DurationInMs" : 4455,
+        "TotalTasksDurationInMs" : 66463,
+        "IOBytes" : {
+          "Total" : 205532784,
+          "Details" : {
+            "IR" : 135971534,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 69561250
+          }
+        }
+      }
+    },
+    "0" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1353218182,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 16000000,
+                "rowCount" : 1000000
+              },
+              "compileTime" : {
+                "sizeInBytes" : 16000000,
+                "rowCount" : 1000000
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [s_suppkey#16L] "
+          },
+          "1" : {
+            "sign" : -509583360,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 201000000,
+                "rowCount" : 1000000
+              },
+              "compileTime" : {
+                "sizeInBytes" : 201000000,
+                "rowCount" : 1000000
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%) "
+          },
+          "2" : {
+            "sign" : 1019251165,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 201000000,
+                "rowCount" : 1000000
+              },
+              "compileTime" : {
+                "sizeInBytes" : 201000000,
+                "rowCount" : 1000000
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [s_suppkey#16L, s_name#17, s_address#18, s_nationkey#19L, s_phone#20, s_acctbal#21, s_comment#22], `spark_catalog`.`tpch_100`.`supplier`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "LogicalRelation",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [s_suppkey#16L]\n+- Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n   +- Relation spark_catalog.tpch_100.supplier[s_suppkey#16L,s_name#17,s_address#18,s_nationkey#19L,s_phone#20,s_acctbal#21,s_comment#22] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -524153848,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 16000000,
+            "rowCount" : 1000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [1]: [s_suppkey#16L] Input [2]: [s_suppkey#16L, s_comment#22] "
+          },
+          "1" : {
+            "sign" : -1858730034,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 16000000,
+            "rowCount" : 1000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [2]: [s_suppkey#16L, s_comment#22] Condition : (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%) "
+          },
+          "2" : {
+            "sign" : 1170133905,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 16000000,
+            "rowCount" : 1000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpch_100.supplier Output [2]: [s_suppkey#16L, s_comment#22] Batched: true Location: InMemoryFileIndex [hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/supplier] PushedFilters: [IsNotNull(s_comment)] ReadSchema: struct<s_suppkey:bigint,s_comment:string> "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "Scan parquet spark_catalog.tpch_100.supplier",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Project [s_suppkey#16L]\n+- Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n   +- FileScan parquet spark_catalog.tpch_100.supplier[s_suppkey#16L,s_comment#22] Batched: true, DataFilters: [isnotnull(s_comment#22), s_comment#22 LIKE %Customer%Complaints%], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/supplier], PartitionFilters: [], PushedFilters: [IsNotNull(s_comment)], ReadSchema: struct<s_suppkey:bigint,s_comment:string>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 16000000,
+        "inputRowCount" : 1000000
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 0,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 1 ],
+      "Objectives" : {
+        "DurationInMs" : 6449,
+        "TotalTasksDurationInMs" : 5550,
+        "IOBytes" : {
+          "Total" : 29221949,
+          "Details" : {
+            "IR" : 29221949,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 0
+          }
+        }
+      }
+    },
+    "2" : {
+      "QSLogical" : {
+        "operators" : {
+          "4" : {
+            "sign" : 842229362,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 1064960,
+                "rowCount" : 479
+              },
+              "compileTime" : {
+                "sizeInBytes" : 16000000,
+                "rowCount" : 1000000
+              }
+            },
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [s_suppkey#16L], BroadcastQueryStage 0 "
+          },
+          "1" : {
+            "sign" : 2087555312,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 1920000000,
+                "rowCount" : 80000000
+              },
+              "compileTime" : {
+                "sizeInBytes" : 1920000000,
+                "rowCount" : 80000000
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [ps_partkey#2L, ps_suppkey#3L] "
+          },
+          "0" : {
+            "sign" : 1658695692,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 1920000000,
+                "rowCount" : 80000000
+              },
+              "compileTime" : {
+                "sizeInBytes" : 1920000000,
+                "rowCount" : 80000000
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))) "
+          },
+          "2" : {
+            "sign" : 1360130543,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 13760000000,
+                "rowCount" : 80000000
+              },
+              "compileTime" : {
+                "sizeInBytes" : 13760000000,
+                "rowCount" : 80000000
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: isnotnull(ps_partkey#2L) "
+          },
+          "3" : {
+            "sign" : -114112705,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 13760000000,
+                "rowCount" : 80000000
+              },
+              "compileTime" : {
+                "sizeInBytes" : 13760000000,
+                "rowCount" : 80000000
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [ps_partkey#2L, ps_suppkey#3L, ps_availqty#4, ps_supplycost#5, ps_comment#6], `spark_catalog`.`tpch_100`.`partsupp`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 3,
+          "fromName" : "LogicalRelation",
+          "toId" : 2,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Filter",
+          "toId" : 1,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Project",
+          "toId" : 0,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 0,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L)))\n:- Project [ps_partkey#2L, ps_suppkey#3L]\n:  +- Filter isnotnull(ps_partkey#2L)\n:     +- Relation spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L,ps_availqty#4,ps_supplycost#5,ps_comment#6] parquet\n+- LogicalQueryStage Project [s_suppkey#16L], BroadcastQueryStage 0\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 386398679,
+            "className" : "org.apache.spark.sql.execution.joins.BroadcastHashJoinExec",
+            "sizeInBytes" : 1920000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) BroadcastHashJoin Left keys [1]: [ps_suppkey#3L] Right keys [1]: [s_suppkey#16L] Join type: LeftAnti Join condition: None "
+          },
+          "1" : {
+            "sign" : -686068717,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 1920000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [2]: [ps_partkey#2L, ps_suppkey#3L] Condition : isnotnull(ps_partkey#2L) "
+          },
+          "2" : {
+            "sign" : -504217245,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 1920000000,
+            "rowCount" : 80000000,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpch_100.partsupp Output [2]: [ps_partkey#2L, ps_suppkey#3L] Batched: true Location: InMemoryFileIndex [hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/partsupp] PushedFilters: [IsNotNull(ps_partkey)] ReadSchema: struct<ps_partkey:bigint,ps_suppkey:bigint> "
+          },
+          "3" : {
+            "sign" : 332011735,
+            "className" : "org.apache.spark.sql.execution.adaptive.BroadcastQueryStageExec",
+            "sizeInBytes" : 1064960,
+            "rowCount" : 479,
+            "isRuntime" : true,
+            "predicate" : " (unknown) BroadcastQueryStage Output [1]: [s_suppkey#16L] Arguments: 0 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 2,
+          "fromName" : "Scan parquet spark_catalog.tpch_100.partsupp",
+          "toId" : 1,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Filter",
+          "toId" : 0,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "BroadcastQueryStage",
+          "toId" : 0,
+          "toName" : "BroadcastHashJoin",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "BroadcastHashJoin [ps_suppkey#3L], [s_suppkey#16L], LeftAnti, BuildRight, true\n:- Filter isnotnull(ps_partkey#2L)\n:  +- FileScan parquet spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L] Batched: true, DataFilters: [isnotnull(ps_partkey#2L)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/partsupp], PartitionFilters: [], PushedFilters: [IsNotNull(ps_partkey)], ReadSchema: struct<ps_partkey:bigint,ps_suppkey:bigint>\n+- BroadcastQueryStage 0\n   +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, bigint, true]),true), [plan_id=134]\n      +- *(1) Project [s_suppkey#16L]\n         +- *(1) Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n            +- *(1) ColumnarToRow\n               +- FileScan parquet spark_catalog.tpch_100.supplier[s_suppkey#16L,s_comment#22] Batched: true, DataFilters: [isnotnull(s_comment#22), s_comment#22 LIKE %Customer%Complaints%], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/supplier], PartitionFilters: [], PushedFilters: [IsNotNull(s_comment)], ReadSchema: struct<s_suppkey:bigint,s_comment:string>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 1921064960,
+        "inputRowCount" : 80000479
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 2,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 2 ],
+      "Objectives" : {
+        "DurationInMs" : 3034,
+        "TotalTasksDurationInMs" : 38085,
+        "IOBytes" : {
+          "Total" : 1563997279,
+          "Details" : {
+            "IR" : 729470610,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 834526669
+          }
+        }
+      }
+    },
+    "3" : {
+      "QSLogical" : {
+        "operators" : {
+          "4" : {
+            "sign" : 1064285296,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 213611688,
+                "rowCount" : 2969159
+              },
+              "compileTime" : {
+                "sizeInBytes" : 224975415,
+                "rowCount" : 3081855
+              }
+            },
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1 "
+          },
+          "1" : {
+            "sign" : -2112434935,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : 237418941827120
+              },
+              "compileTime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : 237418941827120
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15] "
+          },
+          "0" : {
+            "sign" : 628368558,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : -1
+              },
+              "compileTime" : {
+                "sizeInBytes" : 14245136509627200,
+                "rowCount" : -1
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L] "
+          },
+          "2" : {
+            "sign" : 1863604332,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Join",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 18043839578861120,
+                "rowCount" : 237418941827120
+              },
+              "compileTime" : {
+                "sizeInBytes" : 18043839578861120,
+                "rowCount" : 237418941827120
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Join Arguments: Inner, (p_partkey#7L = ps_partkey#2L) "
+          },
+          "3" : {
+            "sign" : -221963403,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 1919080320,
+                "rowCount" : 79961680
+              },
+              "compileTime" : {
+                "sizeInBytes" : 1920000000,
+                "rowCount" : 80000000
+              }
+            },
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))), ShuffleQueryStage 2 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 3,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 2,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 4,
+          "fromName" : "LogicalQueryStage",
+          "toId" : 2,
+          "toName" : "Join",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Join",
+          "toId" : 1,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Project",
+          "toId" : 0,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Aggregate [p_brand#15, p_type#10, p_size#11], [p_brand#15, p_type#10, p_size#11, count(distinct ps_suppkey#3L) AS supplier_cnt#31L]\n+- Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n   +- Join Inner, (p_partkey#7L = ps_partkey#2L)\n      :- LogicalQueryStage Join LeftAnti, ((ps_suppkey#3L = s_suppkey#16L) OR isnull((ps_suppkey#3L = s_suppkey#16L))), ShuffleQueryStage 2\n      +- LogicalQueryStage Project [p_partkey#7L, p_type#10, p_size#11, p_brand#15], ShuffleQueryStage 1\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "4" : {
+            "sign" : -316301358,
+            "className" : "org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec",
+            "sizeInBytes" : 1919080320,
+            "rowCount" : 79961680,
+            "isRuntime" : true,
+            "predicate" : " (unknown) ShuffleQueryStage Output [2]: [ps_partkey#2L, ps_suppkey#3L] Arguments: 2 "
+          },
+          "5" : {
+            "sign" : -459380358,
+            "className" : "org.apache.spark.sql.execution.SortExec",
+            "sizeInBytes" : -1,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Input [4]: [p_partkey#7L, p_type#10, p_size#11, p_brand#15] Arguments: [p_partkey#7L ASC NULLS FIRST], false, 0 "
+          },
+          "6" : {
+            "sign" : -1643211591,
+            "className" : "org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec",
+            "sizeInBytes" : 213611688,
+            "rowCount" : 2969159,
+            "isRuntime" : true,
+            "predicate" : " (unknown) ShuffleQueryStage Output [4]: [p_partkey#7L, p_type#10, p_size#11, p_brand#15] Arguments: 1 "
+          },
+          "1" : {
+            "sign" : 1436149067,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : 237418941827120,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [4]: [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15] Input [6]: [ps_partkey#2L, ps_suppkey#3L, p_partkey#7L, p_type#10, p_size#11, p_brand#15] "
+          },
+          "0" : {
+            "sign" : 938417664,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 14245136509627200,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) HashAggregate Input [4]: [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15] Keys [4]: [p_brand#15, p_type#10, p_size#11, ps_suppkey#3L] Functions: [] Aggregate Attributes: [] Results [4]: [p_brand#15, p_type#10, p_size#11, ps_suppkey#3L] "
+          },
+          "2" : {
+            "sign" : -1527247174,
+            "className" : "org.apache.spark.sql.execution.joins.SortMergeJoinExec",
+            "sizeInBytes" : 18043839578861120,
+            "rowCount" : 237418941827120,
+            "isRuntime" : false,
+            "predicate" : " (unknown) SortMergeJoin Left keys [1]: [ps_partkey#2L] Right keys [1]: [p_partkey#7L] Join type: Inner Join condition: None "
+          },
+          "3" : {
+            "sign" : 501562021,
+            "className" : "org.apache.spark.sql.execution.SortExec",
+            "sizeInBytes" : -1,
+            "rowCount" : -1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Sort Input [2]: [ps_partkey#2L, ps_suppkey#3L] Arguments: [ps_partkey#2L ASC NULLS FIRST], false, 0 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 4,
+          "fromName" : "ShuffleQueryStage",
+          "toId" : 3,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 3,
+          "fromName" : "Sort",
+          "toId" : 2,
+          "toName" : "SortMergeJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 6,
+          "fromName" : "ShuffleQueryStage",
+          "toId" : 5,
+          "toName" : "Sort",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 5,
+          "fromName" : "Sort",
+          "toId" : 2,
+          "toName" : "SortMergeJoin",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "SortMergeJoin",
+          "toId" : 1,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Project",
+          "toId" : 0,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "HashAggregate(keys=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L], functions=[], output=[p_brand#15, p_type#10, p_size#11, ps_suppkey#3L])\n+- Project [ps_suppkey#3L, p_type#10, p_size#11, p_brand#15]\n   +- SortMergeJoin [ps_partkey#2L], [p_partkey#7L], Inner\n      :- Sort [ps_partkey#2L ASC NULLS FIRST], false, 0\n      :  +- ShuffleQueryStage 2\n      :     +- Exchange hashpartitioning(ps_partkey#2L, 200), ENSURE_REQUIREMENTS, [plan_id=350]\n      :        +- *(3) BroadcastHashJoin [ps_suppkey#3L], [s_suppkey#16L], LeftAnti, BuildRight, true\n      :           :- *(3) Filter isnotnull(ps_partkey#2L)\n      :           :  +- *(3) ColumnarToRow\n      :           :     +- FileScan parquet spark_catalog.tpch_100.partsupp[ps_partkey#2L,ps_suppkey#3L] Batched: true, DataFilters: [isnotnull(ps_partkey#2L)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/partsupp], PartitionFilters: [], PushedFilters: [IsNotNull(ps_partkey)], ReadSchema: struct<ps_partkey:bigint,ps_suppkey:bigint>\n      :           +- BroadcastQueryStage 0\n      :              +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, bigint, true]),true), [plan_id=134]\n      :                 +- *(1) Project [s_suppkey#16L]\n      :                    +- *(1) Filter (isnotnull(s_comment#22) AND s_comment#22 LIKE %Customer%Complaints%)\n      :                       +- *(1) ColumnarToRow\n      :                          +- FileScan parquet spark_catalog.tpch_100.supplier[s_suppkey#16L,s_comment#22] Batched: true, DataFilters: [isnotnull(s_comment#22), s_comment#22 LIKE %Customer%Complaints%], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/supplier], PartitionFilters: [], PushedFilters: [IsNotNull(s_comment)], ReadSchema: struct<s_suppkey:bigint,s_comment:string>\n      +- Sort [p_partkey#7L ASC NULLS FIRST], false, 0\n         +- ShuffleQueryStage 1\n            +- Exchange hashpartitioning(p_partkey#7L, 200), ENSURE_REQUIREMENTS, [plan_id=154]\n               +- *(2) Filter (((isnotnull(p_type#10) AND NOT StartsWith(p_type#10, MEDIUM BURNISHED)) AND p_size#11 IN (4,22,35,31,47,44,30,11)) AND isnotnull(p_partkey#7L))\n                  +- *(2) ColumnarToRow\n                     +- FileScan parquet spark_catalog.tpch_100.part[p_partkey#7L,p_type#10,p_size#11,p_brand#15] Batched: true, DataFilters: [isnotnull(p_type#10), NOT StartsWith(p_type#10, MEDIUM BURNISHED), p_size#11 IN (4,22,35,31,47,4..., Format: Parquet, Location: InMemoryFileIndex(24 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/part/p_br..., PartitionFilters: [isnotnull(p_brand#15), NOT (p_brand#15 = Brand#41)], PushedFilters: [IsNotNull(p_type), Not(StringStartsWith(p_type,MEDIUM BURNISHED)), In(p_size, [11,22,30,31,35,4,..., ReadSchema: struct<p_partkey:bigint,p_type:string,p_size:int>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 2132692008,
+        "inputRowCount" : 82930839
+      },
+      "InitialPartitionNum" : 200,
+      "PD" : {
+        "1" : [ 4272049, 4309069, 4309069, 4296729, 4346089, 4309069, 4333749, 4321409, 4326783, 4333749, 4333749, 4296729, 4333749, 4321409, 4321409, 4316730, 4321409, 4284389, 4296729, 4383109, 4309069, 4321409, 4358429, 4333749, 4284389, 4296729, 4346089, 4296729, 4333749, 4309069, 4309069, 4333749, 4346089, 4284389, 4321409, 4309069, 4296729, 4321409, 4296729, 4346089, 4321409, 4309069, 4333749, 4296729, 4309069, 4309069, 4296729, 4383109, 4309069, 4296729, 4284389, 4346089, 4292050, 4383109, 4321409, 4321409, 4309069, 4321409, 4383109, 4296729, 4321409, 4346089, 4321409, 4284389, 4284389, 4296729, 4284389, 4296729, 4309069, 4296729, 4284389, 4370769, 4284389, 4321409, 4309069, 4314443, 4284389, 4346089, 4296729, 4284389, 4284389, 4309069, 4296729, 4326783, 4309069, 4321409, 4284389, 4309069, 4296729, 4309069, 4321409, 4296729, 4346089, 4333749, 4333749, 4284389, 4309069, 4309069, 4321409, 4272049, 4346089, 4309069, 4321409, 4296729, 4333749, 4333749, 4284389, 4309069, 4296729, 4346089, 4296729, 4309069, 4309069, 4358429, 4284389, 4346089, 4309069, 4309069, 4370769, 4333749, 4333749, 4284389, 4284389, 4321409, 4296729, 4333749, 4321409, 4296729, 4321409, 4296729, 4321409, 4333749, 4304390, 4296729, 4370769, 4333749, 4346089, 4296729, 4309069, 4333749, 4358429, 4321409, 4296729, 4296729, 4358429, 4296729, 4309069, 4370769, 4321409, 4321409, 4284389, 4346089, 4273171, 4309069, 4296729, 4296729, 4333749, 4272049, 4333749, 4341410, 4333749, 4296729, 4370769, 4296729, 4346089, 4284389, 4284389, 4309069, 4272049, 4346089, 4333749, 4346089, 4358429, 4309069, 4370769, 4333749, 4321409, 4309069, 4321409, 4321409, 4309069, 4309069, 4309069, 4358429, 4316730, 4370769, 4333749, 4333749, 4346089, 4333749, 4296729, 4346089, 4321409, 4358429, 4321409, 4309069, 4333749, 4309069, 4302103, 4321409 ],
+        "0" : [ 357178, 364068, 365446, 368478, 374680, 365722, 365308, 365584, 365584, 359796, 368616, 364344, 365584, 365722, 365722, 358418, 361312, 361174, 364344, 364344, 364068, 368616, 368478, 364206, 370132, 365722, 364206, 354146, 361312, 364068, 365722, 366962, 364068, 361174, 367100, 368478, 365722, 367100, 368340, 363930, 365584, 370132, 364206, 361174, 366962, 361588, 362552, 368340, 371510, 364068, 360072, 368892, 364206, 368616, 361450, 364344, 361450, 366824, 367100, 365446, 358280, 361312, 365584, 361174, 364068, 359796, 361312, 362690, 365998, 361174, 360072, 368478, 362690, 364068, 364068, 371648, 363930, 369856, 362828, 362828, 367100, 367100, 365584, 361450, 365584, 359796, 359934, 362552, 357316, 359658, 364344, 359796, 365722, 365308, 358418, 366962, 368478, 371372, 366824, 362552, 371510, 361174, 366962, 365584, 368478, 368478, 362690, 364206, 365584, 365446, 362690, 361450, 367100, 371510, 368478, 366962, 370270, 358694, 369994, 365584, 359796, 365446, 365446, 366824, 361450, 364344, 357040, 358556, 361450, 361174, 361174, 365584, 362828, 362690, 364068, 365446, 368478, 365584, 361312, 361174, 358418, 362966, 364068, 362552, 361312, 357040, 368340, 368478, 364206, 368478, 364206, 364068, 361174, 365722, 364068, 364068, 364344, 368478, 366824, 365584, 362552, 367100, 362552, 367100, 368478, 364068, 365584, 367100, 366962, 365308, 368754, 366962, 368754, 362690, 356902, 365584, 367100, 368616, 364344, 368616, 359934, 361450, 358418, 361036, 362828, 367100, 365722, 361036, 364068, 366962, 364206, 359796, 362690, 366962, 358556, 361588, 362690, 365860, 367100, 361174 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 3,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 5 ],
+      "Objectives" : {
+        "DurationInMs" : 6324,
+        "TotalTasksDurationInMs" : 80019,
+        "IOBytes" : {
+          "Total" : 1173363300,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 904087919,
+            "SW" : 269275381
+          }
+        }
+      }
+    }
+  },
+  "SQLStartTimeInMs" : 1702226676127,
+  "SQLEndTimeInMs" : 1702226705466,
+  "Objectives" : {
+    "DurationInMs" : 29339,
+    "IOBytes" : {
+      "Total" : 3251886700,
+      "Details" : {
+        "IR" : 894664093,
+        "IW" : 0,
+        "SR" : 1180179211,
+        "SW" : 1177043396
+      }
+    }
+  }
+}

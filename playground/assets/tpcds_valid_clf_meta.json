@@ -1,0 +1,226 @@
+{
+  "4": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_4",
+    "eval_stats": {
+      "accuracy": 0.9795918367346939,
+      "balanced_accuracy": 0.5000000000000002,
+      "mcc": 0.0,
+      "roc_auc": 0.052083333333333315,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 478
+  },
+  "16": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_16",
+    "eval_stats": {
+      "accuracy": 0.9489795918367347,
+      "balanced_accuracy": 0.5000000000000001,
+      "mcc": 0.0,
+      "roc_auc": 0.7064516129032259,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 465
+  },
+  "23b": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_23b",
+    "eval_stats": {
+      "accuracy": 0.9489795918367347,
+      "balanced_accuracy": 0.5000000000000001,
+      "mcc": 0.0,
+      "roc_auc": 0.3860215053763441,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 465
+  },
+  "35": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_35",
+    "eval_stats": {
+      "accuracy": 0.9897959183673469,
+      "balanced_accuracy": 0.75,
+      "mcc": 0.7034524581126591,
+      "roc_auc": 0.6848958333333334,
+      "f1": 0.6666666666666666,
+      "precision": 1.0,
+      "recall": 0.5
+    },
+    "n_all": 490,
+    "n_succ": 479
+  },
+  "37": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_37",
+    "eval_stats": {
+      "accuracy": 0.9693877551020408,
+      "balanced_accuracy": 0.5000000000000002,
+      "mcc": 0.0,
+      "roc_auc": 0.49122807017543857,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 476
+  },
+  "38": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_38",
+    "eval_stats": {
+      "accuracy": 0.9795918367346939,
+      "balanced_accuracy": 0.7447916666666667,
+      "mcc": 0.4895833333333333,
+      "roc_auc": 0.9869791666666666,
+      "f1": 0.5,
+      "precision": 0.5,
+      "recall": 0.5
+    },
+    "n_all": 490,
+    "n_succ": 479
+  },
+  "44": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_44",
+    "eval_stats": {
+      "accuracy": 0.47959183673469385,
+      "balanced_accuracy": 0.47875,
+      "mcc": -0.04263343831891912,
+      "roc_auc": 0.49,
+      "f1": 0.5048543689320388,
+      "precision": 0.49056603773584906,
+      "recall": 0.52
+    },
+    "n_all": 490,
+    "n_succ": 239
+  },
+  "69": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_69",
+    "eval_stats": {
+      "accuracy": 0.6938775510204082,
+      "balanced_accuracy": 0.4927536231884058,
+      "mcc": -0.06582465422499258,
+      "roc_auc": 0.5407296351824088,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 344
+  },
+  "72": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_72",
+    "eval_stats": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "mcc": 1.0,
+      "roc_auc": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "n_all": 490,
+    "n_succ": 43
+  },
+  "75": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_75",
+    "eval_stats": {
+      "accuracy": 0.9693877551020408,
+      "balanced_accuracy": 0.5000000000000002,
+      "mcc": 0.0,
+      "roc_auc": 0.3333333333333333,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 473
+  },
+  "78": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_78",
+    "eval_stats": {
+      "accuracy": 0.9489795918367347,
+      "balanced_accuracy": 0.878494623655914,
+      "mcc": 0.6083449942418495,
+      "roc_auc": 0.9731182795698925,
+      "f1": 0.6153846153846154,
+      "precision": 0.5,
+      "recall": 0.8
+    },
+    "n_all": 490,
+    "n_succ": 463
+  },
+  "80": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_80",
+    "eval_stats": {
+      "accuracy": 0.9795918367346939,
+      "balanced_accuracy": 0.5000000000000002,
+      "mcc": 0.0,
+      "roc_auc": 0.5963541666666667,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 480
+  },
+  "87": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_87",
+    "eval_stats": {
+      "accuracy": 0.9693877551020408,
+      "balanced_accuracy": 0.6614035087719298,
+      "mcc": 0.39329170163264243,
+      "roc_auc": 0.9631578947368421,
+      "f1": 0.4,
+      "precision": 0.5,
+      "recall": 0.3333333333333333
+    },
+    "n_all": 490,
+    "n_succ": 475
+  },
+  "93": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_93",
+    "eval_stats": {
+      "accuracy": 0.7448979591836735,
+      "balanced_accuracy": 0.5,
+      "mcc": 0.0,
+      "roc_auc": 0.5909589041095891,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 366
+  },
+  "94": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_94",
+    "eval_stats": {
+      "accuracy": 0.9693877551020408,
+      "balanced_accuracy": 0.625,
+      "mcc": 0.4922073153023159,
+      "roc_auc": 0.9813829787234043,
+      "f1": 0.4,
+      "precision": 1.0,
+      "recall": 0.25
+    },
+    "n_all": 490,
+    "n_succ": 470
+  },
+  "95": {
+    "path": "AutogluonModels/tpcds_fail_clf/template_95",
+    "eval_stats": {
+      "accuracy": 0.9795918367346939,
+      "balanced_accuracy": 0.5000000000000002,
+      "mcc": 0.0,
+      "roc_auc": 0.36197916666666663,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "n_all": 490,
+    "n_succ": 479
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "CompileTimeLQP" : {
+    "LQP" : {
+      "operators" : {
+        "0" : {
+          "sign" : -696016481,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+          "sizeInBytes" : 24,
+          "rowCount" : 1,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Aggregate Arguments: [sum((l_extendedprice#6 * l_discount#7)) AS revenue#0] "
+        },
+        "1" : {
+          "sign" : 515353680,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+          "sizeInBytes" : 289356768,
+          "rowCount" : 12056532,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Project Arguments: [l_extendedprice#6, l_discount#7] "
+        },
+        "2" : {
+          "sign" : 1168243767,
+          "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+          "sizeInBytes" : 2242514952,
+          "rowCount" : 12056532,
+          "isRuntime" : false,
+          "predicate" : " (unknown) Filter Arguments: (((((((isnotnull(l_shipdate#16) AND isnotnull(l_discount#7)) AND isnotnull(l_quantity#5)) AND (l_shipdate#16 >= 1993-01-01)) AND (l_shipdate#16 < 1994-01-01)) AND (l_discount#7 >= 0.06)) AND (l_discount#7 <= 0.08)) AND (l_quantity#5 < 25.00)) "
+        },
+        "3" : {
+          "sign" : 206381769,
+          "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+          "sizeInBytes" : 16941227634,
+          "rowCount" : 91081869,
+          "isRuntime" : false,
+          "predicate" : " (unknown) LogicalRelation Arguments: parquet, [l_orderkey#1L, l_partkey#2L, l_suppkey#3L, l_linenumber#4, l_quantity#5, l_extendedprice#6, l_discount#7, l_tax#8, l_returnflag#9, l_linestatus#10, l_commitdate#11, l_receiptdate#12, l_shipinstruct#13, l_shipmode#14, l_comment#15, l_shipdate#16], `spark_catalog`.`tpch_100`.`lineitem`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+        }
+      },
+      "links" : [ {
+        "fromId" : 3,
+        "fromName" : "LogicalRelation",
+        "toId" : 2,
+        "toName" : "Filter",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 2,
+        "fromName" : "Filter",
+        "toId" : 1,
+        "toName" : "Project",
+        "linkType" : "Operator"
+      }, {
+        "fromId" : 1,
+        "fromName" : "Project",
+        "toId" : 0,
+        "toName" : "Aggregate",
+        "linkType" : "Operator"
+      } ],
+      "rawPlan" : "Aggregate [sum((l_extendedprice#6 * l_discount#7)) AS revenue#0]\n+- Project [l_extendedprice#6, l_discount#7]\n   +- Filter (((((((isnotnull(l_shipdate#16) AND isnotnull(l_discount#7)) AND isnotnull(l_quantity#5)) AND (l_shipdate#16 >= 1993-01-01)) AND (l_shipdate#16 < 1994-01-01)) AND (l_discount#7 >= 0.06)) AND (l_discount#7 <= 0.08)) AND (l_quantity#5 < 25.00))\n      +- Relation spark_catalog.tpch_100.lineitem[l_orderkey#1L,l_partkey#2L,l_suppkey#3L,l_linenumber#4,l_quantity#5,l_extendedprice#6,l_discount#7,l_tax#8,l_returnflag#9,l_linestatus#10,l_commitdate#11,l_receiptdate#12,l_shipinstruct#13,l_shipmode#14,l_comment#15,l_shipdate#16] parquet\n"
+    },
+    "IM" : {
+      "inputSizeInBytes" : 16941227634,
+      "inputRowCount" : 91081869
+    },
+    "PD" : { },
+    "Configuration" : {
+      "theta_c" : [ {
+        "spark.executor.memory" : "1g"
+      }, {
+        "spark.executor.cores" : "1"
+      }, {
+        "spark.executor.instances" : "16"
+      }, {
+        "spark.default.parallelism" : "16"
+      }, {
+        "spark.reducer.maxSizeInFlight" : "48m"
+      }, {
+        "spark.shuffle.sort.bypassMergeThreshold" : "200"
+      }, {
+        "spark.shuffle.compress" : "true"
+      }, {
+        "spark.memory.fraction" : "0.6"
+      } ],
+      "theta_p" : [ {
+        "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+      }, {
+        "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+      }, {
+        "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+      }, {
+        "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+      }, {
+        "spark.sql.shuffle.partitions" : "200"
+      }, {
+        "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+      }, {
+        "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+      }, {
+        "spark.sql.files.maxPartitionBytes" : "128MB"
+      }, {
+        "spark.sql.files.openCostInBytes" : "4MB"
+      } ],
+      "theta_s" : [ {
+        "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+      }, {
+        "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+      } ]
+    }
+  },
+  "RuntimeLQPs" : {
+    "1" : {
+      "LQP" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1372476884,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "sizeInBytes" : 1640,
+            "rowCount" : 41,
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [sum((l_extendedprice#6 * l_discount#7)) AS revenue#20], HashAggregate(keys=[], functions=[sum((l_extendedprice#6 * l_discount#7))]) "
+          }
+        },
+        "links" : [ ],
+        "rawPlan" : "LogicalQueryStage Aggregate [sum((l_extendedprice#6 * l_discount#7)) AS revenue#20], HashAggregate(keys=[], functions=[sum((l_extendedprice#6 * l_discount#7))])\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 1640,
+        "inputRowCount" : 41
+      },
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "StartTimeInMs" : 1702226548231,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "Objectives" : {
+        "DurationInMs" : 379,
+        "IOBytes" : {
+          "Total" : 3239,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 3239,
+            "SW" : 0
+          }
+        }
+      }
+    }
+  },
+  "RuntimeQSs" : {
+    "0" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -1038293803,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Aggregate",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 24,
+                "rowCount" : 1
+              },
+              "compileTime" : {
+                "sizeInBytes" : 24,
+                "rowCount" : 1
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Aggregate Arguments: [sum((l_extendedprice#6 * l_discount#7)) AS revenue#20] "
+          },
+          "1" : {
+            "sign" : 515353680,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Project",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 289356768,
+                "rowCount" : 12056532
+              },
+              "compileTime" : {
+                "sizeInBytes" : 289356768,
+                "rowCount" : 12056532
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Arguments: [l_extendedprice#6, l_discount#7] "
+          },
+          "2" : {
+            "sign" : 1168243767,
+            "className" : "org.apache.spark.sql.catalyst.plans.logical.Filter",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 2242514952,
+                "rowCount" : 12056532
+              },
+              "compileTime" : {
+                "sizeInBytes" : 2242514952,
+                "rowCount" : 12056532
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Arguments: (((((((isnotnull(l_shipdate#16) AND isnotnull(l_discount#7)) AND isnotnull(l_quantity#5)) AND (l_shipdate#16 >= 1993-01-01)) AND (l_shipdate#16 < 1994-01-01)) AND (l_discount#7 >= 0.06)) AND (l_discount#7 <= 0.08)) AND (l_quantity#5 < 25.00)) "
+          },
+          "3" : {
+            "sign" : 206381769,
+            "className" : "org.apache.spark.sql.execution.datasources.LogicalRelation",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 16941227634,
+                "rowCount" : 91081869
+              },
+              "compileTime" : {
+                "sizeInBytes" : 16941227634,
+                "rowCount" : 91081869
+              }
+            },
+            "isRuntime" : false,
+            "predicate" : " (unknown) LogicalRelation Arguments: parquet, [l_orderkey#1L, l_partkey#2L, l_suppkey#3L, l_linenumber#4, l_quantity#5, l_extendedprice#6, l_discount#7, l_tax#8, l_returnflag#9, l_linestatus#10, l_commitdate#11, l_receiptdate#12, l_shipinstruct#13, l_shipmode#14, l_comment#15, l_shipdate#16], `spark_catalog`.`tpch_100`.`lineitem`, org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, false "
+          }
+        },
+        "links" : [ {
+          "fromId" : 3,
+          "fromName" : "LogicalRelation",
+          "toId" : 2,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Filter",
+          "toId" : 1,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Project",
+          "toId" : 0,
+          "toName" : "Aggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "Aggregate [sum((l_extendedprice#6 * l_discount#7)) AS revenue#20]\n+- Project [l_extendedprice#6, l_discount#7]\n   +- Filter (((((((isnotnull(l_shipdate#16) AND isnotnull(l_discount#7)) AND isnotnull(l_quantity#5)) AND (l_shipdate#16 >= 1993-01-01)) AND (l_shipdate#16 < 1994-01-01)) AND (l_discount#7 >= 0.06)) AND (l_discount#7 <= 0.08)) AND (l_quantity#5 < 25.00))\n      +- Relation spark_catalog.tpch_100.lineitem[l_orderkey#1L,l_partkey#2L,l_suppkey#3L,l_linenumber#4,l_quantity#5,l_extendedprice#6,l_discount#7,l_tax#8,l_returnflag#9,l_linestatus#10,l_commitdate#11,l_receiptdate#12,l_shipinstruct#13,l_shipmode#14,l_comment#15,l_shipdate#16] parquet\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : -107257539,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 24,
+            "rowCount" : 1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) HashAggregate Input [2]: [l_extendedprice#6, l_discount#7] Keys: [] Functions [1]: [partial_sum((l_extendedprice#6 * l_discount#7))] Aggregate Attributes [2]: [sum#23, isEmpty#24] Results [2]: [sum#25, isEmpty#26] "
+          },
+          "1" : {
+            "sign" : -1742572016,
+            "className" : "org.apache.spark.sql.execution.ProjectExec",
+            "sizeInBytes" : 289356768,
+            "rowCount" : 12056532,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Project Output [2]: [l_extendedprice#6, l_discount#7] Input [4]: [l_quantity#5, l_extendedprice#6, l_discount#7, l_shipdate#16] "
+          },
+          "2" : {
+            "sign" : 631798081,
+            "className" : "org.apache.spark.sql.execution.FilterExec",
+            "sizeInBytes" : 289356768,
+            "rowCount" : 12056532,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Filter Input [4]: [l_quantity#5, l_extendedprice#6, l_discount#7, l_shipdate#16] Condition : ((((isnotnull(l_discount#7) AND isnotnull(l_quantity#5)) AND (l_discount#7 >= 0.06)) AND (l_discount#7 <= 0.08)) AND (l_quantity#5 < 25.00)) "
+          },
+          "3" : {
+            "sign" : 1049065939,
+            "className" : "org.apache.spark.sql.execution.FileSourceScanExec",
+            "sizeInBytes" : 289356768,
+            "rowCount" : 12056532,
+            "isRuntime" : false,
+            "predicate" : " (unknown) Scan parquet spark_catalog.tpch_100.lineitem Output [4]: [l_quantity#5, l_extendedprice#6, l_discount#7, l_shipdate#16] Batched: true Location: InMemoryFileIndex [hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/lineitem/l_shipdate=1993-01-01, ... 364 entries] PartitionFilters: [isnotnull(l_shipdate#16), (l_shipdate#16 >= 1993-01-01), (l_shipdate#16 < 1994-01-01)] PushedFilters: [IsNotNull(l_discount), IsNotNull(l_quantity), GreaterThanOrEqual(l_discount,0.06), LessThanOrEqual(l_discount,0.08), LessThan(l_quantity,25.00)] ReadSchema: struct<l_quantity:decimal(12,2),l_extendedprice:decimal(12,2),l_discount:decimal(12,2)> "
+          }
+        },
+        "links" : [ {
+          "fromId" : 3,
+          "fromName" : "Scan parquet spark_catalog.tpch_100.lineitem",
+          "toId" : 2,
+          "toName" : "Filter",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 2,
+          "fromName" : "Filter",
+          "toId" : 1,
+          "toName" : "Project",
+          "linkType" : "Operator"
+        }, {
+          "fromId" : 1,
+          "fromName" : "Project",
+          "toId" : 0,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "HashAggregate(keys=[], functions=[partial_sum((l_extendedprice#6 * l_discount#7))], output=[sum#25, isEmpty#26])\n+- Project [l_extendedprice#6, l_discount#7]\n   +- Filter ((((isnotnull(l_discount#7) AND isnotnull(l_quantity#5)) AND (l_discount#7 >= 0.06)) AND (l_discount#7 <= 0.08)) AND (l_quantity#5 < 25.00))\n      +- FileScan parquet spark_catalog.tpch_100.lineitem[l_quantity#5,l_extendedprice#6,l_discount#7,l_shipdate#16] Batched: true, DataFilters: [isnotnull(l_discount#7), isnotnull(l_quantity#5), (l_discount#7 >= 0.06), (l_discount#7 <= 0.08)..., Format: Parquet, Location: InMemoryFileIndex(365 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/lineitem..., PartitionFilters: [isnotnull(l_shipdate#16), (l_shipdate#16 >= 1993-01-01), (l_shipdate#16 < 1994-01-01)], PushedFilters: [IsNotNull(l_discount), IsNotNull(l_quantity), GreaterThanOrEqual(l_discount,0.06), LessThanOrEqu..., ReadSchema: struct<l_quantity:decimal(12,2),l_extendedprice:decimal(12,2),l_discount:decimal(12,2)>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 289356768,
+        "inputRowCount" : 12056532
+      },
+      "InitialPartitionNum" : 0,
+      "PD" : { },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 0,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 1 ],
+      "Objectives" : {
+        "DurationInMs" : 5407,
+        "TotalTasksDurationInMs" : 76713,
+        "IOBytes" : {
+          "Total" : 588470395,
+          "Details" : {
+            "IR" : 588467156,
+            "IW" : 0,
+            "SR" : 0,
+            "SW" : 3239
+          }
+        }
+      }
+    },
+    "1" : {
+      "QSLogical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1372476884,
+            "className" : "org.apache.spark.sql.execution.adaptive.LogicalQueryStage",
+            "stats" : {
+              "runtime" : {
+                "sizeInBytes" : 1640,
+                "rowCount" : 41
+              },
+              "compileTime" : {
+                "sizeInBytes" : 24,
+                "rowCount" : 1
+              }
+            },
+            "isRuntime" : true,
+            "predicate" : " (unknown) LogicalQueryStage Arguments: Aggregate [sum((l_extendedprice#6 * l_discount#7)) AS revenue#20], HashAggregate(keys=[], functions=[sum((l_extendedprice#6 * l_discount#7))]) "
+          }
+        },
+        "links" : [ ],
+        "rawPlan" : "LogicalQueryStage Aggregate [sum((l_extendedprice#6 * l_discount#7)) AS revenue#20], HashAggregate(keys=[], functions=[sum((l_extendedprice#6 * l_discount#7))])\n"
+      },
+      "QSPhysical" : {
+        "operators" : {
+          "0" : {
+            "sign" : 1045055,
+            "className" : "org.apache.spark.sql.execution.aggregate.HashAggregateExec",
+            "sizeInBytes" : 1640,
+            "rowCount" : 41,
+            "isRuntime" : true,
+            "predicate" : " (unknown) HashAggregate Input [2]: [sum#25, isEmpty#26] Keys: [] Functions [1]: [sum((l_extendedprice#6 * l_discount#7))] Aggregate Attributes [1]: [sum((l_extendedprice#6 * l_discount#7))#21] Results [1]: [sum((l_extendedprice#6 * l_discount#7))#21 AS revenue#20] "
+          },
+          "1" : {
+            "sign" : -174879190,
+            "className" : "org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec",
+            "sizeInBytes" : 24,
+            "rowCount" : 1,
+            "isRuntime" : false,
+            "predicate" : " (unknown) ShuffleQueryStage Output [2]: [sum#25, isEmpty#26] Arguments: 0 "
+          }
+        },
+        "links" : [ {
+          "fromId" : 1,
+          "fromName" : "ShuffleQueryStage",
+          "toId" : 0,
+          "toName" : "HashAggregate",
+          "linkType" : "Operator"
+        } ],
+        "rawPlan" : "HashAggregate(keys=[], functions=[sum((l_extendedprice#6 * l_discount#7))], output=[revenue#20])\n+- ShuffleQueryStage 0\n   +- Exchange SinglePartition, ENSURE_REQUIREMENTS, [plan_id=39]\n      +- *(1) HashAggregate(keys=[], functions=[partial_sum((l_extendedprice#6 * l_discount#7))], output=[sum#25, isEmpty#26])\n         +- *(1) Project [l_extendedprice#6, l_discount#7]\n            +- *(1) Filter ((((isnotnull(l_discount#7) AND isnotnull(l_quantity#5)) AND (l_discount#7 >= 0.06)) AND (l_discount#7 <= 0.08)) AND (l_quantity#5 < 25.00))\n               +- *(1) ColumnarToRow\n                  +- FileScan parquet spark_catalog.tpch_100.lineitem[l_quantity#5,l_extendedprice#6,l_discount#7,l_shipdate#16] Batched: true, DataFilters: [isnotnull(l_discount#7), isnotnull(l_quantity#5), (l_discount#7 >= 0.06), (l_discount#7 <= 0.08)..., Format: Parquet, Location: InMemoryFileIndex(365 paths)[hdfs://node1-opa:8020/user/spark_benchmark/tpch_100/dataset/lineitem..., PartitionFilters: [isnotnull(l_shipdate#16), (l_shipdate#16 >= 1993-01-01), (l_shipdate#16 < 1994-01-01)], PushedFilters: [IsNotNull(l_discount), IsNotNull(l_quantity), GreaterThanOrEqual(l_discount,0.06), LessThanOrEqu..., ReadSchema: struct<l_quantity:decimal(12,2),l_extendedprice:decimal(12,2),l_discount:decimal(12,2)>\n"
+      },
+      "IM" : {
+        "inputSizeInBytes" : 1640,
+        "inputRowCount" : 41
+      },
+      "InitialPartitionNum" : 1,
+      "PD" : {
+        "0" : [ 3280 ]
+      },
+      "RunningQueryStageSnapshot" : {
+        "RunningTasksNum" : 0,
+        "FinishedTasksNum" : 0,
+        "FinishedTasksTotalTimeInMs" : 0.0,
+        "FinishedTasksDistributionInMs" : [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      },
+      "QueryStageOptimizationId" : 1,
+      "RuntimeConfiguration" : {
+        "theta_p" : [ {
+          "spark.sql.adaptive.advisoryPartitionSizeInBytes" : "64MB"
+        }, {
+          "spark.sql.adaptive.nonEmptyPartitionRatioForBroadcastJoin" : "0.2"
+        }, {
+          "spark.sql.adaptive.maxShuffledHashJoinLocalMapThreshold" : "0MB"
+        }, {
+          "spark.sql.adaptive.autoBroadcastJoinThreshold" : "10MB"
+        }, {
+          "spark.sql.shuffle.partitions" : "200"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes" : "256MB"
+        }, {
+          "spark.sql.adaptive.skewJoin.skewedPartitionFactor" : "5"
+        }, {
+          "spark.sql.files.maxPartitionBytes" : "128MB"
+        }, {
+          "spark.sql.files.openCostInBytes" : "4MB"
+        } ],
+        "theta_s" : [ {
+          "spark.sql.adaptive.rebalancePartitionsSmallPartitionFactor" : "0.2"
+        }, {
+          "spark.sql.adaptive.coalescePartitions.minPartitionSize" : "1024KB"
+        } ]
+      },
+      "RelevantQueryStageIds" : [ 3 ],
+      "Objectives" : {
+        "DurationInMs" : 243,
+        "TotalTasksDurationInMs" : 234,
+        "IOBytes" : {
+          "Total" : 3239,
+          "Details" : {
+            "IR" : 0,
+            "IW" : 0,
+            "SR" : 3239,
+            "SW" : 0
+          }
+        }
+      }
+    }
+  },
+  "SQLStartTimeInMs" : 1702226542137,
+  "SQLEndTimeInMs" : 1702226548610,
+  "Objectives" : {
+    "DurationInMs" : 6473,
+    "IOBytes" : {
+      "Total" : 588473634,
+      "Details" : {
+        "IR" : 588467156,
+        "IW" : 0,
+        "SR" : 3239,
+        "SW" : 3239
+      }
+    }
+  }
+}
